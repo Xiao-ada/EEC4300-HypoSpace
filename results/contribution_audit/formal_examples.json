@@ -1,0 +1,48 @@
+{
+  "kind": "mathematical examples, not measured LLM results or a priority claim",
+  "budget": 16,
+  "mass_preserving_partition": {
+    "parts": [
+      0.1,
+      0.2
+    ],
+    "total": 0.3,
+    "grouped_parts": 0.9966767069430399,
+    "grouped_total": 0.9966767069430399,
+    "ungrouped_string_reward": 1.7865504834437502
+  },
+  "lower_bound_example": {
+    "finite_alias_masses": [
+      0.2,
+      0.1
+    ],
+    "full_valid_class_masses": [
+      0.3,
+      0.2
+    ],
+    "surrogate": 0.8932752417218751,
+    "true_expected_RR": 0.9842646046359871
+  },
+  "nonproportional_objective_gradients": {
+    "coordinate": "log class mass; equal-length completion model",
+    "classes": 2,
+    "answer_tokens": 10,
+    "class_masses": [
+      0.1,
+      0.01
+    ],
+    "balanced_SFT_gradients": [
+      -0.05,
+      -0.05
+    ],
+    "negative_coverage_gradients": [
+      -0.16471290567571928,
+      -0.06880466837130307
+    ],
+    "coverage_to_SFT_ratios": [
+      3.2942581135143856,
+      1.3760933674260614
+    ]
+  },
+  "script_sha256": "2a80b8329a0d210f7ccaff050d5ca061b335444c3c35b2459e64a6450b6cdab8"
+}

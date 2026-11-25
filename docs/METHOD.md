@@ -22,7 +22,7 @@ Complete sequence log probability is the sum, not mean, of answer-token log prob
 
 If K_positive classes have usable aliases, the sampled coverage term is multiplied by K_positive/K. Its expectation over the sampled positive class is the full sum divided by the original reference count K. Empty groups have zero coverage contribution and never require undefined SFT targets.
 
-Under fixed-prompt IID sampling, disjoint complete answer events and matched sampling/termination rules, the finite alias pool provides a lower bound on expected reference coverage. It is not the full probability mass of every possible wording, and no normalization over valid candidates is performed. The coverage term uses stable log-sum-exp/exp/log1p/expm1 computations and bounded probability arithmetic.
+Under fixed-prompt IID sampling, disjoint complete answer events and matched sampling/termination rules, the finite alias pool provides a lower bound on expected reference coverage. It is not the full probability mass of every possible wording, and no normalization over valid candidates is performed. The coverage term exponentiates complete-sequence log probabilities, sums alias probabilities and uses log1p/expm1 with bounded probability arithmetic.
 
 Balanced SFT can also approach a uniform class distribution in an ideal limit. Our question is whether grouping and finite-budget coverage gradients help under a fixed finite training budget; a better theoretical optimum is not claimed.
 
@@ -49,3 +49,5 @@ The primary comparison is class coverage versus matched balanced SFT on 26 held-
 The reference generator and validator disagree in both directions for some expressions. Targets are verified, empty classes are recorded, and every method uses the same disclosed scoring rule. Absolute scores are not a reproduction of the paper's tables. The task split establishes unseen observations, not unseen expression families or cross-domain generalization. Teammate development results are not directly ranked without matching their model, tasks and budget accounting.
 
 Related work includes [HypoSpace](https://proceedings.mlr.press/v306/chen26bz.html), [GAPO](https://aclanthology.org/2025.emnlp-main.1649/) and [prefix-conditioned SFT](https://aclanthology.org/2026.acl-long.9/). LoRA, balancing, diversity training and the expected coverage identity are existing ideas; this project evaluates their task-specific combination and its measured limits.
+
+A subsequent [contribution audit](CONTRIBUTION_AUDIT_ZH.md) gives analytic properties, primary-source positioning and exploratory secondary inference from existing outputs. It does not alter the inconclusive primary RR comparison, establish global priority or add training runs.

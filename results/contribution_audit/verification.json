@@ -1,0 +1,9 @@
+{
+  "cpu_reproduction_exact": true,
+  "exact_inference_tests_passed": 3,
+  "all_12_comparisons_retained": true,
+  "original_primary_RR_differences_and_intervals_match": true,
+  "no_new_training_or_generation": true,
+  "formal_examples_verified": true,
+  "temporary_verification_files_removed": true
+}

@@ -1,0 +1,80 @@
+{
+  "status": "post-hoc mechanism diagnosis, not an effectiveness test",
+  "data": "one seeded class per training observation set; no validation/test labels",
+  "selection_seed": 4301,
+  "checkpoints": {
+    "warmup": "2c02ddd8543d1c044cbd7d411864ddafac72b24af4b8b68bd1dd4993a496099f",
+    "balanced_sft": "cd37fc2b3f2112601093fe5d39e47da937400eed5d8e6c21548696206397c413",
+    "canonical_coverage": "78264d860250b2679ad2adf6ad6b92d7ecbf38e72811ad3773826fc8f3eda81c"
+  },
+  "lambda": 1,
+  "selected": [
+    {
+      "task_id": "031bf2437b8c4fad",
+      "key": "('OR', (('NOT', ('VAR', 'x')), ('VAR', 'x'), ('VAR', 'y')))"
+    },
+    {
+      "task_id": "3b1e497b20fbea1b",
+      "key": "('AND', (('OR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'y')))"
+    },
+    {
+      "task_id": "3d6511e6558fa796",
+      "key": "('OR', (('NOT', ('VAR', 'y')), ('VAR', 'y')))"
+    },
+    {
+      "task_id": "42ba50fe4dfba2e3",
+      "key": "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('NOT', ('VAR', 'x'))))"
+    },
+    {
+      "task_id": "4405aec39ba683ca",
+      "key": "('AND', (('NOT', ('VAR', 'y')), ('VAR', 'x'), ('VAR', 'y')))"
+    },
+    {
+      "task_id": "4675d1be2394c6d7",
+      "key": "('NOT', ('VAR', 'x'))"
+    },
+    {
+      "task_id": "72832228484609cf",
+      "key": "('AND', (('NOT', ('VAR', 'x')), ('VAR', 'y')))"
+    },
+    {
+      "task_id": "795475f220082197",
+      "key": "('NOT', ('VAR', 'y'))"
+    },
+    {
+      "task_id": "7d1eeb3efb43a526",
+      "key": "('AND', (('NOT', ('VAR', 'y')), ('VAR', 'x')))"
+    },
+    {
+      "task_id": "a46b551e501700e7",
+      "key": "('AND', (('NOT', ('VAR', 'x')), ('VAR', 'x')))"
+    },
+    {
+      "task_id": "a8ff40ee4488550c",
+      "key": "('AND', (('OR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x')))"
+    },
+    {
+      "task_id": "b1b48777fd8ba827",
+      "key": "('AND', (('OR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x')))"
+    },
+    {
+      "task_id": "cf88edc0ec282769",
+      "key": "('AND', (('NOT', ('VAR', 'y')), ('OR', (('VAR', 'x'), ('VAR', 'y')))))"
+    },
+    {
+      "task_id": "d50367af8a878038",
+      "key": "('AND', (('NOT', ('VAR', 'y')), ('VAR', 'y')))"
+    },
+    {
+      "task_id": "da97f239c8b2c00d",
+      "key": "('OR', (('VAR', 'x'), ('VAR', 'y')))"
+    },
+    {
+      "task_id": "f427ae1368a9ace0",
+      "key": "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'y')))"
+    }
+  ],
+  "cosine_definition": "cos(gradient of SFT, gradient of negative coverage); positive reinforces",
+  "batch_definition": "four consecutive selected class groups averaged, matching v1 accumulation size",
+  "probe_source_sha256": "f5a10ff8e346f429a502a13c4f93b0d7bc2de2b61f84a5e14f0df780070059b0"
+}

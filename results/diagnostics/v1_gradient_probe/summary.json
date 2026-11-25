@@ -1,0 +1,247 @@
+{
+  "status": "post-hoc mechanism diagnosis, not an effectiveness test",
+  "training_classes": 16,
+  "seconds": 201.3893197500147,
+  "checkpoints_unchanged": true,
+  "additional_generation_calls": 0,
+  "class_summaries": {
+    "warmup": {
+      "sft_loss": {
+        "mean": 0.39285856299102306,
+        "median": 0.3847498893737793,
+        "min": 0.27325230836868286,
+        "max": 0.5703720450401306
+      },
+      "scaled_coverage_reward": {
+        "mean": 0.3485290613025427,
+        "median": 0.3171631991863251,
+        "min": 0.12523604929447174,
+        "max": 0.6691060662269592
+      },
+      "class_alias_mass": {
+        "mean": 0.032226664436166175,
+        "median": 0.026126904878765345,
+        "min": 0.00832770555280149,
+        "max": 0.09652897715568542
+      },
+      "norm_ratio_coverage_to_sft": {
+        "mean": 2.8369589217854108,
+        "median": 2.8612330057708295,
+        "min": 1.6582680755234356,
+        "max": 5.019233687543506
+      },
+      "loss_gradient_cosine": {
+        "mean": 0.9915910281624938,
+        "median": 0.9926807688002728,
+        "min": 0.9638201393965435,
+        "max": 0.9999376031649154
+      }
+    },
+    "balanced_sft": {
+      "sft_loss": {
+        "mean": 0.3444823808968067,
+        "median": 0.34575551748275757,
+        "min": 0.19967791438102722,
+        "max": 0.5704107284545898
+      },
+      "scaled_coverage_reward": {
+        "mean": 0.5110134817659855,
+        "median": 0.5198671519756317,
+        "min": 0.1903296560049057,
+        "max": 0.8489363193511963
+      },
+      "class_alias_mass": {
+        "mean": 0.05661654195864685,
+        "median": 0.04906445927917957,
+        "min": 0.013108826708048582,
+        "max": 0.15358495712280273
+      },
+      "norm_ratio_coverage_to_sft": {
+        "mean": 3.456896150104062,
+        "median": 3.443473254168384,
+        "min": 0.904841894932735,
+        "max": 5.943108849806577
+      },
+      "loss_gradient_cosine": {
+        "mean": 0.9955366017913392,
+        "median": 0.997746497076991,
+        "min": 0.9827580709781634,
+        "max": 0.9998789644900431
+      }
+    },
+    "canonical_coverage": {
+      "sft_loss": {
+        "mean": 0.38237624429166317,
+        "median": 0.38337866961956024,
+        "min": 0.15340062975883484,
+        "max": 0.5895313620567322
+      },
+      "scaled_coverage_reward": {
+        "mean": 0.4933003056794405,
+        "median": 0.5693632364273071,
+        "min": 0.018051542341709137,
+        "max": 0.9801577925682068
+      },
+      "class_alias_mass": {
+        "mean": 0.06054496562137501,
+        "median": 0.05404704809188843,
+        "min": 0.0011378807830624282,
+        "max": 0.21729231625795364
+      },
+      "norm_ratio_coverage_to_sft": {
+        "mean": 2.6785832202699558,
+        "median": 2.8121231729306486,
+        "min": 0.2718229389200057,
+        "max": 5.436916441853343
+      },
+      "loss_gradient_cosine": {
+        "mean": 0.9524130890680511,
+        "median": 0.9668389845333194,
+        "min": 0.8031643772738812,
+        "max": 0.9992892974768276
+      }
+    }
+  },
+  "batch_summaries": {
+    "warmup": {
+      "norm_ratio_coverage_to_sft": {
+        "mean": 2.662185890653366,
+        "median": 2.6196414082338824,
+        "min": 1.9947097087962826,
+        "max": 3.414751037349418
+      },
+      "loss_gradient_cosine": {
+        "mean": 0.9496442686128558,
+        "median": 0.9695938220569353,
+        "min": 0.8642497834901737,
+        "max": 0.9951396468473785
+      }
+    },
+    "balanced_sft": {
+      "norm_ratio_coverage_to_sft": {
+        "mean": 3.1799029234749354,
+        "median": 3.316236981280832,
+        "min": 2.108777266843719,
+        "max": 3.978360464494357
+      },
+      "loss_gradient_cosine": {
+        "mean": 0.9404242705914331,
+        "median": 0.9716446199143792,
+        "min": 0.8257565311381574,
+        "max": 0.9926513113988162
+      }
+    },
+    "canonical_coverage": {
+      "norm_ratio_coverage_to_sft": {
+        "mean": 2.500059479790516,
+        "median": 2.5392332605091767,
+        "min": 1.1992923984865158,
+        "max": 3.7224789996571936
+      },
+      "loss_gradient_cosine": {
+        "mean": 0.8600683632212484,
+        "median": 0.8567857225562872,
+        "min": 0.81734792083764,
+        "max": 0.9093540869347793
+      }
+    }
+  },
+  "batches": [
+    {
+      "checkpoint": "warmup",
+      "batch_index": 0,
+      "sft_grad_norm": 1.970715045928955,
+      "negative_coverage_grad_norm": 6.729501247406006,
+      "norm_ratio_coverage_to_sft": 3.414751037349418,
+      "loss_gradient_cosine": 0.9721897077785603
+    },
+    {
+      "checkpoint": "warmup",
+      "batch_index": 1,
+      "sft_grad_norm": 2.39721417427063,
+      "negative_coverage_grad_norm": 4.7817463874816895,
+      "norm_ratio_coverage_to_sft": 1.9947097087962826,
+      "loss_gradient_cosine": 0.8642497834901737
+    },
+    {
+      "checkpoint": "warmup",
+      "batch_index": 2,
+      "sft_grad_norm": 3.2699496746063232,
+      "negative_coverage_grad_norm": 6.643083095550537,
+      "norm_ratio_coverage_to_sft": 2.031555148123285,
+      "loss_gradient_cosine": 0.9951396468473785
+    },
+    {
+      "checkpoint": "warmup",
+      "batch_index": 3,
+      "sft_grad_norm": 1.9513522386550903,
+      "negative_coverage_grad_norm": 6.259406566619873,
+      "norm_ratio_coverage_to_sft": 3.2077276683444795,
+      "loss_gradient_cosine": 0.9669979363353103
+    },
+    {
+      "checkpoint": "balanced_sft",
+      "batch_index": 0,
+      "sft_grad_norm": 1.7719155550003052,
+      "negative_coverage_grad_norm": 7.049318790435791,
+      "norm_ratio_coverage_to_sft": 3.978360464494357,
+      "loss_gradient_cosine": 0.983801276405287
+    },
+    {
+      "checkpoint": "balanced_sft",
+      "batch_index": 1,
+      "sft_grad_norm": 2.393981695175171,
+      "negative_coverage_grad_norm": 5.048374176025391,
+      "norm_ratio_coverage_to_sft": 2.108777266843719,
+      "loss_gradient_cosine": 0.8257565311381574
+    },
+    {
+      "checkpoint": "balanced_sft",
+      "batch_index": 2,
+      "sft_grad_norm": 2.936427593231201,
+      "negative_coverage_grad_norm": 8.099522590637207,
+      "norm_ratio_coverage_to_sft": 2.758291268379144,
+      "loss_gradient_cosine": 0.9926513113988162
+    },
+    {
+      "checkpoint": "balanced_sft",
+      "batch_index": 3,
+      "sft_grad_norm": 1.6843680143356323,
+      "negative_coverage_grad_norm": 6.525549411773682,
+      "norm_ratio_coverage_to_sft": 3.87418269418252,
+      "loss_gradient_cosine": 0.9594879634234714
+    },
+    {
+      "checkpoint": "canonical_coverage",
+      "batch_index": 0,
+      "sft_grad_norm": 1.90147066116333,
+      "negative_coverage_grad_norm": 7.078184604644775,
+      "norm_ratio_coverage_to_sft": 3.7224789996571936,
+      "loss_gradient_cosine": 0.81734792083764
+    },
+    {
+      "checkpoint": "canonical_coverage",
+      "batch_index": 1,
+      "sft_grad_norm": 3.480778217315674,
+      "negative_coverage_grad_norm": 6.993693828582764,
+      "norm_ratio_coverage_to_sft": 2.009232818624164,
+      "loss_gradient_cosine": 0.8814086013786708
+    },
+    {
+      "checkpoint": "canonical_coverage",
+      "batch_index": 2,
+      "sft_grad_norm": 4.211333751678467,
+      "negative_coverage_grad_norm": 5.0506205558776855,
+      "norm_ratio_coverage_to_sft": 1.1992923984865158,
+      "loss_gradient_cosine": 0.8321628437339034
+    },
+    {
+      "checkpoint": "canonical_coverage",
+      "batch_index": 3,
+      "sft_grad_norm": 1.831385850906372,
+      "negative_coverage_grad_norm": 5.620951175689697,
+      "norm_ratio_coverage_to_sft": 3.0692337023941896,
+      "loss_gradient_cosine": 0.9093540869347793
+    }
+  ]
+}

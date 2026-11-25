@@ -149,3 +149,7 @@ HF_HOME=../runtime/hf-cache ../runtime/mlx-env/bin/python scripts/local_mlx.py -
 - Fan et al. [Prefix-conditioned SFT](https://aclanthology.org/2026.acl-long.9/)。
 - [MLX LM LoRA](https://github.com/ml-explore/mlx-lm/blob/main/mlx_lm/LORA.md)。
 - [Qwen2.5-1.5B-Instruct](https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct)；固定转换版本见 model.local_mlx.lock.json。
+
+## 后续机制诊断
+
+第一版之后补做了仅使用训练样本的只读梯度探针和有限语法写法审计，未修改模型、测试结果或生成调用数。采样点上的覆盖梯度与 SFT 高度同向；训练类别在有限语法池中的合法写法数为 1–50，第一版每类固定使用两个写法。诊断提供新的研究方向，尚不证明额外性能收益。见[诊断证据与下一步实验](docs/NEXT_EXPERIMENT_ZH.md)。

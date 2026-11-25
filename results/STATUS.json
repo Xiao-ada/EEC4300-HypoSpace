@@ -92,5 +92,13 @@
     "source_and_results": "complete",
     "public_repository": "complete_public_and_pushed",
     "group_video": "outline_prepared_actual_member_recording_required"
+  },
+  "posthoc_diagnostics": {
+    "completed": true,
+    "scope": "training-only immutable-checkpoint gradient probe and finite syntax audit",
+    "additional_generation_calls": 0,
+    "changes_v1_scores": false,
+    "next_version_trained": false,
+    "guide": "docs/NEXT_EXPERIMENT_ZH.md"
   }
 }

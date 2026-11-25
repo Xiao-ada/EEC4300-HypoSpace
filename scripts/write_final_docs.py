@@ -167,6 +167,8 @@ HF_HOME=../runtime/hf-cache ../runtime/mlx-env/bin/python scripts/local_mlx.py -
 - [MLX LM LoRA](https://github.com/ml-explore/mlx-lm/blob/main/mlx_lm/LORA.md)。
 - [Qwen2.5-1.5B-Instruct](https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct)；固定转换版本见 model.local_mlx.lock.json。
 '''
+if (ROOT/'results/diagnostics/v1_gradient_probe/summary.json').exists():
+    readme += '\n## 后续机制诊断\n\n第一版之后补做了仅使用训练样本的只读梯度探针和有限语法写法审计，未修改模型、测试结果或生成调用数。采样点上的覆盖梯度与 SFT 高度同向；训练类别在有限语法池中的合法写法数为 1–50，第一版每类固定使用两个写法。诊断提供新的研究方向，尚不证明额外性能收益。见[诊断证据与下一步实验](docs/NEXT_EXPERIMENT_ZH.md)。\n'
 (ROOT/'README.md').write_text(readme)
 write={'base_RR_gain_pp':base_delta,'vs_SFT_RR_gain_pp':delta,'vs_SFT_RR_interval_pp':[lo,hi],'vs_SFT_VR_gain_pp':vr_delta,'interpretation':conclusion,'string_ablation_interpretation':ab_note,'practical_threshold_met':delta>=5 and vr_delta>=-2}
 (out/'interpretation.json').write_text(json.dumps(write,ensure_ascii=False,indent=2)+'\n')

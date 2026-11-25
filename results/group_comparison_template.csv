@@ -1,0 +1,8 @@
+method,owner,model_and_revision,task_setting,split_fingerprint,queries_per_task,task_count,repetitions,VR,NR,RR,RR_difference_vs_memory,paired_95_interval,total_generation_calls,training_generation_calls,total_tokens,elapsed_seconds,status
+memory,,,,,,,,,,,,,,,,,not_run
+fixed,,,,,,,,,,,,,,,,,not_run
+random,,,,,,,,,,,,,,,,,not_run
+learned,,,,,,,,,,,,,,,,,not_run
+no_history,,,,,,,,,,,,,,,,,not_run
+teammate_candidate_1,,,,,,,,,,,,,,,,,not_run
+teammate_candidate_2,,,,,,,,,,,,,,,,,not_run

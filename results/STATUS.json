@@ -1,0 +1,94 @@
+{
+  "updated_local_date": "2026-11-25",
+  "stage": "final_results_verified_ready_to_publish",
+  "real_llm_experiments_completed": true,
+  "improvement_measured": true,
+  "protocol_tests_passed": 16,
+  "synthetic_pipeline_verified": true,
+  "note": "All 480 validation and 6240 fixed test calls completed. Public raw outputs independently rescored, including a fresh publication-tree check without private caches. Coverage beats base, but extra benefit over matched SFT is uncertain.",
+  "real_training_trajectories_collected": 256,
+  "controller_training_completed": false,
+  "test_evaluation_started": true,
+  "experiments_paused_for_user_review": false,
+  "github": {
+    "repository": "https://github.com/Xiao-ada/EEC4300-HypoSpace",
+    "visibility": "private",
+    "origin_configured": true,
+    "authenticated_git_access_verified": true,
+    "account_push_permission_verified": true,
+    "source_pushed": false
+  },
+  "gpu": {
+    "execution_device": "Apple M5 GPU",
+    "shared_system_memory_gib": 24,
+    "runtime": "MLX LM 0.32.2",
+    "institutional_server_required": false,
+    "institutional_task_created": false
+  },
+  "active_method": "canonical_coverage_lora",
+  "plan_version": "canonical_coverage_lora_v1_1_independent",
+  "lora_training_implemented": true,
+  "lora_loss_verified": true,
+  "lora_training_completed": true,
+  "formal_test_evaluation_started": true,
+  "planned_experiment": {
+    "train_tasks": 16,
+    "validation_tasks": 6,
+    "test_tasks": 26,
+    "methods": 5,
+    "test_generation_calls": 6240,
+    "validation_generation_calls": 480,
+    "specification": "results/coverage_plan/plan.json"
+  },
+  "legacy_diagnostics": {
+    "real_generation_calls": 256,
+    "valid_calls": 43,
+    "inference_seconds": 170.4,
+    "temperature": 0.8,
+    "protocol": "controller random actions; not a formal LoRA baseline"
+  },
+  "method_independent_from_teammate": true,
+  "group_comparison_status": "official_rules_checked; actual_teammate_model_and_task_config_unconfirmed",
+  "non_overlap_scope": "Explicitly independent of teammate mechanisms described by user; teammate full implementation not inspected.",
+  "base_validation_baseline": {
+    "completed": true,
+    "tasks": 6,
+    "repetitions": 1,
+    "calls": 96,
+    "sampling_temperature": 1.0,
+    "VR": 0.1875,
+    "NR": 0.3854166666666667,
+    "RR": 0.14351851851851852,
+    "summary": "results/coverage_baseline/validation/summary.json",
+    "raw_evidence": "results/coverage_baseline/validation/evidence.jsonl",
+    "inference_seconds": 32.22537195449695,
+    "tokens": 52286,
+    "validator_passes_outside_reference": 4
+  },
+  "optimization_decision": "Retain offline canonical coverage LoRA. Audit scoring consistency and complete balanced SFT first; evaluate coverage contribution against matched SFT. No DCHG/repair core module.",
+  "baseline_failure_breakdown": "results/coverage_baseline/validation/failure_breakdown.json",
+  "formal_test_evaluation_completed": true,
+  "raw_evidence_verified": true,
+  "fresh_publication_tree_verified": true,
+  "figures_visually_verified": true,
+  "final_results": {
+    "test_calls": 6240,
+    "validation_calls": 480,
+    "base_RR": 0.13667492638080875,
+    "balanced_SFT_RR": 0.3686130862601451,
+    "canonical_coverage_RR": 0.37755422681893275,
+    "vs_base_RR_gain_percentage_points": 24.0879300438124,
+    "vs_SFT_RR_gain_percentage_points": 0.894114055878762,
+    "vs_SFT_RR_95_interval_percentage_points": [
+      -1.9746350463262226,
+      3.7236631832220084
+    ],
+    "additional_coverage_benefit_established": false,
+    "summary": "results/final/test/summary.json"
+  },
+  "course_deliverables": {
+    "source_and_results": "complete",
+    "public_repository": "publishing",
+    "group_video": "outline_prepared_actual_member_recording_required"
+  }
+}

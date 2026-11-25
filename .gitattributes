@@ -1,0 +1,5 @@
+*.safetensors binary
+*.png binary
+*.pdf binary
+*.gz binary
+*.csv text eol=lf

@@ -1,0 +1,50 @@
+{
+  "status": "real",
+  "split": "validation",
+  "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+  "fingerprint": "162c675512897a3f40fa7ad535651690154063d126710ddbbcd6ec9b9d7d4bf0",
+  "notice": "Validation-set diagnostic only. Not a final held-out test score or evidence of method improvement.",
+  "metrics": {
+    "base_iid": {
+      "VR": 0.1875,
+      "NR": 0.3854166666666667,
+      "RR": 0.14351851851851852,
+      "episodes": 6,
+      "mean_new_valid_count": 1.6666666666666667,
+      "mean_inference_seconds": 5.370895325749491,
+      "mean_total_tokens": 8714.333333333334,
+      "valid_outside_reference_max": 1
+    }
+  },
+  "metrics_by_budget": {
+    "8": {
+      "base_iid": {
+        "VR": 0.22916666666666666,
+        "NR": 0.5,
+        "RR": 0.09722222222222221
+      }
+    },
+    "10": {
+      "base_iid": {
+        "VR": 0.20000000000000004,
+        "NR": 0.4166666666666667,
+        "RR": 0.09722222222222221
+      }
+    },
+    "16": {
+      "base_iid": {
+        "VR": 0.1875,
+        "NR": 0.3854166666666667,
+        "RR": 0.14351851851851852
+      }
+    }
+  },
+  "training_resources": {
+    "calls": 0,
+    "inference_seconds": 0,
+    "total_tokens": 0
+  },
+  "paired_comparisons": {},
+  "complete_episodes": 6,
+  "all_episodes": 6
+}

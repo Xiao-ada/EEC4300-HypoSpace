@@ -1,0 +1,33 @@
+{
+  "temperature": 1.0,
+  "top_p": 1.0,
+  "top_k": 0,
+  "min_p": 0.0,
+  "repetition_penalty": 1.0,
+  "max_output_tokens": 128,
+  "model_identity": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+  "model_provenance": {
+    "repo_id": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+    "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+    "weights_file": "model.safetensors",
+    "weights_sha256": "0979f33d1bc58afcf696d13f57977644e7b11a6f0eec3e631d8e9463d18c0717",
+    "weights_bytes": 868628559,
+    "original_model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "runtime": "mlx-lm==0.32.2",
+    "notes": "Public third-party 4-bit conversion. A small-model screening run; not equivalent to the paper's model settings."
+  },
+  "max_api_calls": 7500,
+  "max_total_tokens": 12000000,
+  "request_timeout_seconds": 90,
+  "send_seed": true,
+  "plan_sha256": "aa82ddfc2ba1f2a8ed72d993655782b7b7dbdda579b16092def1734ae080ed19",
+  "split_sha256": "b880980b9dd4ab09a7237a112f0aebbda83e67e36576078f7daf53dbcc497b9c",
+  "dataset_sha256": "00deffe33a517aecdfa9c90e5067467af28c22f5ecffeac906b9f4f5dfca7c6f",
+  "source_sha256": {
+    "baseline.py": "55767c5db6e77c32ffc6b0a3dd15839cd8d77e758de94f79842da772fecfd922",
+    "backend.py": "ce0da0721d31ce82b858f10845005f7ed5929fc67e300768692961e5b50be428",
+    "experiment.py": "7cee0b77828495821f021cf9c510e588202a3447c5d7754900b15767011c68d4",
+    "report.py": "0725d042bd7dc659c9caefe9aa434d2c74508e912394ea4416c083dda6583148",
+    "upstream.py": "2453c92ea19fb657f53f80dde238a75a9ae823b59c1670168a5eec0decd9ad4f"
+  }
+}

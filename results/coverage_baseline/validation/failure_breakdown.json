@@ -1,0 +1,14 @@
+{
+  "scope": "six validation tasks, one repetition, 96 original-model IID generations; not final test",
+  "counts": {
+    "total": 96,
+    "observation_failure": 44,
+    "parse_or_space_check_failure": 34,
+    "new_reference_hit": 7,
+    "duplicate_reference_hit": 7,
+    "validator_pass_outside_reference": 4
+  },
+  "known_validator_shape_in_failed_checks": 5,
+  "known_shape_matches_observations": 2,
+  "interpretation": "The 34 parser/space-check failures are protocol outcomes, not all attributable to model errors. No corrected score or method improvement is claimed. Current scores and denominator remain unchanged."
+}

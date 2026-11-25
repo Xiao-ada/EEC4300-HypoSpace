@@ -1,0 +1,43 @@
+{
+  "validation_only": true,
+  "verified_rows": 96,
+  "errors": 0,
+  "prompt_fixed_within_each_task": true,
+  "reference_labels_excluded_from_model_inputs": true,
+  "recorded_unique_request_seeds": 96,
+  "raw_file_sha256": {
+    "validation_base_iid_58afbe555602c1b3_101.jsonl": "da90e40c0c7354ec91289d5a5b6a0a2497e7267fc20e2ba12b2403a76d7849b0",
+    "validation_base_iid_ad53dfd61538637a_101.jsonl": "e5e29e9d050bd3fb9c666fff7686ee2547e0c62b8f65cb5ac7b1010946ecb26e",
+    "validation_base_iid_b80ea1ea0723d497_101.jsonl": "f585fa48845efe2c3ed03594560bfb676513de678e96fe0b8eae9e1a2fa60af5",
+    "validation_base_iid_c0ebd18dfefc1425_101.jsonl": "34663ad44b8b64295c5a0bc53c473d7027009ba2885cd55acb92fd80e5e807a8",
+    "validation_base_iid_e581cfb9a2e7da47_101.jsonl": "bf26cc353859c797f642197e7c55da9eafb4d79ed9186e0b4d5881b4be0a353e",
+    "validation_base_iid_f25ac6d673e4a101_101.jsonl": "0a89a6ab71de267b9c18ede5573975b8842d4c623ee15acaec64b72b3462183e"
+  },
+  "valid_outputs_outside_reference": [
+    {
+      "task_id": "c0ebd18dfefc1425",
+      "step": 2,
+      "expression": "NOT x OR NOT y OR x AND y",
+      "key": "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('NOT', ('VAR', 'x')), ('NOT', ('VAR', 'y'))))"
+    },
+    {
+      "task_id": "c0ebd18dfefc1425",
+      "step": 4,
+      "expression": "(NOT x) OR (NOT y) OR x AND y",
+      "key": "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('NOT', ('VAR', 'x')), ('NOT', ('VAR', 'y'))))"
+    },
+    {
+      "task_id": "e581cfb9a2e7da47",
+      "step": 12,
+      "expression": "NOT x OR NOT y OR x AND y",
+      "key": "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('NOT', ('VAR', 'x')), ('NOT', ('VAR', 'y'))))"
+    },
+    {
+      "task_id": "f25ac6d673e4a101",
+      "step": 7,
+      "expression": "(NOT x) OR (NOT y) OR x AND y",
+      "key": "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('NOT', ('VAR', 'x')), ('NOT', ('VAR', 'y'))))"
+    }
+  ],
+  "note": "All 96 parsed outcomes independently recomputed from raw text. Outside-reference validator passes retained as diagnostics, excluded from RR. Reference denominator unchanged."
+}

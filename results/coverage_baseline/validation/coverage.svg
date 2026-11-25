@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="530" viewBox="0 0 900 530">
+<rect width="900" height="530" fill="white"/>
+<g font-family="sans-serif" fill="#111827">
+<text x="65" y="28" font-size="17">HypoSpace Boolean validation pilot</text>
+<text x="65" y="52" font-size="12">Mean Recovery versus counted generation calls</text>
+<path d="M65 80 V435 H690" stroke="#475569" fill="none"/>
+<text x="20" y="439" font-size="12">0.00</text><path d="M65 435 H690" stroke="#e5e7eb"/>
+<text x="20" y="355.25" font-size="12">0.25</text><path d="M65 351.25 H690" stroke="#e5e7eb"/>
+<text x="20" y="271.5" font-size="12">0.50</text><path d="M65 267.5 H690" stroke="#e5e7eb"/>
+<text x="20" y="187.75" font-size="12">0.75</text><path d="M65 183.75 H690" stroke="#e5e7eb"/>
+<text x="20" y="104" font-size="12">1.00</text><path d="M65 100 H690" stroke="#e5e7eb"/>
+<polyline points="104.06,435.00 143.12,435.00 182.19,413.29 221.25,407.08 260.31,407.08 299.38,407.08 338.44,402.43 377.50,402.43 416.56,402.43 455.62,402.43 494.69,396.23 533.75,386.92 572.81,386.92 611.88,386.92 650.94,386.92 690.00,386.92" fill="none" stroke="#2563eb" stroke-width="2.5"/>
+<text x="715" y="110" fill="#2563eb" font-size="13">base_iid</text>
+<text x="65" y="460" font-size="12">0</text><text x="675" y="460" font-size="12">16</text>
+<text x="240" y="490" font-size="13">Counted calls per observation set</text>
+</g></svg>

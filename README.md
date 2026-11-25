@@ -159,3 +159,7 @@ HF_HOME=../runtime/hf-cache ../runtime/mlx-env/bin/python scripts/local_mlx.py -
 [贡献审查与可直接使用的报告陈述](docs/CONTRIBUTION_AUDIT_ZH.md)整理了已有工作的定位、目标的数学性质和匹配对照证据。对现有结果补做的探索性次要推断显示：相对匹配 SFT，VR 增加 3.125 个百分点，同时 NR 降低 4.167 个百分点；RR 的额外优势仍未证实。全部四个对照、三个最终指标统一纳入十二项比较，保留代价与不确定性。次要推断不是新的预注册确认性结果，也不证明全球首创。
 
 无需训练或 GPU 可复核：`.venv/bin/python scripts/verify_contribution_audit.py`。第二版重训不安排执行；原始主结果、模型和 6720 次正式生成记录保持不变。
+
+## 个人两至三分钟讲解
+
+按各成员分别介绍自己方法的分工，已准备[中文说明、主讲稿、精简稿、两页内容和问答](docs/PERSONAL_TALK_ZH.md)，以及[英文备选稿](docs/PERSONAL_TALK_EN.md)。[全组视频指南](docs/VIDEO_GUIDE_ZH.md)给出三人或四人组的十分钟分配参考。稿件时长为估算，实际视频仍需成员试读和录制。

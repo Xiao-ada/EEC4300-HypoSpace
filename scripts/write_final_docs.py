@@ -171,6 +171,8 @@ if (ROOT/'results/diagnostics/v1_gradient_probe/summary.json').exists():
     readme += '\n## 后续机制诊断\n\n第一版之后补做了仅使用训练样本的只读梯度探针和有限语法写法审计，未修改模型、测试结果或生成调用数。采样点上的覆盖梯度与 SFT 高度同向；训练类别在有限语法池中的合法写法数为 1–50，第一版每类固定使用两个写法。诊断提供新的研究方向，尚不证明额外性能收益。见[诊断证据与下一步实验](docs/NEXT_EXPERIMENT_ZH.md)。\n'
 if (ROOT/'results/contribution_audit/secondary_metrics.json').exists():
     readme += '\n## 已完成版本的独立贡献审查\n\n[贡献审查与可直接使用的报告陈述](docs/CONTRIBUTION_AUDIT_ZH.md)整理了已有工作的定位、目标的数学性质和匹配对照证据。对现有结果补做的探索性次要推断显示：相对匹配 SFT，VR 增加 3.125 个百分点，同时 NR 降低 4.167 个百分点；RR 的额外优势仍未证实。全部四个对照、三个最终指标统一纳入十二项比较，保留代价与不确定性。次要推断不是新的预注册确认性结果，也不证明全球首创。\n\n无需训练或 GPU 可复核：`.venv/bin/python scripts/verify_contribution_audit.py`。第二版重训不安排执行；原始主结果、模型和 6720 次正式生成记录保持不变。\n'
+if (ROOT/'docs/PERSONAL_TALK_ZH.md').exists():
+    readme += '\n## 个人两至三分钟讲解\n\n按各成员分别介绍自己方法的分工，已准备[中文说明、主讲稿、精简稿、两页内容和问答](docs/PERSONAL_TALK_ZH.md)，以及[英文备选稿](docs/PERSONAL_TALK_EN.md)。[全组视频指南](docs/VIDEO_GUIDE_ZH.md)给出三人或四人组的十分钟分配参考。稿件时长为估算，实际视频仍需成员试读和录制。\n'
 (ROOT/'README.md').write_text(readme)
 write={'base_RR_gain_pp':base_delta,'vs_SFT_RR_gain_pp':delta,'vs_SFT_RR_interval_pp':[lo,hi],'vs_SFT_VR_gain_pp':vr_delta,'interpretation':conclusion,'string_ablation_interpretation':ab_note,'practical_threshold_met':delta>=5 and vr_delta>=-2}
 (out/'interpretation.json').write_text(json.dumps(write,ensure_ascii=False,indent=2)+'\n')

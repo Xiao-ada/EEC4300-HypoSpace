@@ -112,5 +112,12 @@
     "primary_RR_conclusion_unchanged": true,
     "claims_global_priority": false,
     "v2_training": "not_scheduled_at_user_request"
+  },
+  "presentation_preparation": {
+    "group_structure": "each member presents their own method",
+    "personal_chinese_guide": "docs/PERSONAL_TALK_ZH.md",
+    "personal_english_script": "docs/PERSONAL_TALK_EN.md",
+    "actual_video_recorded": false,
+    "timings": "estimated; speaker rehearsal required"
   }
 }

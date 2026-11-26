@@ -175,6 +175,8 @@ if (ROOT/'docs/PERSONAL_TALK_ZH.md').exists():
     readme += '\n## 个人两至三分钟讲解\n\n按各成员分别介绍自己方法的分工，已准备[中文说明、主讲稿、精简稿、两页内容和问答](docs/PERSONAL_TALK_ZH.md)，以及[英文备选稿](docs/PERSONAL_TALK_EN.md)。[全组视频指南](docs/VIDEO_GUIDE_ZH.md)给出三人或四人组的十分钟分配参考。稿件时长为估算，实际视频仍需成员试读和录制。\n'
 if (ROOT/'docs/PERSONAL_TALK_2MIN_ZH.md').exists():
     readme += '\n当前推荐的个人口头稿：[两分钟以内，含文献逻辑与最终成果](docs/PERSONAL_TALK_2MIN_ZH.md)。\n'
+if (ROOT/'presentations/personal_method_results.pptx').exists():
+    readme += '\n[Editable principle and results slides](presentations/personal_method_results.pptx), with [page previews](presentations/README.md).\n'
 (ROOT/'README.md').write_text(readme)
 write={'base_RR_gain_pp':base_delta,'vs_SFT_RR_gain_pp':delta,'vs_SFT_RR_interval_pp':[lo,hi],'vs_SFT_VR_gain_pp':vr_delta,'interpretation':conclusion,'string_ablation_interpretation':ab_note,'practical_threshold_met':delta>=5 and vr_delta>=-2}
 (out/'interpretation.json').write_text(json.dumps(write,ensure_ascii=False,indent=2)+'\n')

@@ -121,6 +121,13 @@
     "timings": "estimated; speaker rehearsal required",
     "personal_current_script": "docs/PERSONAL_TALK_2MIN_ZH.md",
     "focus": "individual thought process, cited motivation, method and completed results",
-    "target": "under two minutes; actual rehearsal required"
+    "target": "under two minutes; actual rehearsal required",
+    "personal_powerpoint": "presentations/personal_method_results.pptx",
+    "slide_count": 2,
+    "structure": [
+      "principle_and_literature",
+      "results_and_limits"
+    ],
+    "editable": true
   }
 }

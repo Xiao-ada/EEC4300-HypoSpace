@@ -1,4 +1,44 @@
-# Canonical Coverage LoRA for HypoSpace
+# COVE for HypoSpace: learned execution and canonical coverage
+
+## 当前版本：COVE，三指标优化实验
+
+在 Mac 上新增训练 **179 参数的组合式神经执行器**，学习 AND / OR / NOT 的数值执行，再用观测一致性为冻结 LLM 的结构类别概率重新加权，以 Gumbel top-N 无放回采样输出。不是只换提示，也不在提议阶段调用精确布尔求解器。
+
+**已完成：16 道训练题、6 道验证题、26 道测试题；三个执行器初始化、三个测试采样种子；18,981 条输出独立复核、35 项本地测试通过。** 仍是 x/y、深度 2 的受控 Boolean 子实验，未扩展成论文所有任务的评测。
+
+### 当前最终结果：必须区分两种预算
+
+下表是同一批测试题、每个协议内同一输出预算的宏平均，单位为百分比。N=K 使用[官方 README](https://github.com/CTT-Pavilion/_HypoSpace/blob/main/README.md) 示例 `--query-multiplier 1.0` 的预算规则；K 为该题完整参考集合大小，仅由评测器提供为预算。**N=K 的成绩不能直接当成旧 N=16 的提升。**
+
+| Method | N=K: VR | NR | RR | N=16: VR | NR | RR |
+|---|---:|---:|---:|---:|---:|---:|
+| Base LLM / IID | 15.82 | 45.44 | 10.21 | 15.30 | 35.90 | 13.67 |
+| Frozen coverage-adapted LLM / IID | 38.48 | 76.62 | 26.22 | 39.90 | 64.42 | 41.02 |
+| LLM catalog / without replacement | 37.07 | 100.00 | 37.07 | 34.86 | 100.00 | 60.13 |
+| **COVE + frozen LLM (primary)** | **99.27** | **100.00** | **99.27** | **55.53** | **100.00** | **98.28** |
+| COVE only, no LLM prior | 99.27 | 100.00 | 99.27 | 55.53 | 100.00 | 98.28 |
+| Uniform catalog / without replacement | 28.29 | 100.00 | 28.29 | 28.93 | 100.00 | 50.12 |
+| Exact symbolic solver control | 99.27 | 100.00 | 99.27 | 55.53 | 100.00 | 98.28 |
+
+原封存 BACE 版本在 N=16 下为 **36.38 / 81.49 / 50.34**。新方法在相同 N=16 下三项数值均提高；仅自适应预算实验实现三项 >80%。官方 README 的 Good Score 指引还要求 VR>90%，本次自适应子实验也达到该数值，但这不是课程分数、论文全榜成绩或基础 LLM 的原生生成水平。
+
+**方法贡献与限制：** 相对使用同一 LLM 分数、同一目录、同一无放回规则的对照，学习执行模块提高合法覆盖；但是 COVE-only 和精确求解器已达到同样结果，尚无证据证明 LLM 先验提供额外最终指标收益。33 类静态目录的选择比自由生成更受限；NR=100% 由无放回设计保证，且在 N=K、合法命中均在参考集合时 VR=RR，三项不是三份独立机制证据。不能将系统成绩描述成“LLM 本身提升到 99%”。
+
+候选评分每题额外评估 **66 个完整回答序列**，采用共享前缀和 9 个候选批次；各方法对齐的是最终输出预算，计算量没有对齐。执行器只读取原有训练标签，推理只读取给定观测；完整测试参考集合只用于预算与最终评分。详见[成本账本](results/all80/costs.json)。
+
+![Two separate budget protocols](results/all80/metrics.png)
+
+[中文完整报告](docs/ALL80_RESULTS_ZH.md) · [English report](docs/ALL80_RESULTS_EN.md) · [算法与复现](docs/COVE_METHOD.md) · [原始对比数据](results/all80/test/summary.json) · [独立核验](results/all80/verification.json)
+
+无需 LLM 或 GPU，使用下方 CPU 环境即可核验新结果：
+
+```bash
+.venv/bin/python scripts/verify_all80.py
+```
+
+**封存与版本：** 改动前的 BACE 版为提交 `fdb968e659545626e3275679d965ae29e1c408a5`，完整本地只读备份包含代码、模型、环境和运行证据；归档位置已经单独交付用户，私有归档不进入公开仓库。旧版所有实验、适配器和报告保留，下面均为历史结果，不能与本节预算混用。
+
+## 历史版本：Canonical Coverage LoRA
 
 在 Apple M5、24GB Mac 上实际完成的小模型课程研究：用经过校验的合法表达式训练 LoRA，并检验官方结构类别覆盖目标相对均衡 SFT 是否提供额外收益。
 

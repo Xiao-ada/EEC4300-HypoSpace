@@ -1,0 +1,2353 @@
+{
+  "reference_keys": {
+    "529e001f10ce8f35": [
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x'), ('VAR', 'y')))",
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'y')))",
+      "('AND', (('VAR', 'x'), ('VAR', 'y')))",
+      "('NOT', ('NOT', ('VAR', 'y')))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'y')))",
+      "('VAR', 'y')"
+    ],
+    "d2bab89d4e62c767": [
+      "('AND', (('NOT', ('VAR', 'x')), ('OR', (('VAR', 'x'), ('VAR', 'y')))))",
+      "('AND', (('NOT', ('VAR', 'x')), ('VAR', 'y')))",
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'y')))",
+      "('NOT', ('AND', (('VAR', 'x'), ('VAR', 'y'))))",
+      "('NOT', ('NOT', ('VAR', 'y')))",
+      "('NOT', ('VAR', 'x'))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('NOT', ('VAR', 'x'))))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x'), ('VAR', 'y')))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'y')))",
+      "('OR', (('NOT', ('VAR', 'x')), ('NOT', ('VAR', 'y'))))",
+      "('OR', (('NOT', ('VAR', 'x')), ('VAR', 'x')))",
+      "('OR', (('NOT', ('VAR', 'x')), ('VAR', 'x'), ('VAR', 'y')))",
+      "('OR', (('NOT', ('VAR', 'x')), ('VAR', 'y')))",
+      "('OR', (('NOT', ('VAR', 'y')), ('VAR', 'x'), ('VAR', 'y')))",
+      "('OR', (('NOT', ('VAR', 'y')), ('VAR', 'y')))",
+      "('OR', (('VAR', 'x'), ('VAR', 'y')))",
+      "('VAR', 'y')"
+    ],
+    "4ae35d977a5b3a7f": [
+      "('AND', (('NOT', ('VAR', 'x')), ('OR', (('VAR', 'x'), ('VAR', 'y')))))",
+      "('AND', (('NOT', ('VAR', 'x')), ('VAR', 'y')))",
+      "('NOT', ('AND', (('VAR', 'x'), ('VAR', 'y'))))",
+      "('NOT', ('VAR', 'x'))",
+      "('OR', (('NOT', ('VAR', 'x')), ('NOT', ('VAR', 'y'))))"
+    ],
+    "33ba982524498e44": [
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('NOT', ('VAR', 'x'))))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('NOT', ('VAR', 'y'))))",
+      "('OR', (('NOT', ('VAR', 'x')), ('VAR', 'x')))",
+      "('OR', (('NOT', ('VAR', 'x')), ('VAR', 'x'), ('VAR', 'y')))",
+      "('OR', (('NOT', ('VAR', 'x')), ('VAR', 'y')))",
+      "('OR', (('NOT', ('VAR', 'y')), ('VAR', 'x')))",
+      "('OR', (('NOT', ('VAR', 'y')), ('VAR', 'x'), ('VAR', 'y')))",
+      "('OR', (('NOT', ('VAR', 'y')), ('VAR', 'y')))"
+    ],
+    "ccb74e75ae7fe6f8": [
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x')))",
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x'), ('VAR', 'y')))",
+      "('AND', (('VAR', 'x'), ('VAR', 'y')))",
+      "('NOT', ('NOT', ('VAR', 'x')))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x')))",
+      "('VAR', 'x')"
+    ],
+    "cfb68019d93cb40b": [
+      "('AND', (('NOT', ('VAR', 'x')), ('VAR', 'x')))",
+      "('AND', (('NOT', ('VAR', 'x')), ('VAR', 'x'), ('VAR', 'y')))",
+      "('AND', (('NOT', ('VAR', 'y')), ('VAR', 'x'), ('VAR', 'y')))",
+      "('AND', (('NOT', ('VAR', 'y')), ('VAR', 'y')))",
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x'), ('VAR', 'y')))",
+      "('AND', (('VAR', 'x'), ('VAR', 'y')))"
+    ],
+    "3376193cc0b23f84": [
+      "('AND', (('NOT', ('VAR', 'x')), ('OR', (('VAR', 'x'), ('VAR', 'y')))))",
+      "('AND', (('NOT', ('VAR', 'x')), ('VAR', 'y')))",
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'y')))",
+      "('NOT', ('NOT', ('VAR', 'y')))",
+      "('NOT', ('VAR', 'x'))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('NOT', ('VAR', 'x'))))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'y')))",
+      "('OR', (('NOT', ('VAR', 'x')), ('VAR', 'y')))",
+      "('VAR', 'y')"
+    ],
+    "05ace31b5594de25": [
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x')))",
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x'), ('VAR', 'y')))",
+      "('AND', (('VAR', 'x'), ('VAR', 'y')))",
+      "('NOT', ('NOT', ('VAR', 'x')))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('NOT', ('VAR', 'y'))))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x')))",
+      "('OR', (('NOT', ('VAR', 'y')), ('VAR', 'x')))",
+      "('VAR', 'x')"
+    ],
+    "5a17b622676fbafd": [
+      "('AND', (('NOT', ('VAR', 'y')), ('OR', (('VAR', 'x'), ('VAR', 'y')))))",
+      "('AND', (('NOT', ('VAR', 'y')), ('VAR', 'x')))",
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x')))",
+      "('NOT', ('NOT', ('VAR', 'x')))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x')))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x'), ('VAR', 'y')))",
+      "('OR', (('VAR', 'x'), ('VAR', 'y')))",
+      "('VAR', 'x')"
+    ],
+    "cf672e2a816c26f7": [
+      "('AND', (('NOT', ('VAR', 'y')), ('OR', (('VAR', 'x'), ('VAR', 'y')))))",
+      "('AND', (('NOT', ('VAR', 'y')), ('VAR', 'x')))",
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x')))",
+      "('NOT', ('NOT', ('VAR', 'x')))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x')))",
+      "('VAR', 'x')"
+    ],
+    "0460f9d0a8255d57": [
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x')))",
+      "('NOT', ('NOT', ('VAR', 'x')))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x')))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x'), ('VAR', 'y')))",
+      "('OR', (('VAR', 'x'), ('VAR', 'y')))",
+      "('VAR', 'x')"
+    ],
+    "96e90180d0d7e7c1": [
+      "('AND', (('NOT', ('VAR', 'x')), ('NOT', ('VAR', 'y'))))",
+      "('AND', (('NOT', ('VAR', 'x')), ('OR', (('VAR', 'x'), ('VAR', 'y')))))",
+      "('AND', (('NOT', ('VAR', 'x')), ('VAR', 'x')))",
+      "('AND', (('NOT', ('VAR', 'x')), ('VAR', 'x'), ('VAR', 'y')))",
+      "('AND', (('NOT', ('VAR', 'x')), ('VAR', 'y')))",
+      "('AND', (('NOT', ('VAR', 'y')), ('VAR', 'x'), ('VAR', 'y')))",
+      "('AND', (('NOT', ('VAR', 'y')), ('VAR', 'y')))",
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x'), ('VAR', 'y')))",
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'y')))",
+      "('AND', (('VAR', 'x'), ('VAR', 'y')))",
+      "('NOR', (('VAR', 'x'), ('VAR', 'y')))",
+      "('NOT', ('NOT', ('VAR', 'y')))",
+      "('NOT', ('VAR', 'x'))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('NOT', ('VAR', 'x'))))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'y')))",
+      "('OR', (('NOT', ('VAR', 'x')), ('VAR', 'y')))",
+      "('VAR', 'y')"
+    ],
+    "4193d5a0e928436f": [
+      "('AND', (('NOT', ('VAR', 'x')), ('NOT', ('VAR', 'y'))))",
+      "('NOR', (('VAR', 'x'), ('VAR', 'y')))",
+      "('NOT', ('AND', (('VAR', 'x'), ('VAR', 'y'))))",
+      "('NOT', ('VAR', 'x'))",
+      "('NOT', ('VAR', 'y'))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('NOT', ('VAR', 'x'))))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('NOT', ('VAR', 'y'))))",
+      "('OR', (('NOT', ('VAR', 'x')), ('NOT', ('VAR', 'y'))))",
+      "('OR', (('NOT', ('VAR', 'x')), ('VAR', 'x')))",
+      "('OR', (('NOT', ('VAR', 'x')), ('VAR', 'x'), ('VAR', 'y')))",
+      "('OR', (('NOT', ('VAR', 'x')), ('VAR', 'y')))",
+      "('OR', (('NOT', ('VAR', 'y')), ('VAR', 'x')))",
+      "('OR', (('NOT', ('VAR', 'y')), ('VAR', 'x'), ('VAR', 'y')))",
+      "('OR', (('NOT', ('VAR', 'y')), ('VAR', 'y')))"
+    ],
+    "eb5c49b8875cb38d": [
+      "('AND', (('NOT', ('VAR', 'x')), ('NOT', ('VAR', 'y'))))",
+      "('AND', (('NOT', ('VAR', 'x')), ('VAR', 'x')))",
+      "('AND', (('NOT', ('VAR', 'x')), ('VAR', 'x'), ('VAR', 'y')))",
+      "('AND', (('NOT', ('VAR', 'y')), ('OR', (('VAR', 'x'), ('VAR', 'y')))))",
+      "('AND', (('NOT', ('VAR', 'y')), ('VAR', 'x')))",
+      "('AND', (('NOT', ('VAR', 'y')), ('VAR', 'x'), ('VAR', 'y')))",
+      "('AND', (('NOT', ('VAR', 'y')), ('VAR', 'y')))",
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x')))",
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x'), ('VAR', 'y')))",
+      "('AND', (('VAR', 'x'), ('VAR', 'y')))",
+      "('NOR', (('VAR', 'x'), ('VAR', 'y')))",
+      "('NOT', ('NOT', ('VAR', 'x')))",
+      "('NOT', ('VAR', 'y'))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('NOT', ('VAR', 'y'))))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x')))",
+      "('OR', (('NOT', ('VAR', 'y')), ('VAR', 'x')))",
+      "('VAR', 'x')"
+    ],
+    "366130c4ee65403b": [
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('NOT', ('VAR', 'x'))))",
+      "('OR', (('NOT', ('VAR', 'x')), ('VAR', 'x')))",
+      "('OR', (('NOT', ('VAR', 'x')), ('VAR', 'x'), ('VAR', 'y')))",
+      "('OR', (('NOT', ('VAR', 'x')), ('VAR', 'y')))",
+      "('OR', (('NOT', ('VAR', 'y')), ('VAR', 'x'), ('VAR', 'y')))",
+      "('OR', (('NOT', ('VAR', 'y')), ('VAR', 'y')))"
+    ],
+    "41afe33958a0f175": [
+      "('AND', (('NOT', ('VAR', 'x')), ('OR', (('VAR', 'x'), ('VAR', 'y')))))",
+      "('AND', (('NOT', ('VAR', 'x')), ('VAR', 'x')))",
+      "('AND', (('NOT', ('VAR', 'x')), ('VAR', 'x'), ('VAR', 'y')))",
+      "('AND', (('NOT', ('VAR', 'x')), ('VAR', 'y')))",
+      "('AND', (('NOT', ('VAR', 'y')), ('OR', (('VAR', 'x'), ('VAR', 'y')))))",
+      "('AND', (('NOT', ('VAR', 'y')), ('VAR', 'x')))",
+      "('AND', (('NOT', ('VAR', 'y')), ('VAR', 'x'), ('VAR', 'y')))",
+      "('AND', (('NOT', ('VAR', 'y')), ('VAR', 'y')))",
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x')))",
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x'), ('VAR', 'y')))",
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'y')))",
+      "('AND', (('VAR', 'x'), ('VAR', 'y')))",
+      "('NOT', ('NOT', ('VAR', 'x')))",
+      "('NOT', ('NOT', ('VAR', 'y')))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x')))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x'), ('VAR', 'y')))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'y')))",
+      "('OR', (('VAR', 'x'), ('VAR', 'y')))",
+      "('VAR', 'x')",
+      "('VAR', 'y')"
+    ],
+    "4e203c42afda39ea": [
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('NOT', ('VAR', 'y'))))",
+      "('OR', (('NOT', ('VAR', 'x')), ('VAR', 'x')))",
+      "('OR', (('NOT', ('VAR', 'x')), ('VAR', 'x'), ('VAR', 'y')))",
+      "('OR', (('NOT', ('VAR', 'y')), ('VAR', 'x')))",
+      "('OR', (('NOT', ('VAR', 'y')), ('VAR', 'x'), ('VAR', 'y')))",
+      "('OR', (('NOT', ('VAR', 'y')), ('VAR', 'y')))"
+    ],
+    "78e9bb81fdfa58e9": [
+      "('AND', (('NOT', ('VAR', 'x')), ('OR', (('VAR', 'x'), ('VAR', 'y')))))",
+      "('AND', (('NOT', ('VAR', 'x')), ('VAR', 'x')))",
+      "('AND', (('NOT', ('VAR', 'x')), ('VAR', 'x'), ('VAR', 'y')))",
+      "('AND', (('NOT', ('VAR', 'x')), ('VAR', 'y')))",
+      "('AND', (('NOT', ('VAR', 'y')), ('VAR', 'x'), ('VAR', 'y')))",
+      "('AND', (('NOT', ('VAR', 'y')), ('VAR', 'y')))"
+    ],
+    "901883305471e27f": [
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x')))",
+      "('NOT', ('NOT', ('VAR', 'x')))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('NOT', ('VAR', 'y'))))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x')))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x'), ('VAR', 'y')))",
+      "('OR', (('NOT', ('VAR', 'x')), ('VAR', 'x')))",
+      "('OR', (('NOT', ('VAR', 'x')), ('VAR', 'x'), ('VAR', 'y')))",
+      "('OR', (('NOT', ('VAR', 'y')), ('VAR', 'x')))",
+      "('OR', (('NOT', ('VAR', 'y')), ('VAR', 'x'), ('VAR', 'y')))",
+      "('OR', (('NOT', ('VAR', 'y')), ('VAR', 'y')))",
+      "('OR', (('VAR', 'x'), ('VAR', 'y')))",
+      "('VAR', 'x')"
+    ],
+    "bb95a672f4564a67": [
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x')))",
+      "('NOT', ('NOT', ('VAR', 'x')))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('NOT', ('VAR', 'y'))))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x')))",
+      "('OR', (('NOT', ('VAR', 'y')), ('VAR', 'x')))",
+      "('VAR', 'x')"
+    ],
+    "bc56fbefe7c38a2a": [
+      "('AND', (('NOT', ('VAR', 'y')), ('OR', (('VAR', 'x'), ('VAR', 'y')))))",
+      "('AND', (('NOT', ('VAR', 'y')), ('VAR', 'x')))",
+      "('NOT', ('AND', (('VAR', 'x'), ('VAR', 'y'))))",
+      "('NOT', ('VAR', 'y'))",
+      "('OR', (('NOT', ('VAR', 'x')), ('NOT', ('VAR', 'y'))))"
+    ],
+    "309cb870390c832b": [
+      "('AND', (('NOT', ('VAR', 'y')), ('OR', (('VAR', 'x'), ('VAR', 'y')))))",
+      "('AND', (('NOT', ('VAR', 'y')), ('VAR', 'x')))",
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x')))",
+      "('NOT', ('NOT', ('VAR', 'x')))",
+      "('NOT', ('VAR', 'y'))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('NOT', ('VAR', 'y'))))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x')))",
+      "('OR', (('NOT', ('VAR', 'y')), ('VAR', 'x')))",
+      "('VAR', 'x')"
+    ],
+    "53d0f06e5b9f9cf5": [
+      "('AND', (('NOT', ('VAR', 'x')), ('OR', (('VAR', 'x'), ('VAR', 'y')))))",
+      "('AND', (('NOT', ('VAR', 'x')), ('VAR', 'x')))",
+      "('AND', (('NOT', ('VAR', 'x')), ('VAR', 'x'), ('VAR', 'y')))",
+      "('AND', (('NOT', ('VAR', 'x')), ('VAR', 'y')))",
+      "('AND', (('NOT', ('VAR', 'y')), ('VAR', 'x'), ('VAR', 'y')))",
+      "('AND', (('NOT', ('VAR', 'y')), ('VAR', 'y')))",
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x'), ('VAR', 'y')))",
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'y')))",
+      "('AND', (('VAR', 'x'), ('VAR', 'y')))",
+      "('NOT', ('NOT', ('VAR', 'y')))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'y')))",
+      "('VAR', 'y')"
+    ],
+    "2f44f7747e67ffb6": [
+      "('NOT', ('AND', (('VAR', 'x'), ('VAR', 'y'))))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x'), ('VAR', 'y')))",
+      "('OR', (('NOT', ('VAR', 'x')), ('NOT', ('VAR', 'y'))))",
+      "('OR', (('NOT', ('VAR', 'x')), ('VAR', 'x')))",
+      "('OR', (('NOT', ('VAR', 'x')), ('VAR', 'x'), ('VAR', 'y')))",
+      "('OR', (('NOT', ('VAR', 'y')), ('VAR', 'x'), ('VAR', 'y')))",
+      "('OR', (('NOT', ('VAR', 'y')), ('VAR', 'y')))",
+      "('OR', (('VAR', 'x'), ('VAR', 'y')))"
+    ],
+    "af3d6162e50915b5": [
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x'), ('VAR', 'y')))",
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'y')))",
+      "('AND', (('VAR', 'x'), ('VAR', 'y')))",
+      "('NOT', ('NOT', ('VAR', 'y')))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('NOT', ('VAR', 'x'))))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'y')))",
+      "('OR', (('NOT', ('VAR', 'x')), ('VAR', 'y')))",
+      "('VAR', 'y')"
+    ],
+    "b6e6f6b6a9c5ed13": [
+      "('AND', (('NOT', ('VAR', 'x')), ('OR', (('VAR', 'x'), ('VAR', 'y')))))",
+      "('AND', (('NOT', ('VAR', 'x')), ('VAR', 'y')))",
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'y')))",
+      "('NOT', ('NOT', ('VAR', 'y')))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x'), ('VAR', 'y')))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'y')))",
+      "('OR', (('VAR', 'x'), ('VAR', 'y')))",
+      "('VAR', 'y')"
+    ],
+    "ood3_d9f07c127323ab2b": [
+      "('AND', (('NOT', ('VAR', 'x')), ('NOT', ('VAR', 'y'))))",
+      "('AND', (('NOT', ('VAR', 'x')), ('NOT', ('VAR', 'z'))))",
+      "('AND', (('NOT', ('VAR', 'x')), ('OR', (('VAR', 'x'), ('VAR', 'y')))))",
+      "('AND', (('NOT', ('VAR', 'x')), ('OR', (('VAR', 'x'), ('VAR', 'z')))))",
+      "('AND', (('NOT', ('VAR', 'x')), ('OR', (('VAR', 'y'), ('VAR', 'z')))))",
+      "('AND', (('NOT', ('VAR', 'x')), ('VAR', 'x')))",
+      "('AND', (('NOT', ('VAR', 'x')), ('VAR', 'x'), ('VAR', 'y')))",
+      "('AND', (('NOT', ('VAR', 'x')), ('VAR', 'x'), ('VAR', 'z')))",
+      "('AND', (('NOT', ('VAR', 'x')), ('VAR', 'y')))",
+      "('AND', (('NOT', ('VAR', 'x')), ('VAR', 'y'), ('VAR', 'z')))",
+      "('AND', (('NOT', ('VAR', 'x')), ('VAR', 'z')))",
+      "('AND', (('NOT', ('VAR', 'y')), ('NOT', ('VAR', 'z'))))",
+      "('AND', (('NOT', ('VAR', 'y')), ('VAR', 'x'), ('VAR', 'y')))",
+      "('AND', (('NOT', ('VAR', 'y')), ('VAR', 'y')))",
+      "('AND', (('NOT', ('VAR', 'y')), ('VAR', 'y'), ('VAR', 'z')))",
+      "('AND', (('NOT', ('VAR', 'z')), ('OR', (('VAR', 'x'), ('VAR', 'y')))))",
+      "('AND', (('NOT', ('VAR', 'z')), ('OR', (('VAR', 'x'), ('VAR', 'z')))))",
+      "('AND', (('NOT', ('VAR', 'z')), ('OR', (('VAR', 'y'), ('VAR', 'z')))))",
+      "('AND', (('NOT', ('VAR', 'z')), ('VAR', 'x')))",
+      "('AND', (('NOT', ('VAR', 'z')), ('VAR', 'x'), ('VAR', 'y')))",
+      "('AND', (('NOT', ('VAR', 'z')), ('VAR', 'x'), ('VAR', 'z')))",
+      "('AND', (('NOT', ('VAR', 'z')), ('VAR', 'y')))",
+      "('AND', (('NOT', ('VAR', 'z')), ('VAR', 'y'), ('VAR', 'z')))",
+      "('AND', (('NOT', ('VAR', 'z')), ('VAR', 'z')))",
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x'), ('VAR', 'y')))",
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'y')))",
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'y'), ('VAR', 'z')))",
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'z'))), ('VAR', 'x'), ('VAR', 'y')))",
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'z'))), ('VAR', 'y')))",
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'z'))), ('VAR', 'y'), ('VAR', 'z')))",
+      "('AND', (('OR', (('VAR', 'y'), ('VAR', 'z'))), ('VAR', 'x'), ('VAR', 'y')))",
+      "('AND', (('OR', (('VAR', 'y'), ('VAR', 'z'))), ('VAR', 'y')))",
+      "('AND', (('OR', (('VAR', 'y'), ('VAR', 'z'))), ('VAR', 'y'), ('VAR', 'z')))",
+      "('AND', (('VAR', 'x'), ('VAR', 'y')))",
+      "('AND', (('VAR', 'x'), ('VAR', 'y'), ('VAR', 'z')))",
+      "('AND', (('VAR', 'y'), ('VAR', 'z')))",
+      "('NOR', (('VAR', 'x'), ('VAR', 'y')))",
+      "('NOR', (('VAR', 'x'), ('VAR', 'z')))",
+      "('NOR', (('VAR', 'y'), ('VAR', 'z')))",
+      "('NOT', ('AND', (('VAR', 'x'), ('VAR', 'z'))))",
+      "('NOT', ('NOT', ('VAR', 'y')))",
+      "('NOT', ('VAR', 'x'))",
+      "('NOT', ('VAR', 'z'))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('AND', (('VAR', 'y'), ('VAR', 'z')))))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('NOT', ('VAR', 'x'))))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('NOT', ('VAR', 'z'))))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'y')))",
+      "('OR', (('AND', (('VAR', 'y'), ('VAR', 'z'))), ('NOT', ('VAR', 'x'))))",
+      "('OR', (('AND', (('VAR', 'y'), ('VAR', 'z'))), ('NOT', ('VAR', 'z'))))",
+      "('OR', (('AND', (('VAR', 'y'), ('VAR', 'z'))), ('VAR', 'y')))",
+      "('OR', (('NOT', ('VAR', 'x')), ('NOT', ('VAR', 'z'))))",
+      "('OR', (('NOT', ('VAR', 'x')), ('VAR', 'y')))",
+      "('OR', (('NOT', ('VAR', 'z')), ('VAR', 'y')))",
+      "('VAR', 'y')"
+    ],
+    "ood3_54aa97fc81809577": [
+      "('AND', (('NOT', ('VAR', 'x')), ('NOT', ('VAR', 'y'))))",
+      "('AND', (('NOT', ('VAR', 'x')), ('NOT', ('VAR', 'z'))))",
+      "('AND', (('NOT', ('VAR', 'x')), ('OR', (('VAR', 'x'), ('VAR', 'y')))))",
+      "('AND', (('NOT', ('VAR', 'x')), ('OR', (('VAR', 'x'), ('VAR', 'z')))))",
+      "('AND', (('NOT', ('VAR', 'x')), ('OR', (('VAR', 'y'), ('VAR', 'z')))))",
+      "('AND', (('NOT', ('VAR', 'x')), ('VAR', 'x')))",
+      "('AND', (('NOT', ('VAR', 'x')), ('VAR', 'x'), ('VAR', 'y')))",
+      "('AND', (('NOT', ('VAR', 'x')), ('VAR', 'x'), ('VAR', 'z')))",
+      "('AND', (('NOT', ('VAR', 'x')), ('VAR', 'y')))",
+      "('AND', (('NOT', ('VAR', 'x')), ('VAR', 'y'), ('VAR', 'z')))",
+      "('AND', (('NOT', ('VAR', 'x')), ('VAR', 'z')))",
+      "('AND', (('NOT', ('VAR', 'y')), ('NOT', ('VAR', 'z'))))",
+      "('AND', (('NOT', ('VAR', 'y')), ('OR', (('VAR', 'x'), ('VAR', 'y')))))",
+      "('AND', (('NOT', ('VAR', 'y')), ('OR', (('VAR', 'x'), ('VAR', 'z')))))",
+      "('AND', (('NOT', ('VAR', 'y')), ('OR', (('VAR', 'y'), ('VAR', 'z')))))",
+      "('AND', (('NOT', ('VAR', 'y')), ('VAR', 'x')))",
+      "('AND', (('NOT', ('VAR', 'y')), ('VAR', 'x'), ('VAR', 'y')))",
+      "('AND', (('NOT', ('VAR', 'y')), ('VAR', 'x'), ('VAR', 'z')))",
+      "('AND', (('NOT', ('VAR', 'y')), ('VAR', 'y')))",
+      "('AND', (('NOT', ('VAR', 'y')), ('VAR', 'y'), ('VAR', 'z')))",
+      "('AND', (('NOT', ('VAR', 'y')), ('VAR', 'z')))",
+      "('AND', (('NOT', ('VAR', 'z')), ('VAR', 'x'), ('VAR', 'z')))",
+      "('AND', (('NOT', ('VAR', 'z')), ('VAR', 'y'), ('VAR', 'z')))",
+      "('AND', (('NOT', ('VAR', 'z')), ('VAR', 'z')))",
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x'), ('VAR', 'z')))",
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'y'), ('VAR', 'z')))",
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'z')))",
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'z'))), ('VAR', 'x'), ('VAR', 'z')))",
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'z'))), ('VAR', 'y'), ('VAR', 'z')))",
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'z'))), ('VAR', 'z')))",
+      "('AND', (('OR', (('VAR', 'y'), ('VAR', 'z'))), ('VAR', 'x'), ('VAR', 'z')))",
+      "('AND', (('OR', (('VAR', 'y'), ('VAR', 'z'))), ('VAR', 'y'), ('VAR', 'z')))",
+      "('AND', (('OR', (('VAR', 'y'), ('VAR', 'z'))), ('VAR', 'z')))",
+      "('AND', (('VAR', 'x'), ('VAR', 'y'), ('VAR', 'z')))",
+      "('AND', (('VAR', 'x'), ('VAR', 'z')))",
+      "('AND', (('VAR', 'y'), ('VAR', 'z')))",
+      "('NOR', (('VAR', 'x'), ('VAR', 'y')))",
+      "('NOR', (('VAR', 'x'), ('VAR', 'z')))",
+      "('NOR', (('VAR', 'y'), ('VAR', 'z')))",
+      "('NOT', ('AND', (('VAR', 'x'), ('VAR', 'y'))))",
+      "('NOT', ('NOT', ('VAR', 'z')))",
+      "('NOT', ('VAR', 'x'))",
+      "('NOT', ('VAR', 'y'))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'z'))), ('AND', (('VAR', 'y'), ('VAR', 'z')))))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'z'))), ('NOT', ('VAR', 'x'))))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'z'))), ('NOT', ('VAR', 'y'))))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'z'))), ('VAR', 'z')))",
+      "('OR', (('AND', (('VAR', 'y'), ('VAR', 'z'))), ('NOT', ('VAR', 'x'))))",
+      "('OR', (('AND', (('VAR', 'y'), ('VAR', 'z'))), ('NOT', ('VAR', 'y'))))",
+      "('OR', (('AND', (('VAR', 'y'), ('VAR', 'z'))), ('VAR', 'z')))",
+      "('OR', (('NOT', ('VAR', 'x')), ('NOT', ('VAR', 'y'))))",
+      "('OR', (('NOT', ('VAR', 'x')), ('VAR', 'z')))",
+      "('OR', (('NOT', ('VAR', 'y')), ('VAR', 'z')))",
+      "('VAR', 'z')"
+    ],
+    "ood3_e1fc1bb8c6a25e30": [
+      "('AND', (('NOT', ('VAR', 'x')), ('NOT', ('VAR', 'y'))))",
+      "('AND', (('NOT', ('VAR', 'x')), ('NOT', ('VAR', 'z'))))",
+      "('AND', (('NOT', ('VAR', 'x')), ('OR', (('VAR', 'x'), ('VAR', 'y')))))",
+      "('AND', (('NOT', ('VAR', 'x')), ('OR', (('VAR', 'x'), ('VAR', 'z')))))",
+      "('AND', (('NOT', ('VAR', 'x')), ('OR', (('VAR', 'y'), ('VAR', 'z')))))",
+      "('AND', (('NOT', ('VAR', 'x')), ('VAR', 'x')))",
+      "('AND', (('NOT', ('VAR', 'x')), ('VAR', 'x'), ('VAR', 'y')))",
+      "('AND', (('NOT', ('VAR', 'x')), ('VAR', 'x'), ('VAR', 'z')))",
+      "('AND', (('NOT', ('VAR', 'x')), ('VAR', 'y')))",
+      "('AND', (('NOT', ('VAR', 'x')), ('VAR', 'y'), ('VAR', 'z')))",
+      "('AND', (('NOT', ('VAR', 'x')), ('VAR', 'z')))",
+      "('AND', (('NOT', ('VAR', 'y')), ('NOT', ('VAR', 'z'))))",
+      "('AND', (('NOT', ('VAR', 'y')), ('OR', (('VAR', 'x'), ('VAR', 'y')))))",
+      "('AND', (('NOT', ('VAR', 'y')), ('OR', (('VAR', 'x'), ('VAR', 'z')))))",
+      "('AND', (('NOT', ('VAR', 'y')), ('OR', (('VAR', 'y'), ('VAR', 'z')))))",
+      "('AND', (('NOT', ('VAR', 'y')), ('VAR', 'x')))",
+      "('AND', (('NOT', ('VAR', 'y')), ('VAR', 'x'), ('VAR', 'y')))",
+      "('AND', (('NOT', ('VAR', 'y')), ('VAR', 'x'), ('VAR', 'z')))",
+      "('AND', (('NOT', ('VAR', 'y')), ('VAR', 'y')))",
+      "('AND', (('NOT', ('VAR', 'y')), ('VAR', 'y'), ('VAR', 'z')))",
+      "('AND', (('NOT', ('VAR', 'y')), ('VAR', 'z')))",
+      "('AND', (('NOT', ('VAR', 'z')), ('OR', (('VAR', 'x'), ('VAR', 'y')))))",
+      "('AND', (('NOT', ('VAR', 'z')), ('OR', (('VAR', 'x'), ('VAR', 'z')))))",
+      "('AND', (('NOT', ('VAR', 'z')), ('OR', (('VAR', 'y'), ('VAR', 'z')))))",
+      "('AND', (('NOT', ('VAR', 'z')), ('VAR', 'x')))",
+      "('AND', (('NOT', ('VAR', 'z')), ('VAR', 'x'), ('VAR', 'y')))",
+      "('AND', (('NOT', ('VAR', 'z')), ('VAR', 'x'), ('VAR', 'z')))",
+      "('AND', (('NOT', ('VAR', 'z')), ('VAR', 'y')))",
+      "('AND', (('NOT', ('VAR', 'z')), ('VAR', 'y'), ('VAR', 'z')))",
+      "('AND', (('NOT', ('VAR', 'z')), ('VAR', 'z')))",
+      "('NOR', (('VAR', 'x'), ('VAR', 'y')))",
+      "('NOR', (('VAR', 'x'), ('VAR', 'z')))",
+      "('NOR', (('VAR', 'y'), ('VAR', 'z')))",
+      "('NOT', ('AND', (('VAR', 'x'), ('VAR', 'y'))))",
+      "('NOT', ('AND', (('VAR', 'x'), ('VAR', 'z'))))",
+      "('NOT', ('AND', (('VAR', 'y'), ('VAR', 'z'))))",
+      "('NOT', ('VAR', 'x'))",
+      "('NOT', ('VAR', 'y'))",
+      "('NOT', ('VAR', 'z'))",
+      "('OR', (('NOT', ('VAR', 'x')), ('NOT', ('VAR', 'y'))))",
+      "('OR', (('NOT', ('VAR', 'x')), ('NOT', ('VAR', 'z'))))",
+      "('OR', (('NOT', ('VAR', 'y')), ('NOT', ('VAR', 'z'))))"
+    ],
+    "ood3_a120889477c9e5bc": [
+      "('AND', (('NOT', ('VAR', 'x')), ('NOT', ('VAR', 'z'))))",
+      "('AND', (('NOT', ('VAR', 'x')), ('OR', (('VAR', 'x'), ('VAR', 'y')))))",
+      "('AND', (('NOT', ('VAR', 'x')), ('VAR', 'x')))",
+      "('AND', (('NOT', ('VAR', 'x')), ('VAR', 'x'), ('VAR', 'y')))",
+      "('AND', (('NOT', ('VAR', 'x')), ('VAR', 'x'), ('VAR', 'z')))",
+      "('AND', (('NOT', ('VAR', 'x')), ('VAR', 'y')))",
+      "('AND', (('NOT', ('VAR', 'x')), ('VAR', 'y'), ('VAR', 'z')))",
+      "('AND', (('NOT', ('VAR', 'y')), ('NOT', ('VAR', 'z'))))",
+      "('AND', (('NOT', ('VAR', 'y')), ('OR', (('VAR', 'x'), ('VAR', 'y')))))",
+      "('AND', (('NOT', ('VAR', 'y')), ('VAR', 'x')))",
+      "('AND', (('NOT', ('VAR', 'y')), ('VAR', 'x'), ('VAR', 'y')))",
+      "('AND', (('NOT', ('VAR', 'y')), ('VAR', 'x'), ('VAR', 'z')))",
+      "('AND', (('NOT', ('VAR', 'y')), ('VAR', 'y')))",
+      "('AND', (('NOT', ('VAR', 'y')), ('VAR', 'y'), ('VAR', 'z')))",
+      "('AND', (('NOT', ('VAR', 'z')), ('OR', (('VAR', 'x'), ('VAR', 'y')))))",
+      "('AND', (('NOT', ('VAR', 'z')), ('OR', (('VAR', 'x'), ('VAR', 'z')))))",
+      "('AND', (('NOT', ('VAR', 'z')), ('OR', (('VAR', 'y'), ('VAR', 'z')))))",
+      "('AND', (('NOT', ('VAR', 'z')), ('VAR', 'x')))",
+      "('AND', (('NOT', ('VAR', 'z')), ('VAR', 'x'), ('VAR', 'y')))",
+      "('AND', (('NOT', ('VAR', 'z')), ('VAR', 'x'), ('VAR', 'z')))",
+      "('AND', (('NOT', ('VAR', 'z')), ('VAR', 'y')))",
+      "('AND', (('NOT', ('VAR', 'z')), ('VAR', 'y'), ('VAR', 'z')))",
+      "('AND', (('NOT', ('VAR', 'z')), ('VAR', 'z')))",
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'y'))), ('OR', (('VAR', 'x'), ('VAR', 'z')))))",
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'y'))), ('OR', (('VAR', 'y'), ('VAR', 'z')))))",
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x')))",
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x'), ('VAR', 'y')))",
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x'), ('VAR', 'z')))",
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'y')))",
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'y'), ('VAR', 'z')))",
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'z')))",
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'z'))), ('VAR', 'x')))",
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'z'))), ('VAR', 'x'), ('VAR', 'y')))",
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'z'))), ('VAR', 'x'), ('VAR', 'z')))",
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'z'))), ('VAR', 'y')))",
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'z'))), ('VAR', 'y'), ('VAR', 'z')))",
+      "('AND', (('OR', (('VAR', 'y'), ('VAR', 'z'))), ('VAR', 'x')))",
+      "('AND', (('OR', (('VAR', 'y'), ('VAR', 'z'))), ('VAR', 'x'), ('VAR', 'y')))",
+      "('AND', (('OR', (('VAR', 'y'), ('VAR', 'z'))), ('VAR', 'x'), ('VAR', 'z')))",
+      "('AND', (('OR', (('VAR', 'y'), ('VAR', 'z'))), ('VAR', 'y')))",
+      "('AND', (('OR', (('VAR', 'y'), ('VAR', 'z'))), ('VAR', 'y'), ('VAR', 'z')))",
+      "('AND', (('VAR', 'x'), ('VAR', 'y')))",
+      "('AND', (('VAR', 'x'), ('VAR', 'y'), ('VAR', 'z')))",
+      "('AND', (('VAR', 'x'), ('VAR', 'z')))",
+      "('AND', (('VAR', 'y'), ('VAR', 'z')))",
+      "('NOR', (('VAR', 'x'), ('VAR', 'z')))",
+      "('NOR', (('VAR', 'y'), ('VAR', 'z')))",
+      "('NOT', ('NOT', ('VAR', 'x')))",
+      "('NOT', ('NOT', ('VAR', 'y')))",
+      "('NOT', ('VAR', 'z'))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('AND', (('VAR', 'x'), ('VAR', 'z')))))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('AND', (('VAR', 'y'), ('VAR', 'z')))))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('NOT', ('VAR', 'z'))))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x')))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x'), ('VAR', 'y')))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'y')))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'z'))), ('AND', (('VAR', 'y'), ('VAR', 'z')))))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'z'))), ('NOT', ('VAR', 'z'))))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'z'))), ('VAR', 'x')))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'z'))), ('VAR', 'x'), ('VAR', 'y')))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'z'))), ('VAR', 'y')))",
+      "('OR', (('AND', (('VAR', 'y'), ('VAR', 'z'))), ('NOT', ('VAR', 'z'))))",
+      "('OR', (('AND', (('VAR', 'y'), ('VAR', 'z'))), ('VAR', 'x')))",
+      "('OR', (('AND', (('VAR', 'y'), ('VAR', 'z'))), ('VAR', 'x'), ('VAR', 'y')))",
+      "('OR', (('AND', (('VAR', 'y'), ('VAR', 'z'))), ('VAR', 'y')))",
+      "('OR', (('NOT', ('VAR', 'z')), ('VAR', 'x')))",
+      "('OR', (('NOT', ('VAR', 'z')), ('VAR', 'x'), ('VAR', 'y')))",
+      "('OR', (('NOT', ('VAR', 'z')), ('VAR', 'y')))",
+      "('OR', (('VAR', 'x'), ('VAR', 'y')))",
+      "('VAR', 'x')",
+      "('VAR', 'y')"
+    ],
+    "ood3_09dbb864d143768a": [
+      "('AND', (('NOT', ('VAR', 'x')), ('NOT', ('VAR', 'y'))))",
+      "('AND', (('NOT', ('VAR', 'x')), ('OR', (('VAR', 'x'), ('VAR', 'z')))))",
+      "('AND', (('NOT', ('VAR', 'x')), ('VAR', 'x')))",
+      "('AND', (('NOT', ('VAR', 'x')), ('VAR', 'x'), ('VAR', 'y')))",
+      "('AND', (('NOT', ('VAR', 'x')), ('VAR', 'x'), ('VAR', 'z')))",
+      "('AND', (('NOT', ('VAR', 'x')), ('VAR', 'y'), ('VAR', 'z')))",
+      "('AND', (('NOT', ('VAR', 'x')), ('VAR', 'z')))",
+      "('AND', (('NOT', ('VAR', 'y')), ('NOT', ('VAR', 'z'))))",
+      "('AND', (('NOT', ('VAR', 'y')), ('OR', (('VAR', 'x'), ('VAR', 'y')))))",
+      "('AND', (('NOT', ('VAR', 'y')), ('OR', (('VAR', 'x'), ('VAR', 'z')))))",
+      "('AND', (('NOT', ('VAR', 'y')), ('OR', (('VAR', 'y'), ('VAR', 'z')))))",
+      "('AND', (('NOT', ('VAR', 'y')), ('VAR', 'x')))",
+      "('AND', (('NOT', ('VAR', 'y')), ('VAR', 'x'), ('VAR', 'y')))",
+      "('AND', (('NOT', ('VAR', 'y')), ('VAR', 'x'), ('VAR', 'z')))",
+      "('AND', (('NOT', ('VAR', 'y')), ('VAR', 'y')))",
+      "('AND', (('NOT', ('VAR', 'y')), ('VAR', 'y'), ('VAR', 'z')))",
+      "('AND', (('NOT', ('VAR', 'y')), ('VAR', 'z')))",
+      "('AND', (('NOT', ('VAR', 'z')), ('VAR', 'x'), ('VAR', 'z')))",
+      "('AND', (('NOT', ('VAR', 'z')), ('VAR', 'y'), ('VAR', 'z')))",
+      "('AND', (('NOT', ('VAR', 'z')), ('VAR', 'z')))",
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x'), ('VAR', 'z')))",
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'y'), ('VAR', 'z')))",
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'z')))",
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'z'))), ('VAR', 'x'), ('VAR', 'z')))",
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'z'))), ('VAR', 'y'), ('VAR', 'z')))",
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'z'))), ('VAR', 'z')))",
+      "('AND', (('OR', (('VAR', 'y'), ('VAR', 'z'))), ('VAR', 'x'), ('VAR', 'z')))",
+      "('AND', (('OR', (('VAR', 'y'), ('VAR', 'z'))), ('VAR', 'y'), ('VAR', 'z')))",
+      "('AND', (('OR', (('VAR', 'y'), ('VAR', 'z'))), ('VAR', 'z')))",
+      "('AND', (('VAR', 'x'), ('VAR', 'y'), ('VAR', 'z')))",
+      "('AND', (('VAR', 'x'), ('VAR', 'z')))",
+      "('AND', (('VAR', 'y'), ('VAR', 'z')))",
+      "('NOR', (('VAR', 'x'), ('VAR', 'y')))",
+      "('NOR', (('VAR', 'y'), ('VAR', 'z')))",
+      "('NOT', ('NOT', ('VAR', 'z')))",
+      "('NOT', ('VAR', 'y'))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'z'))), ('AND', (('VAR', 'y'), ('VAR', 'z')))))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'z'))), ('NOT', ('VAR', 'y'))))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'z'))), ('VAR', 'z')))",
+      "('OR', (('AND', (('VAR', 'y'), ('VAR', 'z'))), ('NOT', ('VAR', 'y'))))",
+      "('OR', (('AND', (('VAR', 'y'), ('VAR', 'z'))), ('VAR', 'z')))",
+      "('OR', (('NOT', ('VAR', 'y')), ('VAR', 'z')))",
+      "('VAR', 'z')"
+    ],
+    "ood3_e4fb86da0170ce35": [
+      "('AND', (('NOT', ('VAR', 'x')), ('NOT', ('VAR', 'y'))))",
+      "('AND', (('NOT', ('VAR', 'x')), ('NOT', ('VAR', 'z'))))",
+      "('AND', (('NOT', ('VAR', 'y')), ('NOT', ('VAR', 'z'))))",
+      "('NOR', (('VAR', 'x'), ('VAR', 'y')))",
+      "('NOR', (('VAR', 'x'), ('VAR', 'z')))",
+      "('NOR', (('VAR', 'y'), ('VAR', 'z')))",
+      "('NOT', ('AND', (('VAR', 'x'), ('VAR', 'z'))))",
+      "('NOT', ('VAR', 'x'))",
+      "('NOT', ('VAR', 'z'))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('NOT', ('VAR', 'x'))))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('NOT', ('VAR', 'z'))))",
+      "('OR', (('AND', (('VAR', 'y'), ('VAR', 'z'))), ('NOT', ('VAR', 'x'))))",
+      "('OR', (('AND', (('VAR', 'y'), ('VAR', 'z'))), ('NOT', ('VAR', 'z'))))",
+      "('OR', (('NOT', ('VAR', 'x')), ('NOT', ('VAR', 'z'))))",
+      "('OR', (('NOT', ('VAR', 'x')), ('VAR', 'y')))",
+      "('OR', (('NOT', ('VAR', 'z')), ('VAR', 'y')))"
+    ],
+    "ood3_18d7dceceb4d22cd": [
+      "('AND', (('NOT', ('VAR', 'x')), ('NOT', ('VAR', 'y'))))",
+      "('AND', (('NOT', ('VAR', 'x')), ('OR', (('VAR', 'x'), ('VAR', 'z')))))",
+      "('AND', (('NOT', ('VAR', 'x')), ('OR', (('VAR', 'y'), ('VAR', 'z')))))",
+      "('AND', (('NOT', ('VAR', 'x')), ('VAR', 'z')))",
+      "('AND', (('NOT', ('VAR', 'y')), ('OR', (('VAR', 'x'), ('VAR', 'z')))))",
+      "('AND', (('NOT', ('VAR', 'y')), ('OR', (('VAR', 'y'), ('VAR', 'z')))))",
+      "('AND', (('NOT', ('VAR', 'y')), ('VAR', 'z')))",
+      "('NOR', (('VAR', 'x'), ('VAR', 'y')))",
+      "('NOT', ('AND', (('VAR', 'x'), ('VAR', 'y'))))",
+      "('NOT', ('AND', (('VAR', 'x'), ('VAR', 'z'))))",
+      "('NOT', ('AND', (('VAR', 'y'), ('VAR', 'z'))))",
+      "('NOT', ('VAR', 'x'))",
+      "('NOT', ('VAR', 'y'))",
+      "('OR', (('NOT', ('VAR', 'x')), ('NOT', ('VAR', 'y'))))",
+      "('OR', (('NOT', ('VAR', 'x')), ('NOT', ('VAR', 'z'))))",
+      "('OR', (('NOT', ('VAR', 'y')), ('NOT', ('VAR', 'z'))))"
+    ],
+    "ood3_6c4661374aaba3ce": [
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'y'))), ('OR', (('VAR', 'x'), ('VAR', 'z')))))",
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'y'))), ('OR', (('VAR', 'y'), ('VAR', 'z')))))",
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'y')))",
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'z'))), ('OR', (('VAR', 'y'), ('VAR', 'z')))))",
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'z'))), ('VAR', 'y')))",
+      "('AND', (('OR', (('VAR', 'y'), ('VAR', 'z'))), ('VAR', 'y')))",
+      "('NOT', ('AND', (('VAR', 'x'), ('VAR', 'z'))))",
+      "('NOT', ('NOT', ('VAR', 'y')))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('AND', (('VAR', 'y'), ('VAR', 'z')))))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('NOT', ('VAR', 'x'))))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x'), ('VAR', 'y')))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x'), ('VAR', 'z')))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'y')))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'y'), ('VAR', 'z')))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'z')))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'z'))), ('VAR', 'x'), ('VAR', 'y')))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'z'))), ('VAR', 'x'), ('VAR', 'z')))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'z'))), ('VAR', 'y')))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'z'))), ('VAR', 'y'), ('VAR', 'z')))",
+      "('OR', (('AND', (('VAR', 'y'), ('VAR', 'z'))), ('NOT', ('VAR', 'z'))))",
+      "('OR', (('AND', (('VAR', 'y'), ('VAR', 'z'))), ('VAR', 'x')))",
+      "('OR', (('AND', (('VAR', 'y'), ('VAR', 'z'))), ('VAR', 'x'), ('VAR', 'y')))",
+      "('OR', (('AND', (('VAR', 'y'), ('VAR', 'z'))), ('VAR', 'x'), ('VAR', 'z')))",
+      "('OR', (('AND', (('VAR', 'y'), ('VAR', 'z'))), ('VAR', 'y')))",
+      "('OR', (('AND', (('VAR', 'y'), ('VAR', 'z'))), ('VAR', 'y'), ('VAR', 'z')))",
+      "('OR', (('NOT', ('VAR', 'x')), ('NOT', ('VAR', 'z'))))",
+      "('OR', (('NOT', ('VAR', 'x')), ('VAR', 'x')))",
+      "('OR', (('NOT', ('VAR', 'x')), ('VAR', 'x'), ('VAR', 'y')))",
+      "('OR', (('NOT', ('VAR', 'x')), ('VAR', 'x'), ('VAR', 'z')))",
+      "('OR', (('NOT', ('VAR', 'x')), ('VAR', 'y')))",
+      "('OR', (('NOT', ('VAR', 'x')), ('VAR', 'y'), ('VAR', 'z')))",
+      "('OR', (('NOT', ('VAR', 'y')), ('VAR', 'x'), ('VAR', 'y')))",
+      "('OR', (('NOT', ('VAR', 'y')), ('VAR', 'x'), ('VAR', 'z')))",
+      "('OR', (('NOT', ('VAR', 'y')), ('VAR', 'y')))",
+      "('OR', (('NOT', ('VAR', 'y')), ('VAR', 'y'), ('VAR', 'z')))",
+      "('OR', (('NOT', ('VAR', 'z')), ('VAR', 'x'), ('VAR', 'y')))",
+      "('OR', (('NOT', ('VAR', 'z')), ('VAR', 'x'), ('VAR', 'z')))",
+      "('OR', (('NOT', ('VAR', 'z')), ('VAR', 'y')))",
+      "('OR', (('NOT', ('VAR', 'z')), ('VAR', 'y'), ('VAR', 'z')))",
+      "('OR', (('NOT', ('VAR', 'z')), ('VAR', 'z')))",
+      "('OR', (('VAR', 'x'), ('VAR', 'y')))",
+      "('OR', (('VAR', 'x'), ('VAR', 'y'), ('VAR', 'z')))",
+      "('OR', (('VAR', 'x'), ('VAR', 'z')))",
+      "('OR', (('VAR', 'y'), ('VAR', 'z')))",
+      "('VAR', 'y')"
+    ],
+    "ood3_34f1d7870a63c953": [
+      "('AND', (('NOT', ('VAR', 'y')), ('OR', (('VAR', 'x'), ('VAR', 'z')))))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x'), ('VAR', 'z')))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'z'))), ('VAR', 'x'), ('VAR', 'z')))",
+      "('OR', (('AND', (('VAR', 'y'), ('VAR', 'z'))), ('VAR', 'x'), ('VAR', 'z')))",
+      "('OR', (('VAR', 'x'), ('VAR', 'y'), ('VAR', 'z')))",
+      "('OR', (('VAR', 'x'), ('VAR', 'z')))"
+    ],
+    "ood3_6ae243bad80796ae": [
+      "('NOT', ('AND', (('VAR', 'y'), ('VAR', 'z'))))",
+      "('NOT', ('VAR', 'z'))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('NOT', ('VAR', 'y'))))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('NOT', ('VAR', 'z'))))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'z'))), ('NOT', ('VAR', 'z'))))",
+      "('OR', (('NOT', ('VAR', 'y')), ('NOT', ('VAR', 'z'))))",
+      "('OR', (('NOT', ('VAR', 'y')), ('VAR', 'x')))",
+      "('OR', (('NOT', ('VAR', 'z')), ('VAR', 'x')))"
+    ],
+    "ood3_d24b1825967de907": [
+      "('AND', (('NOT', ('VAR', 'x')), ('NOT', ('VAR', 'y'))))",
+      "('AND', (('NOT', ('VAR', 'x')), ('OR', (('VAR', 'x'), ('VAR', 'z')))))",
+      "('AND', (('NOT', ('VAR', 'x')), ('OR', (('VAR', 'y'), ('VAR', 'z')))))",
+      "('AND', (('NOT', ('VAR', 'x')), ('VAR', 'z')))",
+      "('NOR', (('VAR', 'x'), ('VAR', 'y')))",
+      "('NOT', ('AND', (('VAR', 'x'), ('VAR', 'z'))))",
+      "('NOT', ('VAR', 'x'))",
+      "('OR', (('NOT', ('VAR', 'x')), ('NOT', ('VAR', 'z'))))"
+    ],
+    "ood3_550dcc5c959bb2f5": [
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'y'))), ('OR', (('VAR', 'x'), ('VAR', 'z')))))",
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x')))",
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'z'))), ('OR', (('VAR', 'y'), ('VAR', 'z')))))",
+      "('AND', (('OR', (('VAR', 'x'), ('VAR', 'z'))), ('VAR', 'x')))",
+      "('AND', (('OR', (('VAR', 'y'), ('VAR', 'z'))), ('VAR', 'x')))",
+      "('NOT', ('NOT', ('VAR', 'x')))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('AND', (('VAR', 'x'), ('VAR', 'z')))))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('NOT', ('VAR', 'y'))))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x')))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x'), ('VAR', 'z')))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'z')))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'z'))), ('VAR', 'x')))",
+      "('OR', (('AND', (('VAR', 'x'), ('VAR', 'z'))), ('VAR', 'x'), ('VAR', 'z')))",
+      "('OR', (('AND', (('VAR', 'y'), ('VAR', 'z'))), ('VAR', 'x')))",
+      "('OR', (('AND', (('VAR', 'y'), ('VAR', 'z'))), ('VAR', 'x'), ('VAR', 'z')))",
+      "('OR', (('NOT', ('VAR', 'y')), ('VAR', 'x')))",
+      "('OR', (('NOT', ('VAR', 'y')), ('VAR', 'x'), ('VAR', 'z')))",
+      "('OR', (('VAR', 'x'), ('VAR', 'z')))",
+      "('VAR', 'x')"
+    ]
+  },
+  "new_universe": [
+    {
+      "key": "('AND', (('NOT', ('VAR', 'x')), ('NOT', ('VAR', 'y'))))",
+      "truth": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "key": "('AND', (('NOT', ('VAR', 'x')), ('NOT', ('VAR', 'z'))))",
+      "truth": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "key": "('AND', (('NOT', ('VAR', 'x')), ('OR', (('VAR', 'x'), ('VAR', 'y')))))",
+      "truth": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "key": "('AND', (('NOT', ('VAR', 'x')), ('OR', (('VAR', 'x'), ('VAR', 'z')))))",
+      "truth": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "key": "('AND', (('NOT', ('VAR', 'x')), ('OR', (('VAR', 'y'), ('VAR', 'z')))))",
+      "truth": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "key": "('AND', (('NOT', ('VAR', 'x')), ('VAR', 'x')))",
+      "truth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "key": "('AND', (('NOT', ('VAR', 'x')), ('VAR', 'x'), ('VAR', 'y')))",
+      "truth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "key": "('AND', (('NOT', ('VAR', 'x')), ('VAR', 'x'), ('VAR', 'z')))",
+      "truth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "key": "('AND', (('NOT', ('VAR', 'x')), ('VAR', 'y')))",
+      "truth": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "key": "('AND', (('NOT', ('VAR', 'x')), ('VAR', 'y'), ('VAR', 'z')))",
+      "truth": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "key": "('AND', (('NOT', ('VAR', 'x')), ('VAR', 'z')))",
+      "truth": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "key": "('AND', (('NOT', ('VAR', 'y')), ('NOT', ('VAR', 'z'))))",
+      "truth": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "key": "('AND', (('NOT', ('VAR', 'y')), ('OR', (('VAR', 'x'), ('VAR', 'y')))))",
+      "truth": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "key": "('AND', (('NOT', ('VAR', 'y')), ('OR', (('VAR', 'x'), ('VAR', 'z')))))",
+      "truth": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "key": "('AND', (('NOT', ('VAR', 'y')), ('OR', (('VAR', 'y'), ('VAR', 'z')))))",
+      "truth": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "key": "('AND', (('NOT', ('VAR', 'y')), ('VAR', 'x')))",
+      "truth": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "key": "('AND', (('NOT', ('VAR', 'y')), ('VAR', 'x'), ('VAR', 'y')))",
+      "truth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "key": "('AND', (('NOT', ('VAR', 'y')), ('VAR', 'x'), ('VAR', 'z')))",
+      "truth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "key": "('AND', (('NOT', ('VAR', 'y')), ('VAR', 'y')))",
+      "truth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "key": "('AND', (('NOT', ('VAR', 'y')), ('VAR', 'y'), ('VAR', 'z')))",
+      "truth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "key": "('AND', (('NOT', ('VAR', 'y')), ('VAR', 'z')))",
+      "truth": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "key": "('AND', (('NOT', ('VAR', 'z')), ('OR', (('VAR', 'x'), ('VAR', 'y')))))",
+      "truth": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "key": "('AND', (('NOT', ('VAR', 'z')), ('OR', (('VAR', 'x'), ('VAR', 'z')))))",
+      "truth": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "key": "('AND', (('NOT', ('VAR', 'z')), ('OR', (('VAR', 'y'), ('VAR', 'z')))))",
+      "truth": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "key": "('AND', (('NOT', ('VAR', 'z')), ('VAR', 'x')))",
+      "truth": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "key": "('AND', (('NOT', ('VAR', 'z')), ('VAR', 'x'), ('VAR', 'y')))",
+      "truth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "key": "('AND', (('NOT', ('VAR', 'z')), ('VAR', 'x'), ('VAR', 'z')))",
+      "truth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "key": "('AND', (('NOT', ('VAR', 'z')), ('VAR', 'y')))",
+      "truth": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "key": "('AND', (('NOT', ('VAR', 'z')), ('VAR', 'y'), ('VAR', 'z')))",
+      "truth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "key": "('AND', (('NOT', ('VAR', 'z')), ('VAR', 'z')))",
+      "truth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "key": "('AND', (('OR', (('VAR', 'x'), ('VAR', 'y'))), ('OR', (('VAR', 'x'), ('VAR', 'z')))))",
+      "truth": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "('AND', (('OR', (('VAR', 'x'), ('VAR', 'y'))), ('OR', (('VAR', 'y'), ('VAR', 'z')))))",
+      "truth": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "('AND', (('OR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x')))",
+      "truth": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "('AND', (('OR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x'), ('VAR', 'y')))",
+      "truth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "('AND', (('OR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x'), ('VAR', 'z')))",
+      "truth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "key": "('AND', (('OR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'y')))",
+      "truth": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "('AND', (('OR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'y'), ('VAR', 'z')))",
+      "truth": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "key": "('AND', (('OR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'z')))",
+      "truth": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "key": "('AND', (('OR', (('VAR', 'x'), ('VAR', 'z'))), ('OR', (('VAR', 'y'), ('VAR', 'z')))))",
+      "truth": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "('AND', (('OR', (('VAR', 'x'), ('VAR', 'z'))), ('VAR', 'x')))",
+      "truth": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "('AND', (('OR', (('VAR', 'x'), ('VAR', 'z'))), ('VAR', 'x'), ('VAR', 'y')))",
+      "truth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "('AND', (('OR', (('VAR', 'x'), ('VAR', 'z'))), ('VAR', 'x'), ('VAR', 'z')))",
+      "truth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "key": "('AND', (('OR', (('VAR', 'x'), ('VAR', 'z'))), ('VAR', 'y')))",
+      "truth": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "('AND', (('OR', (('VAR', 'x'), ('VAR', 'z'))), ('VAR', 'y'), ('VAR', 'z')))",
+      "truth": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "key": "('AND', (('OR', (('VAR', 'x'), ('VAR', 'z'))), ('VAR', 'z')))",
+      "truth": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "key": "('AND', (('OR', (('VAR', 'y'), ('VAR', 'z'))), ('VAR', 'x')))",
+      "truth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "('AND', (('OR', (('VAR', 'y'), ('VAR', 'z'))), ('VAR', 'x'), ('VAR', 'y')))",
+      "truth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "('AND', (('OR', (('VAR', 'y'), ('VAR', 'z'))), ('VAR', 'x'), ('VAR', 'z')))",
+      "truth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "key": "('AND', (('OR', (('VAR', 'y'), ('VAR', 'z'))), ('VAR', 'y')))",
+      "truth": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "('AND', (('OR', (('VAR', 'y'), ('VAR', 'z'))), ('VAR', 'y'), ('VAR', 'z')))",
+      "truth": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "key": "('AND', (('OR', (('VAR', 'y'), ('VAR', 'z'))), ('VAR', 'z')))",
+      "truth": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "key": "('AND', (('VAR', 'x'), ('VAR', 'y')))",
+      "truth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "('AND', (('VAR', 'x'), ('VAR', 'y'), ('VAR', 'z')))",
+      "truth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "key": "('AND', (('VAR', 'x'), ('VAR', 'z')))",
+      "truth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "key": "('AND', (('VAR', 'y'), ('VAR', 'z')))",
+      "truth": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "key": "('NOR', (('VAR', 'x'), ('VAR', 'y')))",
+      "truth": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "key": "('NOR', (('VAR', 'x'), ('VAR', 'z')))",
+      "truth": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "key": "('NOR', (('VAR', 'y'), ('VAR', 'z')))",
+      "truth": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "key": "('NOT', ('AND', (('VAR', 'x'), ('VAR', 'y'))))",
+      "truth": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "key": "('NOT', ('AND', (('VAR', 'x'), ('VAR', 'z'))))",
+      "truth": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "key": "('NOT', ('AND', (('VAR', 'y'), ('VAR', 'z'))))",
+      "truth": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "key": "('NOT', ('NOT', ('VAR', 'x')))",
+      "truth": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "('NOT', ('NOT', ('VAR', 'y')))",
+      "truth": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "('NOT', ('NOT', ('VAR', 'z')))",
+      "truth": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "key": "('NOT', ('VAR', 'x'))",
+      "truth": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "key": "('NOT', ('VAR', 'y'))",
+      "truth": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "key": "('NOT', ('VAR', 'z'))",
+      "truth": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "key": "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('AND', (('VAR', 'x'), ('VAR', 'z')))))",
+      "truth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('AND', (('VAR', 'y'), ('VAR', 'z')))))",
+      "truth": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('NOT', ('VAR', 'x'))))",
+      "truth": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('NOT', ('VAR', 'y'))))",
+      "truth": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('NOT', ('VAR', 'z'))))",
+      "truth": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x')))",
+      "truth": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x'), ('VAR', 'y')))",
+      "truth": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x'), ('VAR', 'z')))",
+      "truth": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'y')))",
+      "truth": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'y'), ('VAR', 'z')))",
+      "truth": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'z')))",
+      "truth": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "('OR', (('AND', (('VAR', 'x'), ('VAR', 'z'))), ('AND', (('VAR', 'y'), ('VAR', 'z')))))",
+      "truth": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "key": "('OR', (('AND', (('VAR', 'x'), ('VAR', 'z'))), ('NOT', ('VAR', 'x'))))",
+      "truth": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "key": "('OR', (('AND', (('VAR', 'x'), ('VAR', 'z'))), ('NOT', ('VAR', 'y'))))",
+      "truth": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "key": "('OR', (('AND', (('VAR', 'x'), ('VAR', 'z'))), ('NOT', ('VAR', 'z'))))",
+      "truth": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "('OR', (('AND', (('VAR', 'x'), ('VAR', 'z'))), ('VAR', 'x')))",
+      "truth": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "('OR', (('AND', (('VAR', 'x'), ('VAR', 'z'))), ('VAR', 'x'), ('VAR', 'y')))",
+      "truth": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "('OR', (('AND', (('VAR', 'x'), ('VAR', 'z'))), ('VAR', 'x'), ('VAR', 'z')))",
+      "truth": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "('OR', (('AND', (('VAR', 'x'), ('VAR', 'z'))), ('VAR', 'y')))",
+      "truth": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "('OR', (('AND', (('VAR', 'x'), ('VAR', 'z'))), ('VAR', 'y'), ('VAR', 'z')))",
+      "truth": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "('OR', (('AND', (('VAR', 'x'), ('VAR', 'z'))), ('VAR', 'z')))",
+      "truth": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "key": "('OR', (('AND', (('VAR', 'y'), ('VAR', 'z'))), ('NOT', ('VAR', 'x'))))",
+      "truth": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "key": "('OR', (('AND', (('VAR', 'y'), ('VAR', 'z'))), ('NOT', ('VAR', 'y'))))",
+      "truth": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "key": "('OR', (('AND', (('VAR', 'y'), ('VAR', 'z'))), ('NOT', ('VAR', 'z'))))",
+      "truth": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "('OR', (('AND', (('VAR', 'y'), ('VAR', 'z'))), ('VAR', 'x')))",
+      "truth": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "('OR', (('AND', (('VAR', 'y'), ('VAR', 'z'))), ('VAR', 'x'), ('VAR', 'y')))",
+      "truth": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "('OR', (('AND', (('VAR', 'y'), ('VAR', 'z'))), ('VAR', 'x'), ('VAR', 'z')))",
+      "truth": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "('OR', (('AND', (('VAR', 'y'), ('VAR', 'z'))), ('VAR', 'y')))",
+      "truth": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "('OR', (('AND', (('VAR', 'y'), ('VAR', 'z'))), ('VAR', 'y'), ('VAR', 'z')))",
+      "truth": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "('OR', (('AND', (('VAR', 'y'), ('VAR', 'z'))), ('VAR', 'z')))",
+      "truth": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "key": "('OR', (('NOT', ('VAR', 'x')), ('NOT', ('VAR', 'y'))))",
+      "truth": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "key": "('OR', (('NOT', ('VAR', 'x')), ('NOT', ('VAR', 'z'))))",
+      "truth": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "key": "('OR', (('NOT', ('VAR', 'x')), ('VAR', 'x')))",
+      "truth": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "('OR', (('NOT', ('VAR', 'x')), ('VAR', 'x'), ('VAR', 'y')))",
+      "truth": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "('OR', (('NOT', ('VAR', 'x')), ('VAR', 'x'), ('VAR', 'z')))",
+      "truth": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "('OR', (('NOT', ('VAR', 'x')), ('VAR', 'y')))",
+      "truth": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "('OR', (('NOT', ('VAR', 'x')), ('VAR', 'y'), ('VAR', 'z')))",
+      "truth": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "('OR', (('NOT', ('VAR', 'x')), ('VAR', 'z')))",
+      "truth": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "key": "('OR', (('NOT', ('VAR', 'y')), ('NOT', ('VAR', 'z'))))",
+      "truth": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "key": "('OR', (('NOT', ('VAR', 'y')), ('VAR', 'x')))",
+      "truth": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "('OR', (('NOT', ('VAR', 'y')), ('VAR', 'x'), ('VAR', 'y')))",
+      "truth": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "('OR', (('NOT', ('VAR', 'y')), ('VAR', 'x'), ('VAR', 'z')))",
+      "truth": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "('OR', (('NOT', ('VAR', 'y')), ('VAR', 'y')))",
+      "truth": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "('OR', (('NOT', ('VAR', 'y')), ('VAR', 'y'), ('VAR', 'z')))",
+      "truth": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "('OR', (('NOT', ('VAR', 'y')), ('VAR', 'z')))",
+      "truth": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "key": "('OR', (('NOT', ('VAR', 'z')), ('VAR', 'x')))",
+      "truth": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "('OR', (('NOT', ('VAR', 'z')), ('VAR', 'x'), ('VAR', 'y')))",
+      "truth": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "('OR', (('NOT', ('VAR', 'z')), ('VAR', 'x'), ('VAR', 'z')))",
+      "truth": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "('OR', (('NOT', ('VAR', 'z')), ('VAR', 'y')))",
+      "truth": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "('OR', (('NOT', ('VAR', 'z')), ('VAR', 'y'), ('VAR', 'z')))",
+      "truth": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "('OR', (('NOT', ('VAR', 'z')), ('VAR', 'z')))",
+      "truth": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "('OR', (('VAR', 'x'), ('VAR', 'y')))",
+      "truth": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "('OR', (('VAR', 'x'), ('VAR', 'y'), ('VAR', 'z')))",
+      "truth": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "('OR', (('VAR', 'x'), ('VAR', 'z')))",
+      "truth": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "('OR', (('VAR', 'y'), ('VAR', 'z')))",
+      "truth": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "('VAR', 'x')",
+      "truth": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "('VAR', 'y')",
+      "truth": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "('VAR', 'z')",
+      "truth": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ]
+    }
+  ],
+  "new_metadata": {
+    "variables": [
+      "x",
+      "y",
+      "z"
+    ],
+    "operators": [
+      "AND",
+      "NOT",
+      "OR"
+    ],
+    "max_depth": 2,
+    "mechanistic_opts": {
+      "apply_commutativity": true,
+      "apply_idempotence_and_or": true,
+      "flatten_associativity": true
+    }
+  },
+  "old_reference_universe_size": 34,
+  "selection": "Four tasks per observation count 1/2/3, lowest fixed salted hashes among all eligible tasks. No model scores used.",
+  "eligible_3var_counts": {
+    "1": 16,
+    "2": 112,
+    "3": 412
+  }
+}

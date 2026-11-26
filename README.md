@@ -1,6 +1,12 @@
-# COVE for HypoSpace: learned execution and canonical coverage
+# Canonical Coverage LoRA: a controlled free-generation study
 
-## 当前版本：COVE，三指标优化实验
+## 当前主线：固定预算的自由生成审计
+
+项目现将研究贡献与高指标分开：主实验比较原始模型、同预算普通 SFT、结构覆盖训练和字符串覆盖消融，均为每题16次自由生成，不使用候选目录、强制去重、修复或根据参考答案数设置预算。正在按事前冻结协议补跑4,864次真实生成，包括26道已知观测题的新采样重复和12道全新三变量迁移题；结果无论正负均报告。
+
+[本轮冻结协议](docs/RESEARCH_AUDIT_PROTOCOL_ZH.md)。原有 COVE 和 BACE 证据完整保留为历史补充；不能将目录选择的99%解释为LLM自由生成成绩。下方先前报告为历史记录，本轮完成后将更新主结果。
+
+## 历史补充：COVE 目录选择实验
 
 在 Mac 上新增训练 **179 参数的组合式神经执行器**，学习 AND / OR / NOT 的数值执行，再用观测一致性为冻结 LLM 的结构类别概率重新加权，以 Gumbel top-N 无放回采样输出。不是只换提示，也不在提议阶段调用精确布尔求解器。
 

@@ -1,0 +1,1510 @@
+[
+  {
+    "id": "529e001f10ce8f35",
+    "observations": [
+      {
+        "inputs": {
+          "x": 0,
+          "y": 0
+        },
+        "output": 0
+      },
+      {
+        "inputs": {
+          "x": 1,
+          "y": 0
+        },
+        "output": 0
+      },
+      {
+        "inputs": {
+          "x": 1,
+          "y": 1
+        },
+        "output": 1
+      }
+    ],
+    "cohort": "known_2var",
+    "metadata": {
+      "variables": [
+        "x",
+        "y"
+      ],
+      "operators": [
+        "AND",
+        "NOT",
+        "OR"
+      ],
+      "max_depth": 2,
+      "mechanistic_opts": {
+        "apply_commutativity": true,
+        "apply_idempotence_and_or": true,
+        "flatten_associativity": true
+      }
+    },
+    "prompt": "You are given partial observations of a Boolean function with variables: x, y\n\n            Allowed operators: AND (conjunction), OR (disjunction), NOT (negation)\n\n            Observations (input -> output):\n            (x=0, y=0) -> 0\n(x=1, y=0) -> 0\n(x=1, y=1) -> 1\n\n            Prior expressions generated (avoid repeating any expression \n            that is equivalent under the rules below):\n            None\n\n            Task: Generate a single Boolean expression that is consistent with ALL observations.\n\n            Requirements:\n            1. Use ONLY the variables: x, y\n            2. Use ONLY these operators: AND, NOT, OR\n            3. The expression must match all given observations\n            4. Structural uniqueness is judged by these rules:\n            - Commutativity: reorderings are the SAME (e.g., x AND y = y AND x).\n        - Idempotence: duplicates of the same input under AND/OR collapse (e.g., x AND x = x; x OR x = x).\n        - Associativity flattening: cascades of the SAME operator are the SAME regardless of parentheses (e.g., (x AND y) AND x = x AND (y AND x) = x AND x AND y).\n        - No distributivity, absorption, or De Morgan normalization: mixing operators keeps expressions DIFFERENT (e.g., (x AND y) OR z ≠ x AND (y OR z)).\n            5. Expression depth should be at most 2 levels of nesting\n            6. Do not use boolean constants True or False anywhere in the expression.\n\n            Output format: \n            - Return ONLY the Boolean expression on a single line\n            - Use plain text format (no LaTeX, no markdown, no special formatting)\n            - Use uppercase for operators. \n            - Use lowercase for variables: x, y\n            - Use parentheses for grouping when needed\n            - Start your response with \"Expression: \" followed by the expression\n            \n            Examples of correct format:\n            Expression: x AND y\n            Expression: (x OR y) AND NOT x\n            Expression: NOT (x AND y)\n            \n            DO NOT use formats like:\n            - \\(x \\land y\\)  (LaTeX)\n            - `x AND y`  (markdown)\n            - x ∧ y  (mathematical symbols)\n            "
+  },
+  {
+    "id": "d2bab89d4e62c767",
+    "observations": [
+      {
+        "inputs": {
+          "x": 0,
+          "y": 1
+        },
+        "output": 1
+      }
+    ],
+    "cohort": "known_2var",
+    "metadata": {
+      "variables": [
+        "x",
+        "y"
+      ],
+      "operators": [
+        "AND",
+        "NOT",
+        "OR"
+      ],
+      "max_depth": 2,
+      "mechanistic_opts": {
+        "apply_commutativity": true,
+        "apply_idempotence_and_or": true,
+        "flatten_associativity": true
+      }
+    },
+    "prompt": "You are given partial observations of a Boolean function with variables: x, y\n\n            Allowed operators: AND (conjunction), OR (disjunction), NOT (negation)\n\n            Observations (input -> output):\n            (x=0, y=1) -> 1\n\n            Prior expressions generated (avoid repeating any expression \n            that is equivalent under the rules below):\n            None\n\n            Task: Generate a single Boolean expression that is consistent with ALL observations.\n\n            Requirements:\n            1. Use ONLY the variables: x, y\n            2. Use ONLY these operators: AND, NOT, OR\n            3. The expression must match all given observations\n            4. Structural uniqueness is judged by these rules:\n            - Commutativity: reorderings are the SAME (e.g., x AND y = y AND x).\n        - Idempotence: duplicates of the same input under AND/OR collapse (e.g., x AND x = x; x OR x = x).\n        - Associativity flattening: cascades of the SAME operator are the SAME regardless of parentheses (e.g., (x AND y) AND x = x AND (y AND x) = x AND x AND y).\n        - No distributivity, absorption, or De Morgan normalization: mixing operators keeps expressions DIFFERENT (e.g., (x AND y) OR z ≠ x AND (y OR z)).\n            5. Expression depth should be at most 2 levels of nesting\n            6. Do not use boolean constants True or False anywhere in the expression.\n\n            Output format: \n            - Return ONLY the Boolean expression on a single line\n            - Use plain text format (no LaTeX, no markdown, no special formatting)\n            - Use uppercase for operators. \n            - Use lowercase for variables: x, y\n            - Use parentheses for grouping when needed\n            - Start your response with \"Expression: \" followed by the expression\n            \n            Examples of correct format:\n            Expression: x AND y\n            Expression: (x OR y) AND NOT x\n            Expression: NOT (x AND y)\n            \n            DO NOT use formats like:\n            - \\(x \\land y\\)  (LaTeX)\n            - `x AND y`  (markdown)\n            - x ∧ y  (mathematical symbols)\n            "
+  },
+  {
+    "id": "4ae35d977a5b3a7f",
+    "observations": [
+      {
+        "inputs": {
+          "x": 0,
+          "y": 1
+        },
+        "output": 1
+      },
+      {
+        "inputs": {
+          "x": 1,
+          "y": 1
+        },
+        "output": 0
+      }
+    ],
+    "cohort": "known_2var",
+    "metadata": {
+      "variables": [
+        "x",
+        "y"
+      ],
+      "operators": [
+        "AND",
+        "NOT",
+        "OR"
+      ],
+      "max_depth": 2,
+      "mechanistic_opts": {
+        "apply_commutativity": true,
+        "apply_idempotence_and_or": true,
+        "flatten_associativity": true
+      }
+    },
+    "prompt": "You are given partial observations of a Boolean function with variables: x, y\n\n            Allowed operators: AND (conjunction), OR (disjunction), NOT (negation)\n\n            Observations (input -> output):\n            (x=0, y=1) -> 1\n(x=1, y=1) -> 0\n\n            Prior expressions generated (avoid repeating any expression \n            that is equivalent under the rules below):\n            None\n\n            Task: Generate a single Boolean expression that is consistent with ALL observations.\n\n            Requirements:\n            1. Use ONLY the variables: x, y\n            2. Use ONLY these operators: AND, NOT, OR\n            3. The expression must match all given observations\n            4. Structural uniqueness is judged by these rules:\n            - Commutativity: reorderings are the SAME (e.g., x AND y = y AND x).\n        - Idempotence: duplicates of the same input under AND/OR collapse (e.g., x AND x = x; x OR x = x).\n        - Associativity flattening: cascades of the SAME operator are the SAME regardless of parentheses (e.g., (x AND y) AND x = x AND (y AND x) = x AND x AND y).\n        - No distributivity, absorption, or De Morgan normalization: mixing operators keeps expressions DIFFERENT (e.g., (x AND y) OR z ≠ x AND (y OR z)).\n            5. Expression depth should be at most 2 levels of nesting\n            6. Do not use boolean constants True or False anywhere in the expression.\n\n            Output format: \n            - Return ONLY the Boolean expression on a single line\n            - Use plain text format (no LaTeX, no markdown, no special formatting)\n            - Use uppercase for operators. \n            - Use lowercase for variables: x, y\n            - Use parentheses for grouping when needed\n            - Start your response with \"Expression: \" followed by the expression\n            \n            Examples of correct format:\n            Expression: x AND y\n            Expression: (x OR y) AND NOT x\n            Expression: NOT (x AND y)\n            \n            DO NOT use formats like:\n            - \\(x \\land y\\)  (LaTeX)\n            - `x AND y`  (markdown)\n            - x ∧ y  (mathematical symbols)\n            "
+  },
+  {
+    "id": "33ba982524498e44",
+    "observations": [
+      {
+        "inputs": {
+          "x": 0,
+          "y": 0
+        },
+        "output": 1
+      },
+      {
+        "inputs": {
+          "x": 1,
+          "y": 1
+        },
+        "output": 1
+      }
+    ],
+    "cohort": "known_2var",
+    "metadata": {
+      "variables": [
+        "x",
+        "y"
+      ],
+      "operators": [
+        "AND",
+        "NOT",
+        "OR"
+      ],
+      "max_depth": 2,
+      "mechanistic_opts": {
+        "apply_commutativity": true,
+        "apply_idempotence_and_or": true,
+        "flatten_associativity": true
+      }
+    },
+    "prompt": "You are given partial observations of a Boolean function with variables: x, y\n\n            Allowed operators: AND (conjunction), OR (disjunction), NOT (negation)\n\n            Observations (input -> output):\n            (x=0, y=0) -> 1\n(x=1, y=1) -> 1\n\n            Prior expressions generated (avoid repeating any expression \n            that is equivalent under the rules below):\n            None\n\n            Task: Generate a single Boolean expression that is consistent with ALL observations.\n\n            Requirements:\n            1. Use ONLY the variables: x, y\n            2. Use ONLY these operators: AND, NOT, OR\n            3. The expression must match all given observations\n            4. Structural uniqueness is judged by these rules:\n            - Commutativity: reorderings are the SAME (e.g., x AND y = y AND x).\n        - Idempotence: duplicates of the same input under AND/OR collapse (e.g., x AND x = x; x OR x = x).\n        - Associativity flattening: cascades of the SAME operator are the SAME regardless of parentheses (e.g., (x AND y) AND x = x AND (y AND x) = x AND x AND y).\n        - No distributivity, absorption, or De Morgan normalization: mixing operators keeps expressions DIFFERENT (e.g., (x AND y) OR z ≠ x AND (y OR z)).\n            5. Expression depth should be at most 2 levels of nesting\n            6. Do not use boolean constants True or False anywhere in the expression.\n\n            Output format: \n            - Return ONLY the Boolean expression on a single line\n            - Use plain text format (no LaTeX, no markdown, no special formatting)\n            - Use uppercase for operators. \n            - Use lowercase for variables: x, y\n            - Use parentheses for grouping when needed\n            - Start your response with \"Expression: \" followed by the expression\n            \n            Examples of correct format:\n            Expression: x AND y\n            Expression: (x OR y) AND NOT x\n            Expression: NOT (x AND y)\n            \n            DO NOT use formats like:\n            - \\(x \\land y\\)  (LaTeX)\n            - `x AND y`  (markdown)\n            - x ∧ y  (mathematical symbols)\n            "
+  },
+  {
+    "id": "ccb74e75ae7fe6f8",
+    "observations": [
+      {
+        "inputs": {
+          "x": 0,
+          "y": 0
+        },
+        "output": 0
+      },
+      {
+        "inputs": {
+          "x": 0,
+          "y": 1
+        },
+        "output": 0
+      },
+      {
+        "inputs": {
+          "x": 1,
+          "y": 1
+        },
+        "output": 1
+      }
+    ],
+    "cohort": "known_2var",
+    "metadata": {
+      "variables": [
+        "x",
+        "y"
+      ],
+      "operators": [
+        "AND",
+        "NOT",
+        "OR"
+      ],
+      "max_depth": 2,
+      "mechanistic_opts": {
+        "apply_commutativity": true,
+        "apply_idempotence_and_or": true,
+        "flatten_associativity": true
+      }
+    },
+    "prompt": "You are given partial observations of a Boolean function with variables: x, y\n\n            Allowed operators: AND (conjunction), OR (disjunction), NOT (negation)\n\n            Observations (input -> output):\n            (x=0, y=0) -> 0\n(x=0, y=1) -> 0\n(x=1, y=1) -> 1\n\n            Prior expressions generated (avoid repeating any expression \n            that is equivalent under the rules below):\n            None\n\n            Task: Generate a single Boolean expression that is consistent with ALL observations.\n\n            Requirements:\n            1. Use ONLY the variables: x, y\n            2. Use ONLY these operators: AND, NOT, OR\n            3. The expression must match all given observations\n            4. Structural uniqueness is judged by these rules:\n            - Commutativity: reorderings are the SAME (e.g., x AND y = y AND x).\n        - Idempotence: duplicates of the same input under AND/OR collapse (e.g., x AND x = x; x OR x = x).\n        - Associativity flattening: cascades of the SAME operator are the SAME regardless of parentheses (e.g., (x AND y) AND x = x AND (y AND x) = x AND x AND y).\n        - No distributivity, absorption, or De Morgan normalization: mixing operators keeps expressions DIFFERENT (e.g., (x AND y) OR z ≠ x AND (y OR z)).\n            5. Expression depth should be at most 2 levels of nesting\n            6. Do not use boolean constants True or False anywhere in the expression.\n\n            Output format: \n            - Return ONLY the Boolean expression on a single line\n            - Use plain text format (no LaTeX, no markdown, no special formatting)\n            - Use uppercase for operators. \n            - Use lowercase for variables: x, y\n            - Use parentheses for grouping when needed\n            - Start your response with \"Expression: \" followed by the expression\n            \n            Examples of correct format:\n            Expression: x AND y\n            Expression: (x OR y) AND NOT x\n            Expression: NOT (x AND y)\n            \n            DO NOT use formats like:\n            - \\(x \\land y\\)  (LaTeX)\n            - `x AND y`  (markdown)\n            - x ∧ y  (mathematical symbols)\n            "
+  },
+  {
+    "id": "cfb68019d93cb40b",
+    "observations": [
+      {
+        "inputs": {
+          "x": 0,
+          "y": 0
+        },
+        "output": 0
+      },
+      {
+        "inputs": {
+          "x": 0,
+          "y": 1
+        },
+        "output": 0
+      },
+      {
+        "inputs": {
+          "x": 1,
+          "y": 0
+        },
+        "output": 0
+      }
+    ],
+    "cohort": "known_2var",
+    "metadata": {
+      "variables": [
+        "x",
+        "y"
+      ],
+      "operators": [
+        "AND",
+        "NOT",
+        "OR"
+      ],
+      "max_depth": 2,
+      "mechanistic_opts": {
+        "apply_commutativity": true,
+        "apply_idempotence_and_or": true,
+        "flatten_associativity": true
+      }
+    },
+    "prompt": "You are given partial observations of a Boolean function with variables: x, y\n\n            Allowed operators: AND (conjunction), OR (disjunction), NOT (negation)\n\n            Observations (input -> output):\n            (x=0, y=0) -> 0\n(x=0, y=1) -> 0\n(x=1, y=0) -> 0\n\n            Prior expressions generated (avoid repeating any expression \n            that is equivalent under the rules below):\n            None\n\n            Task: Generate a single Boolean expression that is consistent with ALL observations.\n\n            Requirements:\n            1. Use ONLY the variables: x, y\n            2. Use ONLY these operators: AND, NOT, OR\n            3. The expression must match all given observations\n            4. Structural uniqueness is judged by these rules:\n            - Commutativity: reorderings are the SAME (e.g., x AND y = y AND x).\n        - Idempotence: duplicates of the same input under AND/OR collapse (e.g., x AND x = x; x OR x = x).\n        - Associativity flattening: cascades of the SAME operator are the SAME regardless of parentheses (e.g., (x AND y) AND x = x AND (y AND x) = x AND x AND y).\n        - No distributivity, absorption, or De Morgan normalization: mixing operators keeps expressions DIFFERENT (e.g., (x AND y) OR z ≠ x AND (y OR z)).\n            5. Expression depth should be at most 2 levels of nesting\n            6. Do not use boolean constants True or False anywhere in the expression.\n\n            Output format: \n            - Return ONLY the Boolean expression on a single line\n            - Use plain text format (no LaTeX, no markdown, no special formatting)\n            - Use uppercase for operators. \n            - Use lowercase for variables: x, y\n            - Use parentheses for grouping when needed\n            - Start your response with \"Expression: \" followed by the expression\n            \n            Examples of correct format:\n            Expression: x AND y\n            Expression: (x OR y) AND NOT x\n            Expression: NOT (x AND y)\n            \n            DO NOT use formats like:\n            - \\(x \\land y\\)  (LaTeX)\n            - `x AND y`  (markdown)\n            - x ∧ y  (mathematical symbols)\n            "
+  },
+  {
+    "id": "3376193cc0b23f84",
+    "observations": [
+      {
+        "inputs": {
+          "x": 0,
+          "y": 1
+        },
+        "output": 1
+      },
+      {
+        "inputs": {
+          "x": 1,
+          "y": 0
+        },
+        "output": 0
+      }
+    ],
+    "cohort": "known_2var",
+    "metadata": {
+      "variables": [
+        "x",
+        "y"
+      ],
+      "operators": [
+        "AND",
+        "NOT",
+        "OR"
+      ],
+      "max_depth": 2,
+      "mechanistic_opts": {
+        "apply_commutativity": true,
+        "apply_idempotence_and_or": true,
+        "flatten_associativity": true
+      }
+    },
+    "prompt": "You are given partial observations of a Boolean function with variables: x, y\n\n            Allowed operators: AND (conjunction), OR (disjunction), NOT (negation)\n\n            Observations (input -> output):\n            (x=0, y=1) -> 1\n(x=1, y=0) -> 0\n\n            Prior expressions generated (avoid repeating any expression \n            that is equivalent under the rules below):\n            None\n\n            Task: Generate a single Boolean expression that is consistent with ALL observations.\n\n            Requirements:\n            1. Use ONLY the variables: x, y\n            2. Use ONLY these operators: AND, NOT, OR\n            3. The expression must match all given observations\n            4. Structural uniqueness is judged by these rules:\n            - Commutativity: reorderings are the SAME (e.g., x AND y = y AND x).\n        - Idempotence: duplicates of the same input under AND/OR collapse (e.g., x AND x = x; x OR x = x).\n        - Associativity flattening: cascades of the SAME operator are the SAME regardless of parentheses (e.g., (x AND y) AND x = x AND (y AND x) = x AND x AND y).\n        - No distributivity, absorption, or De Morgan normalization: mixing operators keeps expressions DIFFERENT (e.g., (x AND y) OR z ≠ x AND (y OR z)).\n            5. Expression depth should be at most 2 levels of nesting\n            6. Do not use boolean constants True or False anywhere in the expression.\n\n            Output format: \n            - Return ONLY the Boolean expression on a single line\n            - Use plain text format (no LaTeX, no markdown, no special formatting)\n            - Use uppercase for operators. \n            - Use lowercase for variables: x, y\n            - Use parentheses for grouping when needed\n            - Start your response with \"Expression: \" followed by the expression\n            \n            Examples of correct format:\n            Expression: x AND y\n            Expression: (x OR y) AND NOT x\n            Expression: NOT (x AND y)\n            \n            DO NOT use formats like:\n            - \\(x \\land y\\)  (LaTeX)\n            - `x AND y`  (markdown)\n            - x ∧ y  (mathematical symbols)\n            "
+  },
+  {
+    "id": "05ace31b5594de25",
+    "observations": [
+      {
+        "inputs": {
+          "x": 0,
+          "y": 1
+        },
+        "output": 0
+      },
+      {
+        "inputs": {
+          "x": 1,
+          "y": 1
+        },
+        "output": 1
+      }
+    ],
+    "cohort": "known_2var",
+    "metadata": {
+      "variables": [
+        "x",
+        "y"
+      ],
+      "operators": [
+        "AND",
+        "NOT",
+        "OR"
+      ],
+      "max_depth": 2,
+      "mechanistic_opts": {
+        "apply_commutativity": true,
+        "apply_idempotence_and_or": true,
+        "flatten_associativity": true
+      }
+    },
+    "prompt": "You are given partial observations of a Boolean function with variables: x, y\n\n            Allowed operators: AND (conjunction), OR (disjunction), NOT (negation)\n\n            Observations (input -> output):\n            (x=0, y=1) -> 0\n(x=1, y=1) -> 1\n\n            Prior expressions generated (avoid repeating any expression \n            that is equivalent under the rules below):\n            None\n\n            Task: Generate a single Boolean expression that is consistent with ALL observations.\n\n            Requirements:\n            1. Use ONLY the variables: x, y\n            2. Use ONLY these operators: AND, NOT, OR\n            3. The expression must match all given observations\n            4. Structural uniqueness is judged by these rules:\n            - Commutativity: reorderings are the SAME (e.g., x AND y = y AND x).\n        - Idempotence: duplicates of the same input under AND/OR collapse (e.g., x AND x = x; x OR x = x).\n        - Associativity flattening: cascades of the SAME operator are the SAME regardless of parentheses (e.g., (x AND y) AND x = x AND (y AND x) = x AND x AND y).\n        - No distributivity, absorption, or De Morgan normalization: mixing operators keeps expressions DIFFERENT (e.g., (x AND y) OR z ≠ x AND (y OR z)).\n            5. Expression depth should be at most 2 levels of nesting\n            6. Do not use boolean constants True or False anywhere in the expression.\n\n            Output format: \n            - Return ONLY the Boolean expression on a single line\n            - Use plain text format (no LaTeX, no markdown, no special formatting)\n            - Use uppercase for operators. \n            - Use lowercase for variables: x, y\n            - Use parentheses for grouping when needed\n            - Start your response with \"Expression: \" followed by the expression\n            \n            Examples of correct format:\n            Expression: x AND y\n            Expression: (x OR y) AND NOT x\n            Expression: NOT (x AND y)\n            \n            DO NOT use formats like:\n            - \\(x \\land y\\)  (LaTeX)\n            - `x AND y`  (markdown)\n            - x ∧ y  (mathematical symbols)\n            "
+  },
+  {
+    "id": "5a17b622676fbafd",
+    "observations": [
+      {
+        "inputs": {
+          "x": 0,
+          "y": 0
+        },
+        "output": 0
+      },
+      {
+        "inputs": {
+          "x": 1,
+          "y": 0
+        },
+        "output": 1
+      }
+    ],
+    "cohort": "known_2var",
+    "metadata": {
+      "variables": [
+        "x",
+        "y"
+      ],
+      "operators": [
+        "AND",
+        "NOT",
+        "OR"
+      ],
+      "max_depth": 2,
+      "mechanistic_opts": {
+        "apply_commutativity": true,
+        "apply_idempotence_and_or": true,
+        "flatten_associativity": true
+      }
+    },
+    "prompt": "You are given partial observations of a Boolean function with variables: x, y\n\n            Allowed operators: AND (conjunction), OR (disjunction), NOT (negation)\n\n            Observations (input -> output):\n            (x=0, y=0) -> 0\n(x=1, y=0) -> 1\n\n            Prior expressions generated (avoid repeating any expression \n            that is equivalent under the rules below):\n            None\n\n            Task: Generate a single Boolean expression that is consistent with ALL observations.\n\n            Requirements:\n            1. Use ONLY the variables: x, y\n            2. Use ONLY these operators: AND, NOT, OR\n            3. The expression must match all given observations\n            4. Structural uniqueness is judged by these rules:\n            - Commutativity: reorderings are the SAME (e.g., x AND y = y AND x).\n        - Idempotence: duplicates of the same input under AND/OR collapse (e.g., x AND x = x; x OR x = x).\n        - Associativity flattening: cascades of the SAME operator are the SAME regardless of parentheses (e.g., (x AND y) AND x = x AND (y AND x) = x AND x AND y).\n        - No distributivity, absorption, or De Morgan normalization: mixing operators keeps expressions DIFFERENT (e.g., (x AND y) OR z ≠ x AND (y OR z)).\n            5. Expression depth should be at most 2 levels of nesting\n            6. Do not use boolean constants True or False anywhere in the expression.\n\n            Output format: \n            - Return ONLY the Boolean expression on a single line\n            - Use plain text format (no LaTeX, no markdown, no special formatting)\n            - Use uppercase for operators. \n            - Use lowercase for variables: x, y\n            - Use parentheses for grouping when needed\n            - Start your response with \"Expression: \" followed by the expression\n            \n            Examples of correct format:\n            Expression: x AND y\n            Expression: (x OR y) AND NOT x\n            Expression: NOT (x AND y)\n            \n            DO NOT use formats like:\n            - \\(x \\land y\\)  (LaTeX)\n            - `x AND y`  (markdown)\n            - x ∧ y  (mathematical symbols)\n            "
+  },
+  {
+    "id": "cf672e2a816c26f7",
+    "observations": [
+      {
+        "inputs": {
+          "x": 0,
+          "y": 0
+        },
+        "output": 0
+      },
+      {
+        "inputs": {
+          "x": 0,
+          "y": 1
+        },
+        "output": 0
+      },
+      {
+        "inputs": {
+          "x": 1,
+          "y": 0
+        },
+        "output": 1
+      }
+    ],
+    "cohort": "known_2var",
+    "metadata": {
+      "variables": [
+        "x",
+        "y"
+      ],
+      "operators": [
+        "AND",
+        "NOT",
+        "OR"
+      ],
+      "max_depth": 2,
+      "mechanistic_opts": {
+        "apply_commutativity": true,
+        "apply_idempotence_and_or": true,
+        "flatten_associativity": true
+      }
+    },
+    "prompt": "You are given partial observations of a Boolean function with variables: x, y\n\n            Allowed operators: AND (conjunction), OR (disjunction), NOT (negation)\n\n            Observations (input -> output):\n            (x=0, y=0) -> 0\n(x=0, y=1) -> 0\n(x=1, y=0) -> 1\n\n            Prior expressions generated (avoid repeating any expression \n            that is equivalent under the rules below):\n            None\n\n            Task: Generate a single Boolean expression that is consistent with ALL observations.\n\n            Requirements:\n            1. Use ONLY the variables: x, y\n            2. Use ONLY these operators: AND, NOT, OR\n            3. The expression must match all given observations\n            4. Structural uniqueness is judged by these rules:\n            - Commutativity: reorderings are the SAME (e.g., x AND y = y AND x).\n        - Idempotence: duplicates of the same input under AND/OR collapse (e.g., x AND x = x; x OR x = x).\n        - Associativity flattening: cascades of the SAME operator are the SAME regardless of parentheses (e.g., (x AND y) AND x = x AND (y AND x) = x AND x AND y).\n        - No distributivity, absorption, or De Morgan normalization: mixing operators keeps expressions DIFFERENT (e.g., (x AND y) OR z ≠ x AND (y OR z)).\n            5. Expression depth should be at most 2 levels of nesting\n            6. Do not use boolean constants True or False anywhere in the expression.\n\n            Output format: \n            - Return ONLY the Boolean expression on a single line\n            - Use plain text format (no LaTeX, no markdown, no special formatting)\n            - Use uppercase for operators. \n            - Use lowercase for variables: x, y\n            - Use parentheses for grouping when needed\n            - Start your response with \"Expression: \" followed by the expression\n            \n            Examples of correct format:\n            Expression: x AND y\n            Expression: (x OR y) AND NOT x\n            Expression: NOT (x AND y)\n            \n            DO NOT use formats like:\n            - \\(x \\land y\\)  (LaTeX)\n            - `x AND y`  (markdown)\n            - x ∧ y  (mathematical symbols)\n            "
+  },
+  {
+    "id": "0460f9d0a8255d57",
+    "observations": [
+      {
+        "inputs": {
+          "x": 0,
+          "y": 0
+        },
+        "output": 0
+      },
+      {
+        "inputs": {
+          "x": 1,
+          "y": 0
+        },
+        "output": 1
+      },
+      {
+        "inputs": {
+          "x": 1,
+          "y": 1
+        },
+        "output": 1
+      }
+    ],
+    "cohort": "known_2var",
+    "metadata": {
+      "variables": [
+        "x",
+        "y"
+      ],
+      "operators": [
+        "AND",
+        "NOT",
+        "OR"
+      ],
+      "max_depth": 2,
+      "mechanistic_opts": {
+        "apply_commutativity": true,
+        "apply_idempotence_and_or": true,
+        "flatten_associativity": true
+      }
+    },
+    "prompt": "You are given partial observations of a Boolean function with variables: x, y\n\n            Allowed operators: AND (conjunction), OR (disjunction), NOT (negation)\n\n            Observations (input -> output):\n            (x=0, y=0) -> 0\n(x=1, y=0) -> 1\n(x=1, y=1) -> 1\n\n            Prior expressions generated (avoid repeating any expression \n            that is equivalent under the rules below):\n            None\n\n            Task: Generate a single Boolean expression that is consistent with ALL observations.\n\n            Requirements:\n            1. Use ONLY the variables: x, y\n            2. Use ONLY these operators: AND, NOT, OR\n            3. The expression must match all given observations\n            4. Structural uniqueness is judged by these rules:\n            - Commutativity: reorderings are the SAME (e.g., x AND y = y AND x).\n        - Idempotence: duplicates of the same input under AND/OR collapse (e.g., x AND x = x; x OR x = x).\n        - Associativity flattening: cascades of the SAME operator are the SAME regardless of parentheses (e.g., (x AND y) AND x = x AND (y AND x) = x AND x AND y).\n        - No distributivity, absorption, or De Morgan normalization: mixing operators keeps expressions DIFFERENT (e.g., (x AND y) OR z ≠ x AND (y OR z)).\n            5. Expression depth should be at most 2 levels of nesting\n            6. Do not use boolean constants True or False anywhere in the expression.\n\n            Output format: \n            - Return ONLY the Boolean expression on a single line\n            - Use plain text format (no LaTeX, no markdown, no special formatting)\n            - Use uppercase for operators. \n            - Use lowercase for variables: x, y\n            - Use parentheses for grouping when needed\n            - Start your response with \"Expression: \" followed by the expression\n            \n            Examples of correct format:\n            Expression: x AND y\n            Expression: (x OR y) AND NOT x\n            Expression: NOT (x AND y)\n            \n            DO NOT use formats like:\n            - \\(x \\land y\\)  (LaTeX)\n            - `x AND y`  (markdown)\n            - x ∧ y  (mathematical symbols)\n            "
+  },
+  {
+    "id": "96e90180d0d7e7c1",
+    "observations": [
+      {
+        "inputs": {
+          "x": 1,
+          "y": 0
+        },
+        "output": 0
+      }
+    ],
+    "cohort": "known_2var",
+    "metadata": {
+      "variables": [
+        "x",
+        "y"
+      ],
+      "operators": [
+        "AND",
+        "NOT",
+        "OR"
+      ],
+      "max_depth": 2,
+      "mechanistic_opts": {
+        "apply_commutativity": true,
+        "apply_idempotence_and_or": true,
+        "flatten_associativity": true
+      }
+    },
+    "prompt": "You are given partial observations of a Boolean function with variables: x, y\n\n            Allowed operators: AND (conjunction), OR (disjunction), NOT (negation)\n\n            Observations (input -> output):\n            (x=1, y=0) -> 0\n\n            Prior expressions generated (avoid repeating any expression \n            that is equivalent under the rules below):\n            None\n\n            Task: Generate a single Boolean expression that is consistent with ALL observations.\n\n            Requirements:\n            1. Use ONLY the variables: x, y\n            2. Use ONLY these operators: AND, NOT, OR\n            3. The expression must match all given observations\n            4. Structural uniqueness is judged by these rules:\n            - Commutativity: reorderings are the SAME (e.g., x AND y = y AND x).\n        - Idempotence: duplicates of the same input under AND/OR collapse (e.g., x AND x = x; x OR x = x).\n        - Associativity flattening: cascades of the SAME operator are the SAME regardless of parentheses (e.g., (x AND y) AND x = x AND (y AND x) = x AND x AND y).\n        - No distributivity, absorption, or De Morgan normalization: mixing operators keeps expressions DIFFERENT (e.g., (x AND y) OR z ≠ x AND (y OR z)).\n            5. Expression depth should be at most 2 levels of nesting\n            6. Do not use boolean constants True or False anywhere in the expression.\n\n            Output format: \n            - Return ONLY the Boolean expression on a single line\n            - Use plain text format (no LaTeX, no markdown, no special formatting)\n            - Use uppercase for operators. \n            - Use lowercase for variables: x, y\n            - Use parentheses for grouping when needed\n            - Start your response with \"Expression: \" followed by the expression\n            \n            Examples of correct format:\n            Expression: x AND y\n            Expression: (x OR y) AND NOT x\n            Expression: NOT (x AND y)\n            \n            DO NOT use formats like:\n            - \\(x \\land y\\)  (LaTeX)\n            - `x AND y`  (markdown)\n            - x ∧ y  (mathematical symbols)\n            "
+  },
+  {
+    "id": "4193d5a0e928436f",
+    "observations": [
+      {
+        "inputs": {
+          "x": 0,
+          "y": 0
+        },
+        "output": 1
+      }
+    ],
+    "cohort": "known_2var",
+    "metadata": {
+      "variables": [
+        "x",
+        "y"
+      ],
+      "operators": [
+        "AND",
+        "NOT",
+        "OR"
+      ],
+      "max_depth": 2,
+      "mechanistic_opts": {
+        "apply_commutativity": true,
+        "apply_idempotence_and_or": true,
+        "flatten_associativity": true
+      }
+    },
+    "prompt": "You are given partial observations of a Boolean function with variables: x, y\n\n            Allowed operators: AND (conjunction), OR (disjunction), NOT (negation)\n\n            Observations (input -> output):\n            (x=0, y=0) -> 1\n\n            Prior expressions generated (avoid repeating any expression \n            that is equivalent under the rules below):\n            None\n\n            Task: Generate a single Boolean expression that is consistent with ALL observations.\n\n            Requirements:\n            1. Use ONLY the variables: x, y\n            2. Use ONLY these operators: AND, NOT, OR\n            3. The expression must match all given observations\n            4. Structural uniqueness is judged by these rules:\n            - Commutativity: reorderings are the SAME (e.g., x AND y = y AND x).\n        - Idempotence: duplicates of the same input under AND/OR collapse (e.g., x AND x = x; x OR x = x).\n        - Associativity flattening: cascades of the SAME operator are the SAME regardless of parentheses (e.g., (x AND y) AND x = x AND (y AND x) = x AND x AND y).\n        - No distributivity, absorption, or De Morgan normalization: mixing operators keeps expressions DIFFERENT (e.g., (x AND y) OR z ≠ x AND (y OR z)).\n            5. Expression depth should be at most 2 levels of nesting\n            6. Do not use boolean constants True or False anywhere in the expression.\n\n            Output format: \n            - Return ONLY the Boolean expression on a single line\n            - Use plain text format (no LaTeX, no markdown, no special formatting)\n            - Use uppercase for operators. \n            - Use lowercase for variables: x, y\n            - Use parentheses for grouping when needed\n            - Start your response with \"Expression: \" followed by the expression\n            \n            Examples of correct format:\n            Expression: x AND y\n            Expression: (x OR y) AND NOT x\n            Expression: NOT (x AND y)\n            \n            DO NOT use formats like:\n            - \\(x \\land y\\)  (LaTeX)\n            - `x AND y`  (markdown)\n            - x ∧ y  (mathematical symbols)\n            "
+  },
+  {
+    "id": "eb5c49b8875cb38d",
+    "observations": [
+      {
+        "inputs": {
+          "x": 0,
+          "y": 1
+        },
+        "output": 0
+      }
+    ],
+    "cohort": "known_2var",
+    "metadata": {
+      "variables": [
+        "x",
+        "y"
+      ],
+      "operators": [
+        "AND",
+        "NOT",
+        "OR"
+      ],
+      "max_depth": 2,
+      "mechanistic_opts": {
+        "apply_commutativity": true,
+        "apply_idempotence_and_or": true,
+        "flatten_associativity": true
+      }
+    },
+    "prompt": "You are given partial observations of a Boolean function with variables: x, y\n\n            Allowed operators: AND (conjunction), OR (disjunction), NOT (negation)\n\n            Observations (input -> output):\n            (x=0, y=1) -> 0\n\n            Prior expressions generated (avoid repeating any expression \n            that is equivalent under the rules below):\n            None\n\n            Task: Generate a single Boolean expression that is consistent with ALL observations.\n\n            Requirements:\n            1. Use ONLY the variables: x, y\n            2. Use ONLY these operators: AND, NOT, OR\n            3. The expression must match all given observations\n            4. Structural uniqueness is judged by these rules:\n            - Commutativity: reorderings are the SAME (e.g., x AND y = y AND x).\n        - Idempotence: duplicates of the same input under AND/OR collapse (e.g., x AND x = x; x OR x = x).\n        - Associativity flattening: cascades of the SAME operator are the SAME regardless of parentheses (e.g., (x AND y) AND x = x AND (y AND x) = x AND x AND y).\n        - No distributivity, absorption, or De Morgan normalization: mixing operators keeps expressions DIFFERENT (e.g., (x AND y) OR z ≠ x AND (y OR z)).\n            5. Expression depth should be at most 2 levels of nesting\n            6. Do not use boolean constants True or False anywhere in the expression.\n\n            Output format: \n            - Return ONLY the Boolean expression on a single line\n            - Use plain text format (no LaTeX, no markdown, no special formatting)\n            - Use uppercase for operators. \n            - Use lowercase for variables: x, y\n            - Use parentheses for grouping when needed\n            - Start your response with \"Expression: \" followed by the expression\n            \n            Examples of correct format:\n            Expression: x AND y\n            Expression: (x OR y) AND NOT x\n            Expression: NOT (x AND y)\n            \n            DO NOT use formats like:\n            - \\(x \\land y\\)  (LaTeX)\n            - `x AND y`  (markdown)\n            - x ∧ y  (mathematical symbols)\n            "
+  },
+  {
+    "id": "366130c4ee65403b",
+    "observations": [
+      {
+        "inputs": {
+          "x": 0,
+          "y": 0
+        },
+        "output": 1
+      },
+      {
+        "inputs": {
+          "x": 0,
+          "y": 1
+        },
+        "output": 1
+      },
+      {
+        "inputs": {
+          "x": 1,
+          "y": 1
+        },
+        "output": 1
+      }
+    ],
+    "cohort": "known_2var",
+    "metadata": {
+      "variables": [
+        "x",
+        "y"
+      ],
+      "operators": [
+        "AND",
+        "NOT",
+        "OR"
+      ],
+      "max_depth": 2,
+      "mechanistic_opts": {
+        "apply_commutativity": true,
+        "apply_idempotence_and_or": true,
+        "flatten_associativity": true
+      }
+    },
+    "prompt": "You are given partial observations of a Boolean function with variables: x, y\n\n            Allowed operators: AND (conjunction), OR (disjunction), NOT (negation)\n\n            Observations (input -> output):\n            (x=0, y=0) -> 1\n(x=0, y=1) -> 1\n(x=1, y=1) -> 1\n\n            Prior expressions generated (avoid repeating any expression \n            that is equivalent under the rules below):\n            None\n\n            Task: Generate a single Boolean expression that is consistent with ALL observations.\n\n            Requirements:\n            1. Use ONLY the variables: x, y\n            2. Use ONLY these operators: AND, NOT, OR\n            3. The expression must match all given observations\n            4. Structural uniqueness is judged by these rules:\n            - Commutativity: reorderings are the SAME (e.g., x AND y = y AND x).\n        - Idempotence: duplicates of the same input under AND/OR collapse (e.g., x AND x = x; x OR x = x).\n        - Associativity flattening: cascades of the SAME operator are the SAME regardless of parentheses (e.g., (x AND y) AND x = x AND (y AND x) = x AND x AND y).\n        - No distributivity, absorption, or De Morgan normalization: mixing operators keeps expressions DIFFERENT (e.g., (x AND y) OR z ≠ x AND (y OR z)).\n            5. Expression depth should be at most 2 levels of nesting\n            6. Do not use boolean constants True or False anywhere in the expression.\n\n            Output format: \n            - Return ONLY the Boolean expression on a single line\n            - Use plain text format (no LaTeX, no markdown, no special formatting)\n            - Use uppercase for operators. \n            - Use lowercase for variables: x, y\n            - Use parentheses for grouping when needed\n            - Start your response with \"Expression: \" followed by the expression\n            \n            Examples of correct format:\n            Expression: x AND y\n            Expression: (x OR y) AND NOT x\n            Expression: NOT (x AND y)\n            \n            DO NOT use formats like:\n            - \\(x \\land y\\)  (LaTeX)\n            - `x AND y`  (markdown)\n            - x ∧ y  (mathematical symbols)\n            "
+  },
+  {
+    "id": "41afe33958a0f175",
+    "observations": [
+      {
+        "inputs": {
+          "x": 0,
+          "y": 0
+        },
+        "output": 0
+      }
+    ],
+    "cohort": "known_2var",
+    "metadata": {
+      "variables": [
+        "x",
+        "y"
+      ],
+      "operators": [
+        "AND",
+        "NOT",
+        "OR"
+      ],
+      "max_depth": 2,
+      "mechanistic_opts": {
+        "apply_commutativity": true,
+        "apply_idempotence_and_or": true,
+        "flatten_associativity": true
+      }
+    },
+    "prompt": "You are given partial observations of a Boolean function with variables: x, y\n\n            Allowed operators: AND (conjunction), OR (disjunction), NOT (negation)\n\n            Observations (input -> output):\n            (x=0, y=0) -> 0\n\n            Prior expressions generated (avoid repeating any expression \n            that is equivalent under the rules below):\n            None\n\n            Task: Generate a single Boolean expression that is consistent with ALL observations.\n\n            Requirements:\n            1. Use ONLY the variables: x, y\n            2. Use ONLY these operators: AND, NOT, OR\n            3. The expression must match all given observations\n            4. Structural uniqueness is judged by these rules:\n            - Commutativity: reorderings are the SAME (e.g., x AND y = y AND x).\n        - Idempotence: duplicates of the same input under AND/OR collapse (e.g., x AND x = x; x OR x = x).\n        - Associativity flattening: cascades of the SAME operator are the SAME regardless of parentheses (e.g., (x AND y) AND x = x AND (y AND x) = x AND x AND y).\n        - No distributivity, absorption, or De Morgan normalization: mixing operators keeps expressions DIFFERENT (e.g., (x AND y) OR z ≠ x AND (y OR z)).\n            5. Expression depth should be at most 2 levels of nesting\n            6. Do not use boolean constants True or False anywhere in the expression.\n\n            Output format: \n            - Return ONLY the Boolean expression on a single line\n            - Use plain text format (no LaTeX, no markdown, no special formatting)\n            - Use uppercase for operators. \n            - Use lowercase for variables: x, y\n            - Use parentheses for grouping when needed\n            - Start your response with \"Expression: \" followed by the expression\n            \n            Examples of correct format:\n            Expression: x AND y\n            Expression: (x OR y) AND NOT x\n            Expression: NOT (x AND y)\n            \n            DO NOT use formats like:\n            - \\(x \\land y\\)  (LaTeX)\n            - `x AND y`  (markdown)\n            - x ∧ y  (mathematical symbols)\n            "
+  },
+  {
+    "id": "4e203c42afda39ea",
+    "observations": [
+      {
+        "inputs": {
+          "x": 0,
+          "y": 0
+        },
+        "output": 1
+      },
+      {
+        "inputs": {
+          "x": 1,
+          "y": 0
+        },
+        "output": 1
+      },
+      {
+        "inputs": {
+          "x": 1,
+          "y": 1
+        },
+        "output": 1
+      }
+    ],
+    "cohort": "known_2var",
+    "metadata": {
+      "variables": [
+        "x",
+        "y"
+      ],
+      "operators": [
+        "AND",
+        "NOT",
+        "OR"
+      ],
+      "max_depth": 2,
+      "mechanistic_opts": {
+        "apply_commutativity": true,
+        "apply_idempotence_and_or": true,
+        "flatten_associativity": true
+      }
+    },
+    "prompt": "You are given partial observations of a Boolean function with variables: x, y\n\n            Allowed operators: AND (conjunction), OR (disjunction), NOT (negation)\n\n            Observations (input -> output):\n            (x=0, y=0) -> 1\n(x=1, y=0) -> 1\n(x=1, y=1) -> 1\n\n            Prior expressions generated (avoid repeating any expression \n            that is equivalent under the rules below):\n            None\n\n            Task: Generate a single Boolean expression that is consistent with ALL observations.\n\n            Requirements:\n            1. Use ONLY the variables: x, y\n            2. Use ONLY these operators: AND, NOT, OR\n            3. The expression must match all given observations\n            4. Structural uniqueness is judged by these rules:\n            - Commutativity: reorderings are the SAME (e.g., x AND y = y AND x).\n        - Idempotence: duplicates of the same input under AND/OR collapse (e.g., x AND x = x; x OR x = x).\n        - Associativity flattening: cascades of the SAME operator are the SAME regardless of parentheses (e.g., (x AND y) AND x = x AND (y AND x) = x AND x AND y).\n        - No distributivity, absorption, or De Morgan normalization: mixing operators keeps expressions DIFFERENT (e.g., (x AND y) OR z ≠ x AND (y OR z)).\n            5. Expression depth should be at most 2 levels of nesting\n            6. Do not use boolean constants True or False anywhere in the expression.\n\n            Output format: \n            - Return ONLY the Boolean expression on a single line\n            - Use plain text format (no LaTeX, no markdown, no special formatting)\n            - Use uppercase for operators. \n            - Use lowercase for variables: x, y\n            - Use parentheses for grouping when needed\n            - Start your response with \"Expression: \" followed by the expression\n            \n            Examples of correct format:\n            Expression: x AND y\n            Expression: (x OR y) AND NOT x\n            Expression: NOT (x AND y)\n            \n            DO NOT use formats like:\n            - \\(x \\land y\\)  (LaTeX)\n            - `x AND y`  (markdown)\n            - x ∧ y  (mathematical symbols)\n            "
+  },
+  {
+    "id": "78e9bb81fdfa58e9",
+    "observations": [
+      {
+        "inputs": {
+          "x": 0,
+          "y": 0
+        },
+        "output": 0
+      },
+      {
+        "inputs": {
+          "x": 1,
+          "y": 0
+        },
+        "output": 0
+      },
+      {
+        "inputs": {
+          "x": 1,
+          "y": 1
+        },
+        "output": 0
+      }
+    ],
+    "cohort": "known_2var",
+    "metadata": {
+      "variables": [
+        "x",
+        "y"
+      ],
+      "operators": [
+        "AND",
+        "NOT",
+        "OR"
+      ],
+      "max_depth": 2,
+      "mechanistic_opts": {
+        "apply_commutativity": true,
+        "apply_idempotence_and_or": true,
+        "flatten_associativity": true
+      }
+    },
+    "prompt": "You are given partial observations of a Boolean function with variables: x, y\n\n            Allowed operators: AND (conjunction), OR (disjunction), NOT (negation)\n\n            Observations (input -> output):\n            (x=0, y=0) -> 0\n(x=1, y=0) -> 0\n(x=1, y=1) -> 0\n\n            Prior expressions generated (avoid repeating any expression \n            that is equivalent under the rules below):\n            None\n\n            Task: Generate a single Boolean expression that is consistent with ALL observations.\n\n            Requirements:\n            1. Use ONLY the variables: x, y\n            2. Use ONLY these operators: AND, NOT, OR\n            3. The expression must match all given observations\n            4. Structural uniqueness is judged by these rules:\n            - Commutativity: reorderings are the SAME (e.g., x AND y = y AND x).\n        - Idempotence: duplicates of the same input under AND/OR collapse (e.g., x AND x = x; x OR x = x).\n        - Associativity flattening: cascades of the SAME operator are the SAME regardless of parentheses (e.g., (x AND y) AND x = x AND (y AND x) = x AND x AND y).\n        - No distributivity, absorption, or De Morgan normalization: mixing operators keeps expressions DIFFERENT (e.g., (x AND y) OR z ≠ x AND (y OR z)).\n            5. Expression depth should be at most 2 levels of nesting\n            6. Do not use boolean constants True or False anywhere in the expression.\n\n            Output format: \n            - Return ONLY the Boolean expression on a single line\n            - Use plain text format (no LaTeX, no markdown, no special formatting)\n            - Use uppercase for operators. \n            - Use lowercase for variables: x, y\n            - Use parentheses for grouping when needed\n            - Start your response with \"Expression: \" followed by the expression\n            \n            Examples of correct format:\n            Expression: x AND y\n            Expression: (x OR y) AND NOT x\n            Expression: NOT (x AND y)\n            \n            DO NOT use formats like:\n            - \\(x \\land y\\)  (LaTeX)\n            - `x AND y`  (markdown)\n            - x ∧ y  (mathematical symbols)\n            "
+  },
+  {
+    "id": "901883305471e27f",
+    "observations": [
+      {
+        "inputs": {
+          "x": 1,
+          "y": 0
+        },
+        "output": 1
+      },
+      {
+        "inputs": {
+          "x": 1,
+          "y": 1
+        },
+        "output": 1
+      }
+    ],
+    "cohort": "known_2var",
+    "metadata": {
+      "variables": [
+        "x",
+        "y"
+      ],
+      "operators": [
+        "AND",
+        "NOT",
+        "OR"
+      ],
+      "max_depth": 2,
+      "mechanistic_opts": {
+        "apply_commutativity": true,
+        "apply_idempotence_and_or": true,
+        "flatten_associativity": true
+      }
+    },
+    "prompt": "You are given partial observations of a Boolean function with variables: x, y\n\n            Allowed operators: AND (conjunction), OR (disjunction), NOT (negation)\n\n            Observations (input -> output):\n            (x=1, y=0) -> 1\n(x=1, y=1) -> 1\n\n            Prior expressions generated (avoid repeating any expression \n            that is equivalent under the rules below):\n            None\n\n            Task: Generate a single Boolean expression that is consistent with ALL observations.\n\n            Requirements:\n            1. Use ONLY the variables: x, y\n            2. Use ONLY these operators: AND, NOT, OR\n            3. The expression must match all given observations\n            4. Structural uniqueness is judged by these rules:\n            - Commutativity: reorderings are the SAME (e.g., x AND y = y AND x).\n        - Idempotence: duplicates of the same input under AND/OR collapse (e.g., x AND x = x; x OR x = x).\n        - Associativity flattening: cascades of the SAME operator are the SAME regardless of parentheses (e.g., (x AND y) AND x = x AND (y AND x) = x AND x AND y).\n        - No distributivity, absorption, or De Morgan normalization: mixing operators keeps expressions DIFFERENT (e.g., (x AND y) OR z ≠ x AND (y OR z)).\n            5. Expression depth should be at most 2 levels of nesting\n            6. Do not use boolean constants True or False anywhere in the expression.\n\n            Output format: \n            - Return ONLY the Boolean expression on a single line\n            - Use plain text format (no LaTeX, no markdown, no special formatting)\n            - Use uppercase for operators. \n            - Use lowercase for variables: x, y\n            - Use parentheses for grouping when needed\n            - Start your response with \"Expression: \" followed by the expression\n            \n            Examples of correct format:\n            Expression: x AND y\n            Expression: (x OR y) AND NOT x\n            Expression: NOT (x AND y)\n            \n            DO NOT use formats like:\n            - \\(x \\land y\\)  (LaTeX)\n            - `x AND y`  (markdown)\n            - x ∧ y  (mathematical symbols)\n            "
+  },
+  {
+    "id": "bb95a672f4564a67",
+    "observations": [
+      {
+        "inputs": {
+          "x": 0,
+          "y": 1
+        },
+        "output": 0
+      },
+      {
+        "inputs": {
+          "x": 1,
+          "y": 0
+        },
+        "output": 1
+      },
+      {
+        "inputs": {
+          "x": 1,
+          "y": 1
+        },
+        "output": 1
+      }
+    ],
+    "cohort": "known_2var",
+    "metadata": {
+      "variables": [
+        "x",
+        "y"
+      ],
+      "operators": [
+        "AND",
+        "NOT",
+        "OR"
+      ],
+      "max_depth": 2,
+      "mechanistic_opts": {
+        "apply_commutativity": true,
+        "apply_idempotence_and_or": true,
+        "flatten_associativity": true
+      }
+    },
+    "prompt": "You are given partial observations of a Boolean function with variables: x, y\n\n            Allowed operators: AND (conjunction), OR (disjunction), NOT (negation)\n\n            Observations (input -> output):\n            (x=0, y=1) -> 0\n(x=1, y=0) -> 1\n(x=1, y=1) -> 1\n\n            Prior expressions generated (avoid repeating any expression \n            that is equivalent under the rules below):\n            None\n\n            Task: Generate a single Boolean expression that is consistent with ALL observations.\n\n            Requirements:\n            1. Use ONLY the variables: x, y\n            2. Use ONLY these operators: AND, NOT, OR\n            3. The expression must match all given observations\n            4. Structural uniqueness is judged by these rules:\n            - Commutativity: reorderings are the SAME (e.g., x AND y = y AND x).\n        - Idempotence: duplicates of the same input under AND/OR collapse (e.g., x AND x = x; x OR x = x).\n        - Associativity flattening: cascades of the SAME operator are the SAME regardless of parentheses (e.g., (x AND y) AND x = x AND (y AND x) = x AND x AND y).\n        - No distributivity, absorption, or De Morgan normalization: mixing operators keeps expressions DIFFERENT (e.g., (x AND y) OR z ≠ x AND (y OR z)).\n            5. Expression depth should be at most 2 levels of nesting\n            6. Do not use boolean constants True or False anywhere in the expression.\n\n            Output format: \n            - Return ONLY the Boolean expression on a single line\n            - Use plain text format (no LaTeX, no markdown, no special formatting)\n            - Use uppercase for operators. \n            - Use lowercase for variables: x, y\n            - Use parentheses for grouping when needed\n            - Start your response with \"Expression: \" followed by the expression\n            \n            Examples of correct format:\n            Expression: x AND y\n            Expression: (x OR y) AND NOT x\n            Expression: NOT (x AND y)\n            \n            DO NOT use formats like:\n            - \\(x \\land y\\)  (LaTeX)\n            - `x AND y`  (markdown)\n            - x ∧ y  (mathematical symbols)\n            "
+  },
+  {
+    "id": "bc56fbefe7c38a2a",
+    "observations": [
+      {
+        "inputs": {
+          "x": 1,
+          "y": 0
+        },
+        "output": 1
+      },
+      {
+        "inputs": {
+          "x": 1,
+          "y": 1
+        },
+        "output": 0
+      }
+    ],
+    "cohort": "known_2var",
+    "metadata": {
+      "variables": [
+        "x",
+        "y"
+      ],
+      "operators": [
+        "AND",
+        "NOT",
+        "OR"
+      ],
+      "max_depth": 2,
+      "mechanistic_opts": {
+        "apply_commutativity": true,
+        "apply_idempotence_and_or": true,
+        "flatten_associativity": true
+      }
+    },
+    "prompt": "You are given partial observations of a Boolean function with variables: x, y\n\n            Allowed operators: AND (conjunction), OR (disjunction), NOT (negation)\n\n            Observations (input -> output):\n            (x=1, y=0) -> 1\n(x=1, y=1) -> 0\n\n            Prior expressions generated (avoid repeating any expression \n            that is equivalent under the rules below):\n            None\n\n            Task: Generate a single Boolean expression that is consistent with ALL observations.\n\n            Requirements:\n            1. Use ONLY the variables: x, y\n            2. Use ONLY these operators: AND, NOT, OR\n            3. The expression must match all given observations\n            4. Structural uniqueness is judged by these rules:\n            - Commutativity: reorderings are the SAME (e.g., x AND y = y AND x).\n        - Idempotence: duplicates of the same input under AND/OR collapse (e.g., x AND x = x; x OR x = x).\n        - Associativity flattening: cascades of the SAME operator are the SAME regardless of parentheses (e.g., (x AND y) AND x = x AND (y AND x) = x AND x AND y).\n        - No distributivity, absorption, or De Morgan normalization: mixing operators keeps expressions DIFFERENT (e.g., (x AND y) OR z ≠ x AND (y OR z)).\n            5. Expression depth should be at most 2 levels of nesting\n            6. Do not use boolean constants True or False anywhere in the expression.\n\n            Output format: \n            - Return ONLY the Boolean expression on a single line\n            - Use plain text format (no LaTeX, no markdown, no special formatting)\n            - Use uppercase for operators. \n            - Use lowercase for variables: x, y\n            - Use parentheses for grouping when needed\n            - Start your response with \"Expression: \" followed by the expression\n            \n            Examples of correct format:\n            Expression: x AND y\n            Expression: (x OR y) AND NOT x\n            Expression: NOT (x AND y)\n            \n            DO NOT use formats like:\n            - \\(x \\land y\\)  (LaTeX)\n            - `x AND y`  (markdown)\n            - x ∧ y  (mathematical symbols)\n            "
+  },
+  {
+    "id": "309cb870390c832b",
+    "observations": [
+      {
+        "inputs": {
+          "x": 0,
+          "y": 1
+        },
+        "output": 0
+      },
+      {
+        "inputs": {
+          "x": 1,
+          "y": 0
+        },
+        "output": 1
+      }
+    ],
+    "cohort": "known_2var",
+    "metadata": {
+      "variables": [
+        "x",
+        "y"
+      ],
+      "operators": [
+        "AND",
+        "NOT",
+        "OR"
+      ],
+      "max_depth": 2,
+      "mechanistic_opts": {
+        "apply_commutativity": true,
+        "apply_idempotence_and_or": true,
+        "flatten_associativity": true
+      }
+    },
+    "prompt": "You are given partial observations of a Boolean function with variables: x, y\n\n            Allowed operators: AND (conjunction), OR (disjunction), NOT (negation)\n\n            Observations (input -> output):\n            (x=0, y=1) -> 0\n(x=1, y=0) -> 1\n\n            Prior expressions generated (avoid repeating any expression \n            that is equivalent under the rules below):\n            None\n\n            Task: Generate a single Boolean expression that is consistent with ALL observations.\n\n            Requirements:\n            1. Use ONLY the variables: x, y\n            2. Use ONLY these operators: AND, NOT, OR\n            3. The expression must match all given observations\n            4. Structural uniqueness is judged by these rules:\n            - Commutativity: reorderings are the SAME (e.g., x AND y = y AND x).\n        - Idempotence: duplicates of the same input under AND/OR collapse (e.g., x AND x = x; x OR x = x).\n        - Associativity flattening: cascades of the SAME operator are the SAME regardless of parentheses (e.g., (x AND y) AND x = x AND (y AND x) = x AND x AND y).\n        - No distributivity, absorption, or De Morgan normalization: mixing operators keeps expressions DIFFERENT (e.g., (x AND y) OR z ≠ x AND (y OR z)).\n            5. Expression depth should be at most 2 levels of nesting\n            6. Do not use boolean constants True or False anywhere in the expression.\n\n            Output format: \n            - Return ONLY the Boolean expression on a single line\n            - Use plain text format (no LaTeX, no markdown, no special formatting)\n            - Use uppercase for operators. \n            - Use lowercase for variables: x, y\n            - Use parentheses for grouping when needed\n            - Start your response with \"Expression: \" followed by the expression\n            \n            Examples of correct format:\n            Expression: x AND y\n            Expression: (x OR y) AND NOT x\n            Expression: NOT (x AND y)\n            \n            DO NOT use formats like:\n            - \\(x \\land y\\)  (LaTeX)\n            - `x AND y`  (markdown)\n            - x ∧ y  (mathematical symbols)\n            "
+  },
+  {
+    "id": "53d0f06e5b9f9cf5",
+    "observations": [
+      {
+        "inputs": {
+          "x": 0,
+          "y": 0
+        },
+        "output": 0
+      },
+      {
+        "inputs": {
+          "x": 1,
+          "y": 0
+        },
+        "output": 0
+      }
+    ],
+    "cohort": "known_2var",
+    "metadata": {
+      "variables": [
+        "x",
+        "y"
+      ],
+      "operators": [
+        "AND",
+        "NOT",
+        "OR"
+      ],
+      "max_depth": 2,
+      "mechanistic_opts": {
+        "apply_commutativity": true,
+        "apply_idempotence_and_or": true,
+        "flatten_associativity": true
+      }
+    },
+    "prompt": "You are given partial observations of a Boolean function with variables: x, y\n\n            Allowed operators: AND (conjunction), OR (disjunction), NOT (negation)\n\n            Observations (input -> output):\n            (x=0, y=0) -> 0\n(x=1, y=0) -> 0\n\n            Prior expressions generated (avoid repeating any expression \n            that is equivalent under the rules below):\n            None\n\n            Task: Generate a single Boolean expression that is consistent with ALL observations.\n\n            Requirements:\n            1. Use ONLY the variables: x, y\n            2. Use ONLY these operators: AND, NOT, OR\n            3. The expression must match all given observations\n            4. Structural uniqueness is judged by these rules:\n            - Commutativity: reorderings are the SAME (e.g., x AND y = y AND x).\n        - Idempotence: duplicates of the same input under AND/OR collapse (e.g., x AND x = x; x OR x = x).\n        - Associativity flattening: cascades of the SAME operator are the SAME regardless of parentheses (e.g., (x AND y) AND x = x AND (y AND x) = x AND x AND y).\n        - No distributivity, absorption, or De Morgan normalization: mixing operators keeps expressions DIFFERENT (e.g., (x AND y) OR z ≠ x AND (y OR z)).\n            5. Expression depth should be at most 2 levels of nesting\n            6. Do not use boolean constants True or False anywhere in the expression.\n\n            Output format: \n            - Return ONLY the Boolean expression on a single line\n            - Use plain text format (no LaTeX, no markdown, no special formatting)\n            - Use uppercase for operators. \n            - Use lowercase for variables: x, y\n            - Use parentheses for grouping when needed\n            - Start your response with \"Expression: \" followed by the expression\n            \n            Examples of correct format:\n            Expression: x AND y\n            Expression: (x OR y) AND NOT x\n            Expression: NOT (x AND y)\n            \n            DO NOT use formats like:\n            - \\(x \\land y\\)  (LaTeX)\n            - `x AND y`  (markdown)\n            - x ∧ y  (mathematical symbols)\n            "
+  },
+  {
+    "id": "2f44f7747e67ffb6",
+    "observations": [
+      {
+        "inputs": {
+          "x": 0,
+          "y": 1
+        },
+        "output": 1
+      },
+      {
+        "inputs": {
+          "x": 1,
+          "y": 0
+        },
+        "output": 1
+      }
+    ],
+    "cohort": "known_2var",
+    "metadata": {
+      "variables": [
+        "x",
+        "y"
+      ],
+      "operators": [
+        "AND",
+        "NOT",
+        "OR"
+      ],
+      "max_depth": 2,
+      "mechanistic_opts": {
+        "apply_commutativity": true,
+        "apply_idempotence_and_or": true,
+        "flatten_associativity": true
+      }
+    },
+    "prompt": "You are given partial observations of a Boolean function with variables: x, y\n\n            Allowed operators: AND (conjunction), OR (disjunction), NOT (negation)\n\n            Observations (input -> output):\n            (x=0, y=1) -> 1\n(x=1, y=0) -> 1\n\n            Prior expressions generated (avoid repeating any expression \n            that is equivalent under the rules below):\n            None\n\n            Task: Generate a single Boolean expression that is consistent with ALL observations.\n\n            Requirements:\n            1. Use ONLY the variables: x, y\n            2. Use ONLY these operators: AND, NOT, OR\n            3. The expression must match all given observations\n            4. Structural uniqueness is judged by these rules:\n            - Commutativity: reorderings are the SAME (e.g., x AND y = y AND x).\n        - Idempotence: duplicates of the same input under AND/OR collapse (e.g., x AND x = x; x OR x = x).\n        - Associativity flattening: cascades of the SAME operator are the SAME regardless of parentheses (e.g., (x AND y) AND x = x AND (y AND x) = x AND x AND y).\n        - No distributivity, absorption, or De Morgan normalization: mixing operators keeps expressions DIFFERENT (e.g., (x AND y) OR z ≠ x AND (y OR z)).\n            5. Expression depth should be at most 2 levels of nesting\n            6. Do not use boolean constants True or False anywhere in the expression.\n\n            Output format: \n            - Return ONLY the Boolean expression on a single line\n            - Use plain text format (no LaTeX, no markdown, no special formatting)\n            - Use uppercase for operators. \n            - Use lowercase for variables: x, y\n            - Use parentheses for grouping when needed\n            - Start your response with \"Expression: \" followed by the expression\n            \n            Examples of correct format:\n            Expression: x AND y\n            Expression: (x OR y) AND NOT x\n            Expression: NOT (x AND y)\n            \n            DO NOT use formats like:\n            - \\(x \\land y\\)  (LaTeX)\n            - `x AND y`  (markdown)\n            - x ∧ y  (mathematical symbols)\n            "
+  },
+  {
+    "id": "af3d6162e50915b5",
+    "observations": [
+      {
+        "inputs": {
+          "x": 1,
+          "y": 0
+        },
+        "output": 0
+      },
+      {
+        "inputs": {
+          "x": 1,
+          "y": 1
+        },
+        "output": 1
+      }
+    ],
+    "cohort": "known_2var",
+    "metadata": {
+      "variables": [
+        "x",
+        "y"
+      ],
+      "operators": [
+        "AND",
+        "NOT",
+        "OR"
+      ],
+      "max_depth": 2,
+      "mechanistic_opts": {
+        "apply_commutativity": true,
+        "apply_idempotence_and_or": true,
+        "flatten_associativity": true
+      }
+    },
+    "prompt": "You are given partial observations of a Boolean function with variables: x, y\n\n            Allowed operators: AND (conjunction), OR (disjunction), NOT (negation)\n\n            Observations (input -> output):\n            (x=1, y=0) -> 0\n(x=1, y=1) -> 1\n\n            Prior expressions generated (avoid repeating any expression \n            that is equivalent under the rules below):\n            None\n\n            Task: Generate a single Boolean expression that is consistent with ALL observations.\n\n            Requirements:\n            1. Use ONLY the variables: x, y\n            2. Use ONLY these operators: AND, NOT, OR\n            3. The expression must match all given observations\n            4. Structural uniqueness is judged by these rules:\n            - Commutativity: reorderings are the SAME (e.g., x AND y = y AND x).\n        - Idempotence: duplicates of the same input under AND/OR collapse (e.g., x AND x = x; x OR x = x).\n        - Associativity flattening: cascades of the SAME operator are the SAME regardless of parentheses (e.g., (x AND y) AND x = x AND (y AND x) = x AND x AND y).\n        - No distributivity, absorption, or De Morgan normalization: mixing operators keeps expressions DIFFERENT (e.g., (x AND y) OR z ≠ x AND (y OR z)).\n            5. Expression depth should be at most 2 levels of nesting\n            6. Do not use boolean constants True or False anywhere in the expression.\n\n            Output format: \n            - Return ONLY the Boolean expression on a single line\n            - Use plain text format (no LaTeX, no markdown, no special formatting)\n            - Use uppercase for operators. \n            - Use lowercase for variables: x, y\n            - Use parentheses for grouping when needed\n            - Start your response with \"Expression: \" followed by the expression\n            \n            Examples of correct format:\n            Expression: x AND y\n            Expression: (x OR y) AND NOT x\n            Expression: NOT (x AND y)\n            \n            DO NOT use formats like:\n            - \\(x \\land y\\)  (LaTeX)\n            - `x AND y`  (markdown)\n            - x ∧ y  (mathematical symbols)\n            "
+  },
+  {
+    "id": "b6e6f6b6a9c5ed13",
+    "observations": [
+      {
+        "inputs": {
+          "x": 0,
+          "y": 0
+        },
+        "output": 0
+      },
+      {
+        "inputs": {
+          "x": 0,
+          "y": 1
+        },
+        "output": 1
+      }
+    ],
+    "cohort": "known_2var",
+    "metadata": {
+      "variables": [
+        "x",
+        "y"
+      ],
+      "operators": [
+        "AND",
+        "NOT",
+        "OR"
+      ],
+      "max_depth": 2,
+      "mechanistic_opts": {
+        "apply_commutativity": true,
+        "apply_idempotence_and_or": true,
+        "flatten_associativity": true
+      }
+    },
+    "prompt": "You are given partial observations of a Boolean function with variables: x, y\n\n            Allowed operators: AND (conjunction), OR (disjunction), NOT (negation)\n\n            Observations (input -> output):\n            (x=0, y=0) -> 0\n(x=0, y=1) -> 1\n\n            Prior expressions generated (avoid repeating any expression \n            that is equivalent under the rules below):\n            None\n\n            Task: Generate a single Boolean expression that is consistent with ALL observations.\n\n            Requirements:\n            1. Use ONLY the variables: x, y\n            2. Use ONLY these operators: AND, NOT, OR\n            3. The expression must match all given observations\n            4. Structural uniqueness is judged by these rules:\n            - Commutativity: reorderings are the SAME (e.g., x AND y = y AND x).\n        - Idempotence: duplicates of the same input under AND/OR collapse (e.g., x AND x = x; x OR x = x).\n        - Associativity flattening: cascades of the SAME operator are the SAME regardless of parentheses (e.g., (x AND y) AND x = x AND (y AND x) = x AND x AND y).\n        - No distributivity, absorption, or De Morgan normalization: mixing operators keeps expressions DIFFERENT (e.g., (x AND y) OR z ≠ x AND (y OR z)).\n            5. Expression depth should be at most 2 levels of nesting\n            6. Do not use boolean constants True or False anywhere in the expression.\n\n            Output format: \n            - Return ONLY the Boolean expression on a single line\n            - Use plain text format (no LaTeX, no markdown, no special formatting)\n            - Use uppercase for operators. \n            - Use lowercase for variables: x, y\n            - Use parentheses for grouping when needed\n            - Start your response with \"Expression: \" followed by the expression\n            \n            Examples of correct format:\n            Expression: x AND y\n            Expression: (x OR y) AND NOT x\n            Expression: NOT (x AND y)\n            \n            DO NOT use formats like:\n            - \\(x \\land y\\)  (LaTeX)\n            - `x AND y`  (markdown)\n            - x ∧ y  (mathematical symbols)\n            "
+  },
+  {
+    "id": "ood3_d9f07c127323ab2b",
+    "observations": [
+      {
+        "inputs": {
+          "x": 1,
+          "y": 0,
+          "z": 1
+        },
+        "output": 0
+      }
+    ],
+    "cohort": "fresh_3var",
+    "metadata": {
+      "variables": [
+        "x",
+        "y",
+        "z"
+      ],
+      "operators": [
+        "AND",
+        "NOT",
+        "OR"
+      ],
+      "max_depth": 2,
+      "mechanistic_opts": {
+        "apply_commutativity": true,
+        "apply_idempotence_and_or": true,
+        "flatten_associativity": true
+      }
+    },
+    "prompt": "You are given partial observations of a Boolean function with variables: x, y, z\n\n            Allowed operators: AND (conjunction), OR (disjunction), NOT (negation)\n\n            Observations (input -> output):\n            (x=1, y=0, z=1) -> 0\n\n            Prior expressions generated (avoid repeating any expression \n            that is equivalent under the rules below):\n            None\n\n            Task: Generate a single Boolean expression that is consistent with ALL observations.\n\n            Requirements:\n            1. Use ONLY the variables: x, y, z\n            2. Use ONLY these operators: AND, NOT, OR\n            3. The expression must match all given observations\n            4. Structural uniqueness is judged by these rules:\n            - Commutativity: reorderings are the SAME (e.g., x AND y = y AND x).\n        - Idempotence: duplicates of the same input under AND/OR collapse (e.g., x AND x = x; x OR x = x).\n        - Associativity flattening: cascades of the SAME operator are the SAME regardless of parentheses (e.g., (x AND y) AND x = x AND (y AND x) = x AND x AND y).\n        - No distributivity, absorption, or De Morgan normalization: mixing operators keeps expressions DIFFERENT (e.g., (x AND y) OR z ≠ x AND (y OR z)).\n            5. Expression depth should be at most 2 levels of nesting\n            6. Do not use boolean constants True or False anywhere in the expression.\n\n            Output format: \n            - Return ONLY the Boolean expression on a single line\n            - Use plain text format (no LaTeX, no markdown, no special formatting)\n            - Use uppercase for operators. \n            - Use lowercase for variables: x, y, z\n            - Use parentheses for grouping when needed\n            - Start your response with \"Expression: \" followed by the expression\n            \n            Examples of correct format:\n            Expression: x AND y\n            Expression: (x OR y) AND NOT x\n            Expression: NOT (x AND y)\n            \n            DO NOT use formats like:\n            - \\(x \\land y\\)  (LaTeX)\n            - `x AND y`  (markdown)\n            - x ∧ y  (mathematical symbols)\n            "
+  },
+  {
+    "id": "ood3_54aa97fc81809577",
+    "observations": [
+      {
+        "inputs": {
+          "x": 1,
+          "y": 1,
+          "z": 0
+        },
+        "output": 0
+      }
+    ],
+    "cohort": "fresh_3var",
+    "metadata": {
+      "variables": [
+        "x",
+        "y",
+        "z"
+      ],
+      "operators": [
+        "AND",
+        "NOT",
+        "OR"
+      ],
+      "max_depth": 2,
+      "mechanistic_opts": {
+        "apply_commutativity": true,
+        "apply_idempotence_and_or": true,
+        "flatten_associativity": true
+      }
+    },
+    "prompt": "You are given partial observations of a Boolean function with variables: x, y, z\n\n            Allowed operators: AND (conjunction), OR (disjunction), NOT (negation)\n\n            Observations (input -> output):\n            (x=1, y=1, z=0) -> 0\n\n            Prior expressions generated (avoid repeating any expression \n            that is equivalent under the rules below):\n            None\n\n            Task: Generate a single Boolean expression that is consistent with ALL observations.\n\n            Requirements:\n            1. Use ONLY the variables: x, y, z\n            2. Use ONLY these operators: AND, NOT, OR\n            3. The expression must match all given observations\n            4. Structural uniqueness is judged by these rules:\n            - Commutativity: reorderings are the SAME (e.g., x AND y = y AND x).\n        - Idempotence: duplicates of the same input under AND/OR collapse (e.g., x AND x = x; x OR x = x).\n        - Associativity flattening: cascades of the SAME operator are the SAME regardless of parentheses (e.g., (x AND y) AND x = x AND (y AND x) = x AND x AND y).\n        - No distributivity, absorption, or De Morgan normalization: mixing operators keeps expressions DIFFERENT (e.g., (x AND y) OR z ≠ x AND (y OR z)).\n            5. Expression depth should be at most 2 levels of nesting\n            6. Do not use boolean constants True or False anywhere in the expression.\n\n            Output format: \n            - Return ONLY the Boolean expression on a single line\n            - Use plain text format (no LaTeX, no markdown, no special formatting)\n            - Use uppercase for operators. \n            - Use lowercase for variables: x, y, z\n            - Use parentheses for grouping when needed\n            - Start your response with \"Expression: \" followed by the expression\n            \n            Examples of correct format:\n            Expression: x AND y\n            Expression: (x OR y) AND NOT x\n            Expression: NOT (x AND y)\n            \n            DO NOT use formats like:\n            - \\(x \\land y\\)  (LaTeX)\n            - `x AND y`  (markdown)\n            - x ∧ y  (mathematical symbols)\n            "
+  },
+  {
+    "id": "ood3_e1fc1bb8c6a25e30",
+    "observations": [
+      {
+        "inputs": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        },
+        "output": 0
+      }
+    ],
+    "cohort": "fresh_3var",
+    "metadata": {
+      "variables": [
+        "x",
+        "y",
+        "z"
+      ],
+      "operators": [
+        "AND",
+        "NOT",
+        "OR"
+      ],
+      "max_depth": 2,
+      "mechanistic_opts": {
+        "apply_commutativity": true,
+        "apply_idempotence_and_or": true,
+        "flatten_associativity": true
+      }
+    },
+    "prompt": "You are given partial observations of a Boolean function with variables: x, y, z\n\n            Allowed operators: AND (conjunction), OR (disjunction), NOT (negation)\n\n            Observations (input -> output):\n            (x=1, y=1, z=1) -> 0\n\n            Prior expressions generated (avoid repeating any expression \n            that is equivalent under the rules below):\n            None\n\n            Task: Generate a single Boolean expression that is consistent with ALL observations.\n\n            Requirements:\n            1. Use ONLY the variables: x, y, z\n            2. Use ONLY these operators: AND, NOT, OR\n            3. The expression must match all given observations\n            4. Structural uniqueness is judged by these rules:\n            - Commutativity: reorderings are the SAME (e.g., x AND y = y AND x).\n        - Idempotence: duplicates of the same input under AND/OR collapse (e.g., x AND x = x; x OR x = x).\n        - Associativity flattening: cascades of the SAME operator are the SAME regardless of parentheses (e.g., (x AND y) AND x = x AND (y AND x) = x AND x AND y).\n        - No distributivity, absorption, or De Morgan normalization: mixing operators keeps expressions DIFFERENT (e.g., (x AND y) OR z ≠ x AND (y OR z)).\n            5. Expression depth should be at most 2 levels of nesting\n            6. Do not use boolean constants True or False anywhere in the expression.\n\n            Output format: \n            - Return ONLY the Boolean expression on a single line\n            - Use plain text format (no LaTeX, no markdown, no special formatting)\n            - Use uppercase for operators. \n            - Use lowercase for variables: x, y, z\n            - Use parentheses for grouping when needed\n            - Start your response with \"Expression: \" followed by the expression\n            \n            Examples of correct format:\n            Expression: x AND y\n            Expression: (x OR y) AND NOT x\n            Expression: NOT (x AND y)\n            \n            DO NOT use formats like:\n            - \\(x \\land y\\)  (LaTeX)\n            - `x AND y`  (markdown)\n            - x ∧ y  (mathematical symbols)\n            "
+  },
+  {
+    "id": "ood3_a120889477c9e5bc",
+    "observations": [
+      {
+        "inputs": {
+          "x": 0,
+          "y": 0,
+          "z": 1
+        },
+        "output": 0
+      }
+    ],
+    "cohort": "fresh_3var",
+    "metadata": {
+      "variables": [
+        "x",
+        "y",
+        "z"
+      ],
+      "operators": [
+        "AND",
+        "NOT",
+        "OR"
+      ],
+      "max_depth": 2,
+      "mechanistic_opts": {
+        "apply_commutativity": true,
+        "apply_idempotence_and_or": true,
+        "flatten_associativity": true
+      }
+    },
+    "prompt": "You are given partial observations of a Boolean function with variables: x, y, z\n\n            Allowed operators: AND (conjunction), OR (disjunction), NOT (negation)\n\n            Observations (input -> output):\n            (x=0, y=0, z=1) -> 0\n\n            Prior expressions generated (avoid repeating any expression \n            that is equivalent under the rules below):\n            None\n\n            Task: Generate a single Boolean expression that is consistent with ALL observations.\n\n            Requirements:\n            1. Use ONLY the variables: x, y, z\n            2. Use ONLY these operators: AND, NOT, OR\n            3. The expression must match all given observations\n            4. Structural uniqueness is judged by these rules:\n            - Commutativity: reorderings are the SAME (e.g., x AND y = y AND x).\n        - Idempotence: duplicates of the same input under AND/OR collapse (e.g., x AND x = x; x OR x = x).\n        - Associativity flattening: cascades of the SAME operator are the SAME regardless of parentheses (e.g., (x AND y) AND x = x AND (y AND x) = x AND x AND y).\n        - No distributivity, absorption, or De Morgan normalization: mixing operators keeps expressions DIFFERENT (e.g., (x AND y) OR z ≠ x AND (y OR z)).\n            5. Expression depth should be at most 2 levels of nesting\n            6. Do not use boolean constants True or False anywhere in the expression.\n\n            Output format: \n            - Return ONLY the Boolean expression on a single line\n            - Use plain text format (no LaTeX, no markdown, no special formatting)\n            - Use uppercase for operators. \n            - Use lowercase for variables: x, y, z\n            - Use parentheses for grouping when needed\n            - Start your response with \"Expression: \" followed by the expression\n            \n            Examples of correct format:\n            Expression: x AND y\n            Expression: (x OR y) AND NOT x\n            Expression: NOT (x AND y)\n            \n            DO NOT use formats like:\n            - \\(x \\land y\\)  (LaTeX)\n            - `x AND y`  (markdown)\n            - x ∧ y  (mathematical symbols)\n            "
+  },
+  {
+    "id": "ood3_09dbb864d143768a",
+    "observations": [
+      {
+        "inputs": {
+          "x": 0,
+          "y": 1,
+          "z": 0
+        },
+        "output": 0
+      },
+      {
+        "inputs": {
+          "x": 1,
+          "y": 1,
+          "z": 0
+        },
+        "output": 0
+      }
+    ],
+    "cohort": "fresh_3var",
+    "metadata": {
+      "variables": [
+        "x",
+        "y",
+        "z"
+      ],
+      "operators": [
+        "AND",
+        "NOT",
+        "OR"
+      ],
+      "max_depth": 2,
+      "mechanistic_opts": {
+        "apply_commutativity": true,
+        "apply_idempotence_and_or": true,
+        "flatten_associativity": true
+      }
+    },
+    "prompt": "You are given partial observations of a Boolean function with variables: x, y, z\n\n            Allowed operators: AND (conjunction), OR (disjunction), NOT (negation)\n\n            Observations (input -> output):\n            (x=0, y=1, z=0) -> 0\n(x=1, y=1, z=0) -> 0\n\n            Prior expressions generated (avoid repeating any expression \n            that is equivalent under the rules below):\n            None\n\n            Task: Generate a single Boolean expression that is consistent with ALL observations.\n\n            Requirements:\n            1. Use ONLY the variables: x, y, z\n            2. Use ONLY these operators: AND, NOT, OR\n            3. The expression must match all given observations\n            4. Structural uniqueness is judged by these rules:\n            - Commutativity: reorderings are the SAME (e.g., x AND y = y AND x).\n        - Idempotence: duplicates of the same input under AND/OR collapse (e.g., x AND x = x; x OR x = x).\n        - Associativity flattening: cascades of the SAME operator are the SAME regardless of parentheses (e.g., (x AND y) AND x = x AND (y AND x) = x AND x AND y).\n        - No distributivity, absorption, or De Morgan normalization: mixing operators keeps expressions DIFFERENT (e.g., (x AND y) OR z ≠ x AND (y OR z)).\n            5. Expression depth should be at most 2 levels of nesting\n            6. Do not use boolean constants True or False anywhere in the expression.\n\n            Output format: \n            - Return ONLY the Boolean expression on a single line\n            - Use plain text format (no LaTeX, no markdown, no special formatting)\n            - Use uppercase for operators. \n            - Use lowercase for variables: x, y, z\n            - Use parentheses for grouping when needed\n            - Start your response with \"Expression: \" followed by the expression\n            \n            Examples of correct format:\n            Expression: x AND y\n            Expression: (x OR y) AND NOT x\n            Expression: NOT (x AND y)\n            \n            DO NOT use formats like:\n            - \\(x \\land y\\)  (LaTeX)\n            - `x AND y`  (markdown)\n            - x ∧ y  (mathematical symbols)\n            "
+  },
+  {
+    "id": "ood3_e4fb86da0170ce35",
+    "observations": [
+      {
+        "inputs": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "output": 1
+      },
+      {
+        "inputs": {
+          "x": 1,
+          "y": 0,
+          "z": 1
+        },
+        "output": 0
+      }
+    ],
+    "cohort": "fresh_3var",
+    "metadata": {
+      "variables": [
+        "x",
+        "y",
+        "z"
+      ],
+      "operators": [
+        "AND",
+        "NOT",
+        "OR"
+      ],
+      "max_depth": 2,
+      "mechanistic_opts": {
+        "apply_commutativity": true,
+        "apply_idempotence_and_or": true,
+        "flatten_associativity": true
+      }
+    },
+    "prompt": "You are given partial observations of a Boolean function with variables: x, y, z\n\n            Allowed operators: AND (conjunction), OR (disjunction), NOT (negation)\n\n            Observations (input -> output):\n            (x=0, y=0, z=0) -> 1\n(x=1, y=0, z=1) -> 0\n\n            Prior expressions generated (avoid repeating any expression \n            that is equivalent under the rules below):\n            None\n\n            Task: Generate a single Boolean expression that is consistent with ALL observations.\n\n            Requirements:\n            1. Use ONLY the variables: x, y, z\n            2. Use ONLY these operators: AND, NOT, OR\n            3. The expression must match all given observations\n            4. Structural uniqueness is judged by these rules:\n            - Commutativity: reorderings are the SAME (e.g., x AND y = y AND x).\n        - Idempotence: duplicates of the same input under AND/OR collapse (e.g., x AND x = x; x OR x = x).\n        - Associativity flattening: cascades of the SAME operator are the SAME regardless of parentheses (e.g., (x AND y) AND x = x AND (y AND x) = x AND x AND y).\n        - No distributivity, absorption, or De Morgan normalization: mixing operators keeps expressions DIFFERENT (e.g., (x AND y) OR z ≠ x AND (y OR z)).\n            5. Expression depth should be at most 2 levels of nesting\n            6. Do not use boolean constants True or False anywhere in the expression.\n\n            Output format: \n            - Return ONLY the Boolean expression on a single line\n            - Use plain text format (no LaTeX, no markdown, no special formatting)\n            - Use uppercase for operators. \n            - Use lowercase for variables: x, y, z\n            - Use parentheses for grouping when needed\n            - Start your response with \"Expression: \" followed by the expression\n            \n            Examples of correct format:\n            Expression: x AND y\n            Expression: (x OR y) AND NOT x\n            Expression: NOT (x AND y)\n            \n            DO NOT use formats like:\n            - \\(x \\land y\\)  (LaTeX)\n            - `x AND y`  (markdown)\n            - x ∧ y  (mathematical symbols)\n            "
+  },
+  {
+    "id": "ood3_18d7dceceb4d22cd",
+    "observations": [
+      {
+        "inputs": {
+          "x": 0,
+          "y": 0,
+          "z": 1
+        },
+        "output": 1
+      },
+      {
+        "inputs": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        },
+        "output": 0
+      }
+    ],
+    "cohort": "fresh_3var",
+    "metadata": {
+      "variables": [
+        "x",
+        "y",
+        "z"
+      ],
+      "operators": [
+        "AND",
+        "NOT",
+        "OR"
+      ],
+      "max_depth": 2,
+      "mechanistic_opts": {
+        "apply_commutativity": true,
+        "apply_idempotence_and_or": true,
+        "flatten_associativity": true
+      }
+    },
+    "prompt": "You are given partial observations of a Boolean function with variables: x, y, z\n\n            Allowed operators: AND (conjunction), OR (disjunction), NOT (negation)\n\n            Observations (input -> output):\n            (x=0, y=0, z=1) -> 1\n(x=1, y=1, z=1) -> 0\n\n            Prior expressions generated (avoid repeating any expression \n            that is equivalent under the rules below):\n            None\n\n            Task: Generate a single Boolean expression that is consistent with ALL observations.\n\n            Requirements:\n            1. Use ONLY the variables: x, y, z\n            2. Use ONLY these operators: AND, NOT, OR\n            3. The expression must match all given observations\n            4. Structural uniqueness is judged by these rules:\n            - Commutativity: reorderings are the SAME (e.g., x AND y = y AND x).\n        - Idempotence: duplicates of the same input under AND/OR collapse (e.g., x AND x = x; x OR x = x).\n        - Associativity flattening: cascades of the SAME operator are the SAME regardless of parentheses (e.g., (x AND y) AND x = x AND (y AND x) = x AND x AND y).\n        - No distributivity, absorption, or De Morgan normalization: mixing operators keeps expressions DIFFERENT (e.g., (x AND y) OR z ≠ x AND (y OR z)).\n            5. Expression depth should be at most 2 levels of nesting\n            6. Do not use boolean constants True or False anywhere in the expression.\n\n            Output format: \n            - Return ONLY the Boolean expression on a single line\n            - Use plain text format (no LaTeX, no markdown, no special formatting)\n            - Use uppercase for operators. \n            - Use lowercase for variables: x, y, z\n            - Use parentheses for grouping when needed\n            - Start your response with \"Expression: \" followed by the expression\n            \n            Examples of correct format:\n            Expression: x AND y\n            Expression: (x OR y) AND NOT x\n            Expression: NOT (x AND y)\n            \n            DO NOT use formats like:\n            - \\(x \\land y\\)  (LaTeX)\n            - `x AND y`  (markdown)\n            - x ∧ y  (mathematical symbols)\n            "
+  },
+  {
+    "id": "ood3_6c4661374aaba3ce",
+    "observations": [
+      {
+        "inputs": {
+          "x": 0,
+          "y": 1,
+          "z": 1
+        },
+        "output": 1
+      },
+      {
+        "inputs": {
+          "x": 1,
+          "y": 1,
+          "z": 0
+        },
+        "output": 1
+      }
+    ],
+    "cohort": "fresh_3var",
+    "metadata": {
+      "variables": [
+        "x",
+        "y",
+        "z"
+      ],
+      "operators": [
+        "AND",
+        "NOT",
+        "OR"
+      ],
+      "max_depth": 2,
+      "mechanistic_opts": {
+        "apply_commutativity": true,
+        "apply_idempotence_and_or": true,
+        "flatten_associativity": true
+      }
+    },
+    "prompt": "You are given partial observations of a Boolean function with variables: x, y, z\n\n            Allowed operators: AND (conjunction), OR (disjunction), NOT (negation)\n\n            Observations (input -> output):\n            (x=0, y=1, z=1) -> 1\n(x=1, y=1, z=0) -> 1\n\n            Prior expressions generated (avoid repeating any expression \n            that is equivalent under the rules below):\n            None\n\n            Task: Generate a single Boolean expression that is consistent with ALL observations.\n\n            Requirements:\n            1. Use ONLY the variables: x, y, z\n            2. Use ONLY these operators: AND, NOT, OR\n            3. The expression must match all given observations\n            4. Structural uniqueness is judged by these rules:\n            - Commutativity: reorderings are the SAME (e.g., x AND y = y AND x).\n        - Idempotence: duplicates of the same input under AND/OR collapse (e.g., x AND x = x; x OR x = x).\n        - Associativity flattening: cascades of the SAME operator are the SAME regardless of parentheses (e.g., (x AND y) AND x = x AND (y AND x) = x AND x AND y).\n        - No distributivity, absorption, or De Morgan normalization: mixing operators keeps expressions DIFFERENT (e.g., (x AND y) OR z ≠ x AND (y OR z)).\n            5. Expression depth should be at most 2 levels of nesting\n            6. Do not use boolean constants True or False anywhere in the expression.\n\n            Output format: \n            - Return ONLY the Boolean expression on a single line\n            - Use plain text format (no LaTeX, no markdown, no special formatting)\n            - Use uppercase for operators. \n            - Use lowercase for variables: x, y, z\n            - Use parentheses for grouping when needed\n            - Start your response with \"Expression: \" followed by the expression\n            \n            Examples of correct format:\n            Expression: x AND y\n            Expression: (x OR y) AND NOT x\n            Expression: NOT (x AND y)\n            \n            DO NOT use formats like:\n            - \\(x \\land y\\)  (LaTeX)\n            - `x AND y`  (markdown)\n            - x ∧ y  (mathematical symbols)\n            "
+  },
+  {
+    "id": "ood3_34f1d7870a63c953",
+    "observations": [
+      {
+        "inputs": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "output": 0
+      },
+      {
+        "inputs": {
+          "x": 0,
+          "y": 0,
+          "z": 1
+        },
+        "output": 1
+      },
+      {
+        "inputs": {
+          "x": 1,
+          "y": 0,
+          "z": 0
+        },
+        "output": 1
+      }
+    ],
+    "cohort": "fresh_3var",
+    "metadata": {
+      "variables": [
+        "x",
+        "y",
+        "z"
+      ],
+      "operators": [
+        "AND",
+        "NOT",
+        "OR"
+      ],
+      "max_depth": 2,
+      "mechanistic_opts": {
+        "apply_commutativity": true,
+        "apply_idempotence_and_or": true,
+        "flatten_associativity": true
+      }
+    },
+    "prompt": "You are given partial observations of a Boolean function with variables: x, y, z\n\n            Allowed operators: AND (conjunction), OR (disjunction), NOT (negation)\n\n            Observations (input -> output):\n            (x=0, y=0, z=0) -> 0\n(x=0, y=0, z=1) -> 1\n(x=1, y=0, z=0) -> 1\n\n            Prior expressions generated (avoid repeating any expression \n            that is equivalent under the rules below):\n            None\n\n            Task: Generate a single Boolean expression that is consistent with ALL observations.\n\n            Requirements:\n            1. Use ONLY the variables: x, y, z\n            2. Use ONLY these operators: AND, NOT, OR\n            3. The expression must match all given observations\n            4. Structural uniqueness is judged by these rules:\n            - Commutativity: reorderings are the SAME (e.g., x AND y = y AND x).\n        - Idempotence: duplicates of the same input under AND/OR collapse (e.g., x AND x = x; x OR x = x).\n        - Associativity flattening: cascades of the SAME operator are the SAME regardless of parentheses (e.g., (x AND y) AND x = x AND (y AND x) = x AND x AND y).\n        - No distributivity, absorption, or De Morgan normalization: mixing operators keeps expressions DIFFERENT (e.g., (x AND y) OR z ≠ x AND (y OR z)).\n            5. Expression depth should be at most 2 levels of nesting\n            6. Do not use boolean constants True or False anywhere in the expression.\n\n            Output format: \n            - Return ONLY the Boolean expression on a single line\n            - Use plain text format (no LaTeX, no markdown, no special formatting)\n            - Use uppercase for operators. \n            - Use lowercase for variables: x, y, z\n            - Use parentheses for grouping when needed\n            - Start your response with \"Expression: \" followed by the expression\n            \n            Examples of correct format:\n            Expression: x AND y\n            Expression: (x OR y) AND NOT x\n            Expression: NOT (x AND y)\n            \n            DO NOT use formats like:\n            - \\(x \\land y\\)  (LaTeX)\n            - `x AND y`  (markdown)\n            - x ∧ y  (mathematical symbols)\n            "
+  },
+  {
+    "id": "ood3_6ae243bad80796ae",
+    "observations": [
+      {
+        "inputs": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "output": 1
+      },
+      {
+        "inputs": {
+          "x": 0,
+          "y": 1,
+          "z": 1
+        },
+        "output": 0
+      },
+      {
+        "inputs": {
+          "x": 1,
+          "y": 1,
+          "z": 0
+        },
+        "output": 1
+      }
+    ],
+    "cohort": "fresh_3var",
+    "metadata": {
+      "variables": [
+        "x",
+        "y",
+        "z"
+      ],
+      "operators": [
+        "AND",
+        "NOT",
+        "OR"
+      ],
+      "max_depth": 2,
+      "mechanistic_opts": {
+        "apply_commutativity": true,
+        "apply_idempotence_and_or": true,
+        "flatten_associativity": true
+      }
+    },
+    "prompt": "You are given partial observations of a Boolean function with variables: x, y, z\n\n            Allowed operators: AND (conjunction), OR (disjunction), NOT (negation)\n\n            Observations (input -> output):\n            (x=0, y=0, z=0) -> 1\n(x=0, y=1, z=1) -> 0\n(x=1, y=1, z=0) -> 1\n\n            Prior expressions generated (avoid repeating any expression \n            that is equivalent under the rules below):\n            None\n\n            Task: Generate a single Boolean expression that is consistent with ALL observations.\n\n            Requirements:\n            1. Use ONLY the variables: x, y, z\n            2. Use ONLY these operators: AND, NOT, OR\n            3. The expression must match all given observations\n            4. Structural uniqueness is judged by these rules:\n            - Commutativity: reorderings are the SAME (e.g., x AND y = y AND x).\n        - Idempotence: duplicates of the same input under AND/OR collapse (e.g., x AND x = x; x OR x = x).\n        - Associativity flattening: cascades of the SAME operator are the SAME regardless of parentheses (e.g., (x AND y) AND x = x AND (y AND x) = x AND x AND y).\n        - No distributivity, absorption, or De Morgan normalization: mixing operators keeps expressions DIFFERENT (e.g., (x AND y) OR z ≠ x AND (y OR z)).\n            5. Expression depth should be at most 2 levels of nesting\n            6. Do not use boolean constants True or False anywhere in the expression.\n\n            Output format: \n            - Return ONLY the Boolean expression on a single line\n            - Use plain text format (no LaTeX, no markdown, no special formatting)\n            - Use uppercase for operators. \n            - Use lowercase for variables: x, y, z\n            - Use parentheses for grouping when needed\n            - Start your response with \"Expression: \" followed by the expression\n            \n            Examples of correct format:\n            Expression: x AND y\n            Expression: (x OR y) AND NOT x\n            Expression: NOT (x AND y)\n            \n            DO NOT use formats like:\n            - \\(x \\land y\\)  (LaTeX)\n            - `x AND y`  (markdown)\n            - x ∧ y  (mathematical symbols)\n            "
+  },
+  {
+    "id": "ood3_d24b1825967de907",
+    "observations": [
+      {
+        "inputs": {
+          "x": 0,
+          "y": 0,
+          "z": 1
+        },
+        "output": 1
+      },
+      {
+        "inputs": {
+          "x": 1,
+          "y": 0,
+          "z": 1
+        },
+        "output": 0
+      },
+      {
+        "inputs": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        },
+        "output": 0
+      }
+    ],
+    "cohort": "fresh_3var",
+    "metadata": {
+      "variables": [
+        "x",
+        "y",
+        "z"
+      ],
+      "operators": [
+        "AND",
+        "NOT",
+        "OR"
+      ],
+      "max_depth": 2,
+      "mechanistic_opts": {
+        "apply_commutativity": true,
+        "apply_idempotence_and_or": true,
+        "flatten_associativity": true
+      }
+    },
+    "prompt": "You are given partial observations of a Boolean function with variables: x, y, z\n\n            Allowed operators: AND (conjunction), OR (disjunction), NOT (negation)\n\n            Observations (input -> output):\n            (x=0, y=0, z=1) -> 1\n(x=1, y=0, z=1) -> 0\n(x=1, y=1, z=1) -> 0\n\n            Prior expressions generated (avoid repeating any expression \n            that is equivalent under the rules below):\n            None\n\n            Task: Generate a single Boolean expression that is consistent with ALL observations.\n\n            Requirements:\n            1. Use ONLY the variables: x, y, z\n            2. Use ONLY these operators: AND, NOT, OR\n            3. The expression must match all given observations\n            4. Structural uniqueness is judged by these rules:\n            - Commutativity: reorderings are the SAME (e.g., x AND y = y AND x).\n        - Idempotence: duplicates of the same input under AND/OR collapse (e.g., x AND x = x; x OR x = x).\n        - Associativity flattening: cascades of the SAME operator are the SAME regardless of parentheses (e.g., (x AND y) AND x = x AND (y AND x) = x AND x AND y).\n        - No distributivity, absorption, or De Morgan normalization: mixing operators keeps expressions DIFFERENT (e.g., (x AND y) OR z ≠ x AND (y OR z)).\n            5. Expression depth should be at most 2 levels of nesting\n            6. Do not use boolean constants True or False anywhere in the expression.\n\n            Output format: \n            - Return ONLY the Boolean expression on a single line\n            - Use plain text format (no LaTeX, no markdown, no special formatting)\n            - Use uppercase for operators. \n            - Use lowercase for variables: x, y, z\n            - Use parentheses for grouping when needed\n            - Start your response with \"Expression: \" followed by the expression\n            \n            Examples of correct format:\n            Expression: x AND y\n            Expression: (x OR y) AND NOT x\n            Expression: NOT (x AND y)\n            \n            DO NOT use formats like:\n            - \\(x \\land y\\)  (LaTeX)\n            - `x AND y`  (markdown)\n            - x ∧ y  (mathematical symbols)\n            "
+  },
+  {
+    "id": "ood3_550dcc5c959bb2f5",
+    "observations": [
+      {
+        "inputs": {
+          "x": 0,
+          "y": 1,
+          "z": 0
+        },
+        "output": 0
+      },
+      {
+        "inputs": {
+          "x": 1,
+          "y": 0,
+          "z": 1
+        },
+        "output": 1
+      },
+      {
+        "inputs": {
+          "x": 1,
+          "y": 1,
+          "z": 0
+        },
+        "output": 1
+      }
+    ],
+    "cohort": "fresh_3var",
+    "metadata": {
+      "variables": [
+        "x",
+        "y",
+        "z"
+      ],
+      "operators": [
+        "AND",
+        "NOT",
+        "OR"
+      ],
+      "max_depth": 2,
+      "mechanistic_opts": {
+        "apply_commutativity": true,
+        "apply_idempotence_and_or": true,
+        "flatten_associativity": true
+      }
+    },
+    "prompt": "You are given partial observations of a Boolean function with variables: x, y, z\n\n            Allowed operators: AND (conjunction), OR (disjunction), NOT (negation)\n\n            Observations (input -> output):\n            (x=0, y=1, z=0) -> 0\n(x=1, y=0, z=1) -> 1\n(x=1, y=1, z=0) -> 1\n\n            Prior expressions generated (avoid repeating any expression \n            that is equivalent under the rules below):\n            None\n\n            Task: Generate a single Boolean expression that is consistent with ALL observations.\n\n            Requirements:\n            1. Use ONLY the variables: x, y, z\n            2. Use ONLY these operators: AND, NOT, OR\n            3. The expression must match all given observations\n            4. Structural uniqueness is judged by these rules:\n            - Commutativity: reorderings are the SAME (e.g., x AND y = y AND x).\n        - Idempotence: duplicates of the same input under AND/OR collapse (e.g., x AND x = x; x OR x = x).\n        - Associativity flattening: cascades of the SAME operator are the SAME regardless of parentheses (e.g., (x AND y) AND x = x AND (y AND x) = x AND x AND y).\n        - No distributivity, absorption, or De Morgan normalization: mixing operators keeps expressions DIFFERENT (e.g., (x AND y) OR z ≠ x AND (y OR z)).\n            5. Expression depth should be at most 2 levels of nesting\n            6. Do not use boolean constants True or False anywhere in the expression.\n\n            Output format: \n            - Return ONLY the Boolean expression on a single line\n            - Use plain text format (no LaTeX, no markdown, no special formatting)\n            - Use uppercase for operators. \n            - Use lowercase for variables: x, y, z\n            - Use parentheses for grouping when needed\n            - Start your response with \"Expression: \" followed by the expression\n            \n            Examples of correct format:\n            Expression: x AND y\n            Expression: (x OR y) AND NOT x\n            Expression: NOT (x AND y)\n            \n            DO NOT use formats like:\n            - \\(x \\land y\\)  (LaTeX)\n            - `x AND y`  (markdown)\n            - x ∧ y  (mathematical symbols)\n            "
+  }
+]

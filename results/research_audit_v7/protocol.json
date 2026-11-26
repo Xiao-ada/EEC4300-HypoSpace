@@ -1,0 +1,113 @@
+{
+  "frozen_utc": "2026-11-26T16:39:24.102299+00:00",
+  "purpose": "Measure learned free-generation performance and limits; no score threshold or method selection.",
+  "methods": [
+    "base_iid",
+    "balanced_sft_iid",
+    "canonical_coverage_iid",
+    "string_coverage_iid"
+  ],
+  "inference_seeds": [
+    18617,
+    28657
+  ],
+  "budget": 16,
+  "primary_comparison": "canonical_coverage_iid minus balanced_sft_iid, macro RR@16 on known_2var",
+  "primary_status": "Fresh sampling replication on already-used observation tasks; not a new untouched dataset.",
+  "secondary_cohort": "12 fresh three-variable transfer tasks, selected before any model runs; no adaptation.",
+  "task_ids": {
+    "known_2var": [
+      "529e001f10ce8f35",
+      "d2bab89d4e62c767",
+      "4ae35d977a5b3a7f",
+      "33ba982524498e44",
+      "ccb74e75ae7fe6f8",
+      "cfb68019d93cb40b",
+      "3376193cc0b23f84",
+      "05ace31b5594de25",
+      "5a17b622676fbafd",
+      "cf672e2a816c26f7",
+      "0460f9d0a8255d57",
+      "96e90180d0d7e7c1",
+      "4193d5a0e928436f",
+      "eb5c49b8875cb38d",
+      "366130c4ee65403b",
+      "41afe33958a0f175",
+      "4e203c42afda39ea",
+      "78e9bb81fdfa58e9",
+      "901883305471e27f",
+      "bb95a672f4564a67",
+      "bc56fbefe7c38a2a",
+      "309cb870390c832b",
+      "53d0f06e5b9f9cf5",
+      "2f44f7747e67ffb6",
+      "af3d6162e50915b5",
+      "b6e6f6b6a9c5ed13"
+    ],
+    "fresh_3var": [
+      "ood3_d9f07c127323ab2b",
+      "ood3_54aa97fc81809577",
+      "ood3_e1fc1bb8c6a25e30",
+      "ood3_a120889477c9e5bc",
+      "ood3_09dbb864d143768a",
+      "ood3_e4fb86da0170ce35",
+      "ood3_18d7dceceb4d22cd",
+      "ood3_6c4661374aaba3ce",
+      "ood3_34f1d7870a63c953",
+      "ood3_6ae243bad80796ae",
+      "ood3_d24b1825967de907",
+      "ood3_550dcc5c959bb2f5"
+    ]
+  },
+  "expected_calls": 4864,
+  "generation": {
+    "temperature": 1.0,
+    "top_p": 1.0,
+    "top_k": 0,
+    "min_p": 0.0,
+    "max_tokens": 128,
+    "decoder": "unrestricted autoregressive stream_generate",
+    "prior_history": false,
+    "candidate_catalog": false,
+    "rejection_or_repair": false,
+    "uniqueness_target": null,
+    "reference_K_used_as_budget": false
+  },
+  "prompt_changes": [
+    "Stable operator-list order",
+    "Remove NOR format example when NOR is not allowed",
+    "Correct hard-coded variable-name formatting line for three variables"
+  ],
+  "training": "Original matched v1 checkpoints: same 80 SFT warmup + 120 branch updates, same training schedule; no new training or test-based checkpoint selection.",
+  "training_seed_count": 1,
+  "adapter_sha256": {
+    "balanced_sft_iid": "cd37fc2b3f2112601093fe5d39e47da937400eed5d8e6c21548696206397c413",
+    "canonical_coverage_iid": "78264d860250b2679ad2adf6ad6b92d7ecbf38e72811ad3773826fc8f3eda81c",
+    "string_coverage_iid": "ce6561ad392145c88bc6a6864257bcd4e794e11c0308fc449fa252de1d9c8228"
+  },
+  "base_model": {
+    "repo_id": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+    "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+    "weights_file": "model.safetensors",
+    "weights_sha256": "0979f33d1bc58afcf696d13f57977644e7b11a6f0eec3e631d8e9463d18c0717",
+    "weights_bytes": 868628559,
+    "original_model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "runtime": "mlx-lm==0.32.2",
+    "notes": "Public third-party 4-bit conversion. A small-model screening run; not equivalent to the paper's model settings."
+  },
+  "scoring": "Unchanged common fail-closed official parser/space/observation checks; full reference sets; all attempts retained.",
+  "uncertainty": "10,000 paired task bootstrap resamples, seeds averaged within task. Secondary intervals exploratory; no output-level independence claim.",
+  "source_sha256": {
+    "explorer/research_audit_data.py": "a9e7bba8a1af14d67378b35f66b490706a3b9e86c47a58d6041377f1d690d655",
+    "explorer/research_audit.py": "cf67367283c55bdc81c6acd472e2e1a546375f166e92d7226322ed317cbdbd0f",
+    "scripts/report_research_audit.py": "72685013fcf94a7639af3055460eeb1aee272effd9bda3c7489bcccb9c392e72",
+    "explorer/prefix_cache.py": "426a70dbe4c1187557eea87185280144f37ebc9dc94141b31060539b637153c9",
+    "explorer/experiment.py": "ffb4a6cee67ac401283c6c04833a2c9286fc6a1e95881967949fa50bb9770770"
+  },
+  "data_sha256": {
+    "public_tasks.json": "7912475a07d093129b8a72613df6ddf9616acc3003e2873e39ecf446b0d4aec6",
+    "scoring_references.json": "0d9b219f563d8321f80ef39700ae02d9cdd06f095ef6fa29774943067e30de04"
+  },
+  "old_test_scores_not_combined_with_new_scores": true,
+  "model_runner_reads_scoring_references": false
+}

@@ -2,6 +2,8 @@
 
 [可编辑 PPTX](personal_method_results.pptx)
 
+英文两页演示已保存到当前对话的在线演示，可从查看器导出 PPTX；[英文讲稿](../docs/PERSONAL_TALK_EN.md)约 179 词，并加入官方 Good Score 参考与本模型尚未达标的说明。[官方指标参考核对](../docs/BENCHMARK_SCORE_GUIDANCE_ZH.md)区分仓库模型指引和课程评分。
+
 1. 原理页：HypoSpace 与 GAPO 文献启发、官方结构类别的概率聚合、有限预算覆盖代理及联合训练损失。LoRA 是实现工具。
 2. 结果页：完整五组 VR/NR/RR 对照，区分相对原始模型的整体收益与相对匹配 SFT 尚不确定的恢复率增益。
 

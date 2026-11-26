@@ -10,6 +10,8 @@
 
 目前不能确认“新模块稳定提高 Recovery”“类别合并提高有效假设多样性”“全面优于普通微调”或“该组合在全部文献中首次提出”。方法差异、可证明的数学性质、已有实验中的收益与全球首创是不同层次的主张。
 
+绝对表现也需单列：官方 README 的 Good Score 指引为 Validity >90%、Uniqueness >80%、Recovery >80%，本模型三项均未达到。相对改善、方法贡献和技术交付完成度不能替代这项事实，见[指标参考核对](BENCHMARK_SCORE_GUIDANCE_ZH.md)。
+
 ## 一、已实现的设计贡献是什么
 
 方法使用官方 mechanistic key 定义类别；完整真值表相同的表达式仍可能属于不同类别。因此，它对齐的是基准的结构恢复指标。例：`x` 与 `x AND (x OR y)` 在所有输入上的行为相同，但官方 key 不同，见[已验证例子](../results/coverage_plan/structural_distinction_example.json)。

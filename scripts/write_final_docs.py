@@ -177,6 +177,8 @@ if (ROOT/'docs/PERSONAL_TALK_2MIN_ZH.md').exists():
     readme += '\n当前推荐的个人口头稿：[两分钟以内，含文献逻辑与最终成果](docs/PERSONAL_TALK_2MIN_ZH.md)。\n'
 if (ROOT/'presentations/personal_method_results.pptx').exists():
     readme += '\n[Editable principle and results slides](presentations/personal_method_results.pptx), with [page previews](presentations/README.md).\n'
+if (ROOT/'docs/BENCHMARK_SCORE_GUIDANCE_ZH.md').exists():
+    readme += '\nOfficial README Good Score guides: Validity >90%, Uniqueness >80%, Recovery >80%. Relative gains and course grades are different from these absolute model-performance guides. See [guidance and scope](docs/BENCHMARK_SCORE_GUIDANCE_ZH.md).\n'
 (ROOT/'README.md').write_text(readme)
 write={'base_RR_gain_pp':base_delta,'vs_SFT_RR_gain_pp':delta,'vs_SFT_RR_interval_pp':[lo,hi],'vs_SFT_VR_gain_pp':vr_delta,'interpretation':conclusion,'string_ablation_interpretation':ab_note,'practical_threshold_met':delta>=5 and vr_delta>=-2}
 (out/'interpretation.json').write_text(json.dumps(write,ensure_ascii=False,indent=2)+'\n')

@@ -128,6 +128,20 @@
       "principle_and_literature",
       "results_and_limits"
     ],
-    "editable": true
+    "editable": true,
+    "english_deck": "saved_in_current_conversation",
+    "english_script_words": 179,
+    "english_language": "English",
+    "english_score_guidance_disclosed": true
+  },
+  "benchmark_good_score_guides": {
+    "source": "https://github.com/CTT-Pavilion/_HypoSpace/blob/main/README.md",
+    "strictly_greater_than": {
+      "VR": 0.9,
+      "NR": 0.8,
+      "RR": 0.8
+    },
+    "canonical_coverage_all_three_below": true,
+    "not_course_grade_thresholds": true
   }
 }

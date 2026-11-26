@@ -32,14 +32,16 @@ def main():
     val=json.loads((OUT/'validation/summary.json').read_text())
     selection=json.loads((OUT/'selection.json').read_text())
     assert json.loads((OUT/'test/verification.json').read_text())['pass']
-    stats=test['metrics'];candidate='canonical_preference_bace';s=stats[candidate]
+    stats=test['metrics'];main_method=selection['selected_method']
+    preference='canonical_preference_bace'
+    candidate=main_method or preference
+    s=stats[candidate]
     old=stats['canonical_coverage_iid'];control='coverage_continuation_bace'
-    diff=test['comparisons'][candidate][control]
+    diff=test['comparisons'][preference][control]
     order=['base_iid','balanced_sft_iid','canonical_coverage_iid','coverage_continuation_iid',
-           'canonical_preference_iid','coverage_continuation_bace',candidate,'uniform_bace']
+           'canonical_preference_iid','coverage_continuation_bace',preference,'uniform_bace']
     table='| Method | Validity | Uniqueness | Recovery |\n|---|---:|---:|---:|\n'+''.join(
         f"| {LABELS[m]} | {percent(stats[m]['VR'])} | {percent(stats[m]['NR'])} | {percent(stats[m]['RR'])} |\n" for m in order)
-    main_method=selection['selected_method']
     decision=('验证规则选定 '+LABELS[main_method]+'；选定方法在测试前冻结。' if main_method else
               '验证阶段没有候选同时满足全部采用条件；保留第一版主方法，新增 BACE 结果作为取舍方案报告。')
     attribution=('该设置下支持新增偏好损失提供额外合法率收益，但仍是单训练种子的探索性结果。'
@@ -57,7 +59,7 @@ def main():
 
 {table}
 
-偏好训练+BACE 相对第一版覆盖模型：Validity {pp(s['VR']-old['VR'])}、Uniqueness {pp(s['NR']-old['NR'])}、Recovery {pp(s['RR']-old['RR'])} 个百分点。
+验证阶段选定组合 **{LABELS[candidate]}** 相对第一版覆盖模型：Validity {pp(s['VR']-old['VR'])}、Uniqueness {pp(s['NR']-old['NR'])}、Recovery {pp(s['RR']-old['RR'])} 个百分点。新增偏好损失是否采用，以验证记录为准；不能根据测试结果反向更换选择。
 
 对照额外训练和解码后，新偏好损失相对 Coverage +80 / BACE：Validity {pp(diff['VR']['difference'])} 个百分点，按题配对 bootstrap 95% 区间 {ci(diff['VR'])}；Recovery {pp(diff['RR']['difference'])} 个百分点，区间 {ci(diff['RR'])}。{attribution}区间未做次要多重比较校正，不能推广到所有模型或训练种子。
 
@@ -70,7 +72,7 @@ def main():
 
 ## 官方参考值与取舍
 
-| 指标 | 偏好训练+BACE | README 参考 | 超过参考值 |
+| 指标 | {LABELS[candidate]} | README 参考 | 超过参考值 |
 |---|---:|---:|---|
 | Validity | {percent(s['VR'])} | >90% | {'是' if s['VR']>.9 else '否'} |
 | Uniqueness | {percent(s['NR'])} | >80% | {'是' if s['NR']>.8 else '否'} |
@@ -124,7 +126,7 @@ See [full discussion](OPTIMIZATION_RESULTS_ZH.md), [training method](CANONICAL_P
     banner=f'''<!-- OPTIMIZATION_UPDATE_BEGIN -->
 ## README 参考指标优化：新增实测结果
 
-新增结构类别偏好训练与 BACE 预算控制，原始结果完整保留。**偏好训练+BACE：VR {percent(s['VR'])}、NR {percent(s['NR'])}、RR {percent(s['RR'])}**。不重复率超过 README 的 >80% 指引；其余指标以实际表格为准，不能据此宣称三项全面达标或课程高分。
+新增结构类别偏好训练对照与 BACE 预算控制，原始结果完整保留。**验证选定的 {LABELS[candidate]}：VR {percent(s['VR'])}、NR {percent(s['NR'])}、RR {percent(s['RR'])}**。不重复率超过 README 的 >80% 指引；其余指标以实际表格为准，不能据此宣称三项全面达标或课程高分。
 
 {decision}
 
@@ -143,6 +145,7 @@ See [full discussion](OPTIMIZATION_RESULTS_ZH.md), [training method](CANONICAL_P
 
 '''
     readme=(ROOT/'README.md').read_text()
+    readme=readme.replace('**完整训练、验证与固定测试已完成。全部数字来自真实模型输出。**','**第一版训练、验证与固定测试已完成。该段概述指第一版；新增优化见下节。**')
     readme='\n'.join(line for line in readme.split('\n') if not line.startswith('> **README 指标优化实验进行中'))
     if '<!-- OPTIMIZATION_UPDATE_BEGIN -->' in readme:
         start=readme.index('<!-- OPTIMIZATION_UPDATE_BEGIN -->');end=readme.index('<!-- OPTIMIZATION_UPDATE_END -->')+len('<!-- OPTIMIZATION_UPDATE_END -->')
@@ -166,11 +169,11 @@ See [full discussion](OPTIMIZATION_RESULTS_ZH.md), [training method](CANONICAL_P
               'startup_generation_errors':1,'resource_probe':json.loads((OUT/'resource_probe.json').read_text()),
               'all_v1_results_preserved':True}
     write_json(ROOT/'results/optimization_campaign.json',campaign)
-    plot(test,order)
-    print(json.dumps({'report':'docs/OPTIMIZATION_RESULTS_ZH.md','validation_selected_method':main_method,'candidate_metrics':s,'primary_validity_comparison':diff['VR']},indent=2))
+    plot(test,order,candidate)
+    print(json.dumps({'report':'docs/OPTIMIZATION_RESULTS_ZH.md','validation_selected_method':main_method,'recommended_metrics':s,'primary_validity_comparison':diff['VR']},indent=2))
 
 
-def plot(test,order):
+def plot(test,order,highlight):
     import matplotlib
     matplotlib.use('Agg')
     import matplotlib.pyplot as plt
@@ -180,12 +183,14 @@ def plot(test,order):
     fig,axes=plt.subplots(1,3,figsize=(13,5.8),sharey=True)
     for ax,metric,guide,title in zip(axes,['VR','NR','RR'],[90,80,80],['Validity','Uniqueness','Recovery']):
         values=[stats[m][metric]*100 for m in order]
-        colors=['#245f9e' if m=='canonical_preference_bace' else '#83b0ce' if m.startswith('canonical_preference') else '#b9c2cd' for m in order]
+        colors=['#245f9e' if m==highlight else '#83b0ce' if m.startswith('canonical_preference') else '#b9c2cd' for m in order]
         ax.barh(np.arange(len(order)),values,color=colors)
         ax.axvline(guide,color='#a54435',ls='--',lw=1)
         for y,v in enumerate(values):ax.text(min(v+1.2,95),y,f'{v:.1f}',va='center',fontsize=8)
         ax.set_title(title);ax.set_xlim(0,103);ax.set_xlabel('Percent')
-        ax.set_yticks(range(len(order)),labels if ax is axes[0] else [])
+        ax.set_yticks(range(len(order)))
+        if ax is axes[0]:ax.set_yticklabels(labels)
+        else:ax.tick_params(axis='y',labelleft=False)
         ax.spines[['top','right']].set_visible(False)
     axes[0].invert_yaxis()
     fig.suptitle('26 Boolean tasks / 3 inference seeds / 16 counted attempts',fontsize=13)
@@ -197,7 +202,7 @@ def plot(test,order):
     fig,ax=plt.subplots(figsize=(7.5,4.8))
     for method in ['coverage_continuation_iid','canonical_preference_iid','coverage_continuation_bace','canonical_preference_bace','uniform_bace']:
         y=[100*np.mean([float(r['RR']) for r in rows if r['method']==method and int(r['queries'])==n]) for n in range(1,17)]
-        ax.plot(range(1,17),y,label=LABELS[method],lw=2 if method=='canonical_preference_bace' else 1.4)
+        ax.plot(range(1,17),y,label=LABELS[method],lw=2 if method==highlight else 1.4)
     ax.set(xlabel='Counted proposals (policy planned for total N=16)',ylabel='Recovery (%)',xlim=(1,16),ylim=(0,100))
     ax.axhline(80,ls='--',color='#a54435',lw=1,label='README recovery guide')
     ax.legend(fontsize=8);ax.spines[['top','right']].set_visible(False);fig.tight_layout()

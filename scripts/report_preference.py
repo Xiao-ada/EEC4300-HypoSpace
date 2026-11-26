@@ -34,7 +34,8 @@ def aggregate(split):
     with gzip.open(ROOT/'results/final'/split/'evidence.jsonl.gz','rt') as f:
         for line in f:
             r=json.loads(line)
-            original_prompt[(r['contract']['task_id'],r['contract']['seed'])]=r['prompt']
+            if r['contract']['method']=='canonical_coverage_iid':
+                original_prompt[(r['contract']['task_id'],r['contract']['seed'])]=r['prompt']
     evidence,episodes,curves,hashes=[],[],[],{}
     counts=defaultdict(int)
     for method in METHODS:

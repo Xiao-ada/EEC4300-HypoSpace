@@ -102,8 +102,11 @@ def aggregate(split):
     comparisons={target:{control:paired(episodes,target,control,ids) for control in methods if control!=target}
                  for target in ['canonical_preference_iid','canonical_preference_bace']}
     old=metrics['canonical_coverage_iid']
-    eligible=[m for m in METHODS if metrics[m]['NR']>.8 and metrics[m]['VR']>=old['VR']-.02 and metrics[m]['RR']>old['RR']]
+    eligible=[m for m in METHODS if m!='uniform_bace' and metrics[m]['NR']>.8 and metrics[m]['VR']>=old['VR']-.02 and metrics[m]['RR']>old['RR']]
     selected=max(eligible,key=lambda m:metrics[m]['RR']) if eligible else None
+    if split=='test':
+        # Test data never select which method is recommended.
+        selected=json.loads((OUT/'selection.json').read_text())['selected_method']
     out=OUT/split;out.mkdir(parents=True,exist_ok=True)
     export_csv(out/'episodes.csv',episodes);export_csv(out/'curves.csv',curves)
     write_json(out/'raw_manifest.json',hashes)
@@ -111,7 +114,7 @@ def aggregate(split):
         for r in evidence:f.write((json.dumps(r,ensure_ascii=False)+'\n').encode())
     result={'split':split,'tasks':len(ids),'seeds':seeds,'attempts_per_episode':16,'metrics':metrics,
             'comparisons':comparisons,'counts':dict(counts),'raw_outputs_rescored':len(evidence),
-            'eligible_under_validation_rule':eligible,'selected_under_rule':selected,
+            'eligible_on_this_split_under_numeric_rule':eligible,'selected_under_rule':selected,
             'reference_guides':{'VR':.90,'NR':.80,'RR':.80},
             'reference_guides_met_by_preference_bace':{k:metrics['canonical_preference_bace'][k]>v for k,v in {'VR':.9,'NR':.8,'RR':.8}.items()},
             'limits':'Exploratory follow-up on v1 test observations; fixed final updates; one training seed; task bootstrap intervals not multiplicity-adjusted. A selection rule is evaluated on validation, never used to hide other test arms.'}

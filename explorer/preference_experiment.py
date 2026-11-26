@@ -10,9 +10,10 @@ from pathlib import Path
 
 from .canonical_decode import SupportTrie, TrieLogitsProcessor, completion_tokens, grammar_support
 from .canonical_preference import OUT, RUN as TRAIN
-from .coverage_lora import LORA, RUN as V1, dataset, model_load
+from .coverage_lora import LORA, dataset, model_load
 from .experiment import assess, read_rows
 from .prompt_archive import recorded_prompt
+from .prefix_cache import build_prefix, fresh_prefix
 from .target_decode import intervene
 from .tasks import public_task, write_json
 from .upstream import evaluator
@@ -29,10 +30,11 @@ def config():
            'training': training,
            'analysis_plan_sha256': hashlib.sha256((OUT/'analysis_plan.json').read_bytes()).hexdigest(),
            'sources': {p: hashlib.sha256((Path(__file__).parent/p).read_bytes()).hexdigest()
-                       for p in ['preference_experiment.py', 'canonical_decode.py', 'target_decode.py', 'prompt_archive.py']},
+                       for p in ['preference_experiment.py', 'canonical_decode.py', 'target_decode.py', 'prompt_archive.py', 'prefix_cache.py']},
            'test_status':'Exploratory follow-up on existing v1 held-out observation sets; not a new untouched test',
            'selection_rule':'Publish both fixed final checkpoints and both inference modes. Prefer a candidate that raises validation NR above .8, increases RR and loses no more than .02 VR versus original canonical. If none passes, report the trade-off and retain v1 as main.',
            'cache_policy':'Unchanged IID prefix of the same checkpoint is replayed from this v5 evaluation, counted in all logical costs. No v1 output is replayed under a v5 checkpoint.',
+           'kv_cache_policy':'Identical prompt-prefix KV states are reused per adapter/prompt; the last prompt token and every answer token are computed afresh. Actual-model seeded equivalence checked before validation. Logical prompt tokens remain fully counted; physical prefill work is logged separately.',
            'fairness':'Byte-identical immutable v1 prompt text; identical sampler, seed generation, output cap, scoring and attempt budget. No ground-truth validity filtering during proposal.'}
     p = OUT/'evaluation_protocol.json'
     if p.exists():
@@ -65,9 +67,12 @@ def evaluate(split):
     ledger_path = RUN/'generation_ledger.json'
     ledger = json.loads(ledger_path.read_text()) if ledger_path.exists() else {
         'new_model_calls':0,'replayed_model_calls':0,'uniform_draws':0,
-        'new_model_tokens':0,'replayed_model_tokens':0,'errors':0}
+        'new_model_tokens':0,'replayed_model_tokens':0,'errors':0,
+        'prefix_builds':0,'physical_prefix_tokens':0,'physical_last_prompt_tokens':0,
+        'physical_completion_tokens':0,'prefix_build_seconds':0.}
     for tid in d['splits'][split]:
         task = public_task(tasks[tid])
+        prefixes = {}
         for seed in cfg['seeds'][split]:
             prompt = recorded_prompt(split,tid,seed)
             ids = tok.apply_chat_template([{'role':'user','content':prompt}],add_generation_prompt=True,tokenize=True)
@@ -90,6 +95,16 @@ def evaluate(split):
                 if not uniform and len(rows)<16:
                     model.load_weights(list(weights[arm].items()),strict=False)
                     mx.eval(model.parameters())
+                    cache_key=(arm,tuple(ids))
+                    if cache_key not in prefixes:
+                        start=time.monotonic()
+                        prefixes[cache_key]={'cache':build_prefix(model,ids),'seconds':0.}
+                        elapsed=time.monotonic()-start
+                        prefixes[cache_key]['seconds']=elapsed
+                        ledger['prefix_builds']+=1
+                        ledger['physical_prefix_tokens']+=len(ids)-1
+                        ledger['prefix_build_seconds']+=elapsed
+                        write_json(ledger_path,ledger)
                 for step in range(len(rows),16):
                     seen = {h['key'] for h in history if h['in_space']}
                     active = bace and intervene(len(seen),step)
@@ -113,16 +128,18 @@ def evaluate(split):
                         ledger['replayed_model_calls']+=1
                         ledger['replayed_model_tokens']+=usage['total_tokens']
                     else:
-                        processors = [TrieLogitsProcessor(SupportTrie(support,seen),len(ids))] if active else []
+                        processors = [TrieLogitsProcessor(SupportTrie(support,seen),1)] if active else []
                         mx.random.seed(request_seed)
                         ledger['new_model_calls']+=1
+                        ledger['physical_last_prompt_tokens']+=1
                         write_json(ledger_path,ledger)
                         parts,last = [],None
                         error = None
                         try:
-                            for last in stream_generate(model,tok,ids,max_tokens=128,
+                            for last in stream_generate(model,tok,[ids[-1]],max_tokens=128,
                                                         sampler=make_sampler(temp=1.,top_p=1.,top_k=0,min_p=0.),
-                                                        logits_processors=processors):
+                                                        logits_processors=processors,
+                                                        prompt_cache=fresh_prefix(prefixes[(arm,tuple(ids))]['cache'])):
                                 parts.append(last.text)
                         except Exception as exc:
                             ledger['errors']+=1
@@ -130,9 +147,14 @@ def evaluate(split):
                             raise RuntimeError('Model call failed; retain ledger and inspect before resume') from exc
                         answer=''.join(parts)
                         usage={'prompt_tokens':len(ids),'completion_tokens':last.generation_tokens,
-                               'total_tokens':len(ids)+last.generation_tokens}
+                               'total_tokens':len(ids)+last.generation_tokens,'cached_prompt_tokens':len(ids)-1}
                         ledger['new_model_tokens']+=usage['total_tokens']
+                        ledger['physical_completion_tokens']+=usage['completion_tokens']
                         seconds=time.monotonic()-start
+                        if step==0:
+                            # Charge a prompt build once per logical episode,
+                            # even when physical states are shared across seeds.
+                            seconds+=prefixes[(arm,tuple(ids))]['seconds']
                     h=assess(ev,d['metadata'],task,answer,history)
                     if active:
                         assert h['in_space'] and h['key'] not in seen

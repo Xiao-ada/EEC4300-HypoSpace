@@ -1,0 +1,32 @@
+{
+  "scope": "Formal v1 validation: 6 tasks, seed101, 16 attempts per method",
+  "source_sha256": "6b166fe1ae9bfb9446629baca06ecf20b9cfc1e6f0601360d7e3608121b20ae8",
+  "counts": {
+    "base_iid": {
+      "observation_mismatch": 38,
+      "parse_or_space_rejection": 41,
+      "valid": 17
+    },
+    "balanced_sft_iid": {
+      "observation_mismatch": 70,
+      "valid": 24,
+      "parse_or_space_rejection": 2
+    },
+    "canonical_coverage_iid": {
+      "valid": 37,
+      "observation_mismatch": 55,
+      "parse_or_space_rejection": 4
+    },
+    "string_coverage_iid": {
+      "valid": 39,
+      "observation_mismatch": 55,
+      "parse_or_space_rejection": 2
+    },
+    "base_memory": {
+      "observation_mismatch": 42,
+      "parse_or_space_rejection": 36,
+      "valid": 18
+    }
+  },
+  "interpretation": "The adapted model mostly passes the syntax gate; observation mismatches dominate remaining failures. This motivates observed-constraint preference supervision, not a claim that a new loss will succeed."
+}

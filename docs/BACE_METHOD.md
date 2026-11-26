@@ -23,6 +23,8 @@ Before intervention, an invalid or duplicate proposal consumes one unit of slack
 
 This is the latest safe intervention under a worst-case guarantee: when D_t=0, allowing one more arbitrary IID failure could make M unreachable. It is not a theorem that the number of interventions is minimal in expectation, or that validity/recovery improves.
 
+The policy becomes history-dependent after intervention. It changes the IID assumption behind ordinary occupancy/coverage calculations; it does not disprove the paper's sublinear bounds for the distributions and sampling assumptions analyzed there.
+
 For active decoding, with A(prefix,S_t) the allowed next-token IDs, the policy is
 
     p_BACE(a | prefix,O,S_t) proportional to p_LoRA(a | prefix,O)
@@ -30,11 +32,15 @@ For active decoding, with A(prefix,S_t) the allowed next-token IDs, the policy i
 
 The local renormalization is not claimed to equal the original LM distribution conditioned globally on validity. This is not Gumbel-Top-k sampling from the original sequence distribution.
 
+For a fixed allowed next-token set A, renormalizing the original probabilities on A is the standard minimum-KL solution among distributions supported on A: q*(a)=p(a)/p(A) for a in A. Thus the active mask retains the learned token preferences within its admissible support. This token-level property does not imply global optimality for observation validity or final recovery.
+
 ## What builds the support?
 
 `explorer/canonical_decode.py` enumerates a fixed finite syntax grammar from the variables, operators and depth limit only. It applies the same parser and space gate as every scored method and groups aliases using the pinned official mechanistic key. It does not read task observations or reference sets. The result is 300 strings in 33 structural classes. All aliases of a completed class are excluded together; the string-control arm excludes only the exact completed spelling.
 
 The proposal never checks whether a candidate satisfies observations. Those observations enter the original LLM prompt; their validator is used only after the answer is generated. Thus low validity cannot be hidden by rejection sampling. The known upstream NOR inconsistency and the full reference denominator are retained.
+
+Canonical keys follow the benchmark's mechanical equivalence rules, not full truth-table equivalence. For example, `x` and `x AND (x OR y)` behave identically on all inputs but belong to different official classes. BACE can retain that structural distinction without requesting different predictions at an unobserved input. See the [v1 structural example](../results/coverage_plan/structural_distinction_example.json). This describes our mechanism; it is not a matched performance comparison with another group member's implementation.
 
 ## Learned component and controls
 

@@ -1,16 +1,62 @@
 # Canonical Coverage LoRA for HypoSpace
 
-> **README 指标优化实验进行中（2026-11-26）**：新增[预算控制解码 BACE](docs/BACE_METHOD.md)和[结构类别偏好训练](docs/CANONICAL_PREFERENCE.md)。下方原始表仍是第一版冻结结果。解码试验已公开，新增训练与匹配对照正在完成；验证数据不能当作新的最终测试成绩。
-
 在 Apple M5、24GB Mac 上实际完成的小模型课程研究：用经过校验的合法表达式训练 LoRA，并检验官方结构类别覆盖目标相对均衡 SFT 是否提供额外收益。
 
-**完整训练、验证与固定测试已完成。全部数字来自真实模型输出。** 基础模型为固定的四比特 Qwen2.5-1.5B-Instruct；使用 16 道训练题、6 道验证题、26 道测试题。正式生成共 6720 次，其中测试 6240 次。没有使用付费模型 API。
+**第一版训练、验证与固定测试已完成。该段概述指第一版；新增优化见下节。** 基础模型为固定的四比特 Qwen2.5-1.5B-Instruct；使用 16 道训练题、6 道验证题、26 道测试题。正式生成共 6720 次，其中测试 6240 次。没有使用付费模型 API。
 
 English summary: This project studies parameter-level coverage adaptation for a frozen quantized language model on a task-derived HypoSpace Boolean subset. It compares matched LoRA training objectives and a practical history baseline. Results are small-model, held-out-observation evidence, not a reproduction of the paper's model scores or a claim of globally new diversity training.
 
 [English method](docs/METHOD.md) · [English results](docs/RESULTS_EN.md)
 
-## 最终测试结果
+<!-- OPTIMIZATION_UPDATE_BEGIN -->
+## README 参考指标优化：新增实测结果
+
+新增结构类别偏好训练对照与 BACE 预算控制，原始结果完整保留。**验证选定的 Coverage +80 / BACE：VR 36.38%、NR 81.49%、RR 50.34%**。不重复率超过 README 的 >80% 指引；其余指标以实际表格为准，不能据此宣称三项全面达标或课程高分。
+
+验证规则选定 Coverage +80 / BACE；选定方法在测试前冻结。
+
+实际选用继续覆盖训练 80 步＋BACE；新增偏好项没有通过验证选择，保留为未选用的对照实验。 跟进测试仍满足相对第一版的数值保护条件。
+
+同检查点 BACE 相对 IID：Validity -3.53、Uniqueness +17.07、Recovery +9.32 个百分点。NR 的 95% 区间 [+13.54, +20.67]，RR 的区间 [+5.90, +12.82]。这项对照检验解码模块本身，额外训练不能归因给 BACE。
+
+| Method | Validity | Uniqueness | Recovery |
+|---|---:|---:|---:|
+| Base IID | 15.30% | 35.90% | 13.67% |
+| Balanced SFT | 30.61% | 68.51% | 36.86% |
+| Coverage v1 | 33.73% | 64.34% | 37.76% |
+| Coverage +80 / IID | 39.90% | 64.42% | 41.02% |
+| Preference +80 / IID | 39.66% | 59.86% | 37.52% |
+| Coverage +80 / BACE | 36.38% | 81.49% | 50.34% |
+| Preference +80 / BACE | 36.22% | 81.25% | 48.96% |
+| Uniform / BACE | 28.93% | 83.89% | 40.03% |
+
+
+两组新训练各增加 80 步，同起点、同数据、同预算。完整跟进测试仍是 26 题×3 种子×16 次，沿用第一版评分方式；已见过这些测试观测，因此结果属于探索性跟进。
+
+**新增损失相对同解码的匹配继续训练：VR -0.16 个百分点，95% 区间 [-2.16, +2.00]。** 新增偏好损失相对匹配继续训练的额外合法率优势尚未获得清晰支持。
+
+[详细中文报告](docs/OPTIMIZATION_RESULTS_ZH.md) · [English results](docs/OPTIMIZATION_RESULTS_EN.md) · [训练原理](docs/CANONICAL_PREFERENCE.md) · [BACE 原理](docs/BACE_METHOD.md) · [原始对比数据](results/canonical_preference_v5/test/summary.json)
+
+![Optimization metrics](results/canonical_preference_v5/metrics.png)
+
+旧版演示稿和下方原始表报告第一版；讲解新增优化请使用本节和新增报告。
+
+新增复核与复用：
+
+```bash
+.venv/bin/python scripts/verify_optimization.py
+.venv/bin/python scripts/restore_preference_adapters.py
+# 完成下方 Apple Silicon 固定模型环境后，可重新生成新适配器的验证结果：
+../runtime/mlx-env/bin/python -m explorer.preference_experiment validation
+```
+
+[新版英文两页展示与两分钟讲稿](docs/BACE_PRESENTATION_EN.md) · [新版组内对齐配置](results/optimization_group_packet.json)。同检查点 BACE 相对无 LLM 均匀控制的 RR 增加 10.31 个百分点，95% 区间 [5.36, 15.23]；模型对合法覆盖的作用与强制唯一率分开检验。
+
+<!-- OPTIMIZATION_UPDATE_END -->
+
+
+
+## 第一版测试结果（保留）
 
 每题生成 16 次，三个随机运行编号 17/29/43，先按题和运行算指标，再宏平均。失败、重复和不合规答案都保留在调用预算内。
 
@@ -168,6 +214,6 @@ HF_HOME=../runtime/hf-cache ../runtime/mlx-env/bin/python scripts/local_mlx.py -
 
 按各成员分别介绍自己方法的分工，已准备[中文说明、主讲稿、精简稿、两页内容和问答](docs/PERSONAL_TALK_ZH.md)，以及[英文备选稿](docs/PERSONAL_TALK_EN.md)。[全组视频指南](docs/VIDEO_GUIDE_ZH.md)给出三人或四人组的十分钟分配参考。稿件时长为估算，实际视频仍需成员试读和录制。
 
-当前推荐的个人口头稿：[两分钟以内，含问题来源、GAPO 文献启发、方法与最终成果](docs/PERSONAL_TALK_2MIN_ZH.md)。
+第一版个人口头稿：[两分钟以内，含问题来源、GAPO 文献启发、方法与最终成果](docs/PERSONAL_TALK_2MIN_ZH.md)。
 
 [Editable principle and results slides](presentations/personal_method_results.pptx), with [page previews](presentations/README.md).

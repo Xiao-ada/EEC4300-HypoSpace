@@ -1,3 +1,5 @@
+> This is the frozen v1 talk. The updated BACE two-slide outline and English speaker notes are in [BACE_PRESENTATION_EN.md](BACE_PRESENTATION_EN.md).
+
 # English personal presentation: two slides, under two minutes
 
 Target approximately 1 minute 45 seconds to 2 minutes. This is an estimate, not a measured recording. Rehearse once with a timer.

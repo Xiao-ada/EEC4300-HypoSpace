@@ -1,6 +1,6 @@
 # 已完成方法的创新性与独立贡献审查
 
-审查日期：2026-11-25。范围是已完成的 Canonical Coverage LoRA 第一版。按用户当前要求，第二版重训不安排执行。本文不修改模型、划分、原始回答或主分析，新增内容为相关工作定位、数学论证和已有记录的探索性次要指标推断。
+审查日期：2026-11-25。本文范围是已完成的 Canonical Coverage LoRA 第一版，保留其相关工作定位、数学论证和已有记录的探索性次要指标推断。后续的预算控制解码与偏好训练单独记录于[新增优化报告](OPTIMIZATION_RESULTS_ZH.md)，不追溯改变本审查中的原始模型、划分、回答或主分析。
 
 ## 审查结论与主张边界
 
@@ -118,3 +118,11 @@ d(-C_A)/d log(q_k) = -(N/K) q_k (1-q_k)^(N-1)
 English presentation statement:
 
 > We implement a task-specific canonical-class coverage surrogate for HypoSpace and combine it with balanced supervised LoRA training. Verified complete-answer probabilities are pooled using the benchmark's mechanistic equivalence rules before applying a finite-budget hit objective. We justify the finite-pool lower bound, mass-preserving partition invariance and general non-equivalence to scaled SFT. Matched experiments show substantial gains over the base model. Exploratory secondary inference indicates a validity improvement over matched SFT accompanied by lower structural uniqueness; additional recovery improvement remains unresolved. Our contribution is the task-aligned formulation, controlled implementation and reproducible analysis, without a claim of global priority or consistently superior coverage.
+
+## 后续 BACE 的独立贡献（与第一版结论分开）
+
+2026-11-26 的跟进实验使用相同的继续训练检查点，对比 IID 与 BACE：Recovery 增加 **9.32 个百分点**，按题配对 bootstrap 95% 区间 **[5.90, 12.82]**；Uniqueness 增加 **17.07 个百分点**，Validity 点估计下降 **3.53 个百分点**。这支持预算结构排重模块在该设置中的独立覆盖贡献，并披露合法率取舍。
+
+同一 BACE 策略下，训练模型相对无 LLM 的均匀控制多获得 **10.31 个百分点** Recovery，区间 **[5.36, 15.23]**。所以结构不重复率本身来自约束保证，而合法参考覆盖的收益仍需要学习提议分布。新增偏好损失相对匹配继续训练的优势没有得到支持，未被验证规则选用。
+
+上述都是单训练种子、已见过第一版测试观测的探索性跟进，不是全新确认性检验；不追溯证明第一版 C16 损失相对均衡 SFT 的额外优势。见[方法与全部对比](OPTIMIZATION_RESULTS_ZH.md)。

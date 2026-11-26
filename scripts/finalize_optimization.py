@@ -11,6 +11,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
 from explorer.tasks import write_json
+from scripts.report_canonical_decode import paired
 
 OUT=ROOT/'results/canonical_preference_v5'
 LABELS={
@@ -44,6 +45,23 @@ def main():
         f"| {LABELS[m]} | {percent(stats[m]['VR'])} | {percent(stats[m]['NR'])} | {percent(stats[m]['RR'])} |\n" for m in order)
     decision=('验证规则选定 '+LABELS[main_method]+'；选定方法在测试前冻结。' if main_method else
               '验证阶段没有候选同时满足全部采用条件；保留第一版主方法，新增 BACE 结果作为取舍方案报告。')
+    deployment=('实际选用继续覆盖训练 80 步＋BACE；新增偏好项没有通过验证选择，保留为未选用的对照实验。'
+                if main_method=='coverage_continuation_bace' else '')
+    test_guard=(s['VR']>=old['VR']-.02 and s['RR']>old['RR'] and s['NR']>.8)
+    guard_note=('跟进测试仍满足相对第一版的数值保护条件。' if test_guard else
+                '跟进测试未维持全部数值保护条件；新增结果应作为指标取舍报告，不称为全面改进，第一版仍保留。')
+    own_iid=candidate.removesuffix('_bace')+'_iid' if candidate.endswith('_bace') else None
+    secondary={}
+    if own_iid:
+        with (OUT/'test/episodes.csv').open() as f:
+            episodes=[{**r,**{k:float(r[k]) for k in ['VR','NR','RR']}} for r in csv.DictReader(f)]
+        ids=json.loads((ROOT/'results/coverage_plan/split_manifest.json').read_text())['splits']['test']
+        secondary={m:paired(episodes,candidate,m,ids) for m in [own_iid,'uniform_bace']}
+        write_json(OUT/'secondary_selected_comparisons.json',{'label':'Exploratory decoder/learned-proposal attribution; selected model fixed on validation','target':candidate,'comparisons':secondary})
+    decoder_note=('同检查点 BACE 相对 IID：Validity '+pp(secondary[own_iid]['VR']['difference'])+
+                  '、Uniqueness '+pp(secondary[own_iid]['NR']['difference'])+'、Recovery '+pp(secondary[own_iid]['RR']['difference'])+
+                  ' 个百分点。NR 的 95% 区间 '+ci(secondary[own_iid]['NR'])+'，RR 的区间 '+ci(secondary[own_iid]['RR'])+
+                  '。这项对照检验解码模块本身，额外训练不能归因给 BACE。' if own_iid else '')
     attribution=('该设置下支持新增偏好损失提供额外合法率收益，但仍是单训练种子的探索性结果。'
                  if diff['VR']['task_bootstrap_95_interval'][0]>0 else
                  '新增偏好损失相对匹配继续训练的额外合法率优势尚未获得清晰支持。')
@@ -52,6 +70,8 @@ def main():
 本次优化以官方 README 的 Uniqueness >80% 为主要接近目标，同时公开 Validity >90%、Recovery >80% 的差距。参考值不是课程评分线。
 
 {decision}
+
+{deployment} {guard_note}
 
 ## 正式跟进测试
 
@@ -62,6 +82,8 @@ def main():
 验证阶段选定组合 **{LABELS[candidate]}** 相对第一版覆盖模型：Validity {pp(s['VR']-old['VR'])}、Uniqueness {pp(s['NR']-old['NR'])}、Recovery {pp(s['RR']-old['RR'])} 个百分点。新增偏好损失是否采用，以验证记录为准；不能根据测试结果反向更换选择。
 
 对照额外训练和解码后，新偏好损失相对 Coverage +80 / BACE：Validity {pp(diff['VR']['difference'])} 个百分点，按题配对 bootstrap 95% 区间 {ci(diff['VR'])}；Recovery {pp(diff['RR']['difference'])} 个百分点，区间 {ci(diff['RR'])}。{attribution}区间未做次要多重比较校正，不能推广到所有模型或训练种子。
+
+{decoder_note}
 
 ## 改了什么
 
@@ -78,7 +100,7 @@ def main():
 | Uniqueness | {percent(s['NR'])} | >80% | {'是' if s['NR']>.8 else '否'} |
 | Recovery | {percent(s['RR'])} | >80% | {'是' if s['RR']>.8 else '否'} |
 
-在每题 16 次输出、合法结构数量较少时，提高不重复率可能需要更多错误输出。对 v2 完全语法池的分析显示：其宏平均 Validity 若至少 90%，宏平均 Uniqueness 的一个上界为 66.73%，因而三条指引在那个具体有限支持设置下不能同时满足。这个界不覆盖任意自由文本或其他任务规模，也不是替模型低合法率开脱。应结合观测、预算和参考空间大小解释指标。
+在每题 16 次输出、合法结构数量较少时，提高不重复率可能需要更多错误输出。对 v2 完全语法池的分析显示：其宏平均 Validity 若至少 90%，宏平均 Uniqueness 的一个上界为 66.73%，因而三条指引在那个具体有限支持设置下不能同时满足。这个界仅适用于完全使用该语法池的解码器，不覆盖任意自由文本或其他任务规模。应结合观测、预算和参考空间大小解释指标。
 
 ## 预算、证据和实现检查
 
@@ -112,6 +134,8 @@ def main():
 
 {table}
 
+Validation-selected deployment: **{LABELS[candidate]}**. The added preference loss was {'selected' if selection['new_preference_term_selected'] else 'not selected'} on validation. Test metrics do not change that selection.
+
 Same 26 Boolean observation tasks, three inference seeds, and 16 counted attempts. These task observations were reported in v1; this is an exploratory follow-up, not an untouched confirmation set. The new preference and continuation arms each add 80 matched updates from the same v1 coverage checkpoint.
 
 Preference+BACE versus matched continuation+BACE: validity difference {pp(diff['VR']['difference'])} percentage points, task-bootstrap 95% interval {ci(diff['VR'])}; recovery difference {pp(diff['RR']['difference'])}, interval {ci(diff['RR'])}. One training seed; secondary intervals are not multiplicity-adjusted.
@@ -130,6 +154,10 @@ See [full discussion](OPTIMIZATION_RESULTS_ZH.md), [training method](CANONICAL_P
 
 {decision}
 
+{deployment} {guard_note}
+
+{decoder_note}
+
 {table}
 
 两组新训练各增加 80 步，同起点、同数据、同预算。完整跟进测试仍是 26 题×3 种子×16 次，沿用第一版评分方式；已见过这些测试观测，因此结果属于探索性跟进。
@@ -141,6 +169,17 @@ See [full discussion](OPTIMIZATION_RESULTS_ZH.md), [training method](CANONICAL_P
 ![Optimization metrics](results/canonical_preference_v5/metrics.png)
 
 旧版演示稿和下方原始表报告第一版；讲解新增优化请使用本节和新增报告。
+
+新增复核与复用：
+
+```bash
+.venv/bin/python scripts/verify_optimization.py
+.venv/bin/python scripts/restore_preference_adapters.py
+# 完成下方 Apple Silicon 固定模型环境后，可重新生成新适配器的验证结果：
+../runtime/mlx-env/bin/python -m explorer.preference_experiment validation
+```
+
+[新版英文两页展示与两分钟讲稿](docs/BACE_PRESENTATION_EN.md) · [新版组内对齐配置](results/optimization_group_packet.json)。模型对合法覆盖的作用与强制唯一率分开检验，完整数据包含无 LLM 均匀控制。
 <!-- OPTIMIZATION_UPDATE_END -->
 
 '''

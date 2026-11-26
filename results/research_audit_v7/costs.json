@@ -1,0 +1,14 @@
+{
+  "actual_new_generation_calls": 4864,
+  "replayed_generation_calls": 0,
+  "logical_prompt_tokens": 2547200,
+  "completion_tokens": 55691,
+  "generation_seconds": 1096.2944892384112,
+  "prefix_prefill_events": 152,
+  "physical_prefix_tokens": 79448,
+  "prefix_prefill_seconds": 59.638260091189295,
+  "candidate_scoring_calls": 0,
+  "repair_calls": 0,
+  "fixed_final_output_attempts_per_episode": 16,
+  "note": "Same output cap, sampler and prompt per task in all arms. All invalid/duplicate attempts counted. Completion lengths vary, so FLOPs are not exactly equal."
+}

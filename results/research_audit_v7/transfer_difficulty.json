@@ -1,0 +1,90 @@
+{
+  "note": "Data-only difficulty audit; no task reselection. Expanded variable count does not mean every task requires a new structure.",
+  "tasks_requiring_new_structure": 1,
+  "tasks": [
+    {
+      "task_id": "ood3_d9f07c127323ab2b",
+      "K": 54,
+      "old_structure_compatible_count": 17,
+      "new_structure_compatible_count": 37,
+      "requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_54aa97fc81809577",
+      "K": 54,
+      "old_structure_compatible_count": 14,
+      "new_structure_compatible_count": 40,
+      "requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_e1fc1bb8c6a25e30",
+      "K": 42,
+      "old_structure_compatible_count": 14,
+      "new_structure_compatible_count": 28,
+      "requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_a120889477c9e5bc",
+      "K": 71,
+      "old_structure_compatible_count": 20,
+      "new_structure_compatible_count": 51,
+      "requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_09dbb864d143768a",
+      "K": 43,
+      "old_structure_compatible_count": 9,
+      "new_structure_compatible_count": 34,
+      "requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_e4fb86da0170ce35",
+      "K": 16,
+      "old_structure_compatible_count": 5,
+      "new_structure_compatible_count": 11,
+      "requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_18d7dceceb4d22cd",
+      "K": 16,
+      "old_structure_compatible_count": 6,
+      "new_structure_compatible_count": 10,
+      "requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_6c4661374aaba3ce",
+      "K": 45,
+      "old_structure_compatible_count": 12,
+      "new_structure_compatible_count": 33,
+      "requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_34f1d7870a63c953",
+      "K": 6,
+      "old_structure_compatible_count": 0,
+      "new_structure_compatible_count": 6,
+      "requires_new_structure": true
+    },
+    {
+      "task_id": "ood3_6ae243bad80796ae",
+      "K": 8,
+      "old_structure_compatible_count": 2,
+      "new_structure_compatible_count": 6,
+      "requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_d24b1825967de907",
+      "K": 8,
+      "old_structure_compatible_count": 3,
+      "new_structure_compatible_count": 5,
+      "requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_550dcc5c959bb2f5",
+      "K": 19,
+      "old_structure_compatible_count": 6,
+      "new_structure_compatible_count": 13,
+      "requires_new_structure": false
+    }
+  ]
+}

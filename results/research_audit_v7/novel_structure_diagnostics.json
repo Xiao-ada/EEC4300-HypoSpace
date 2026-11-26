@@ -1,0 +1,779 @@
+{
+  "note": "Post-hoc diagnostic, not the primary endpoint. Only one selected transfer task requires a structure absent from the original universe.",
+  "mean_recovered_new_classes_per_episode": {
+    "base_iid": 1.25,
+    "balanced_sft_iid": 1.25,
+    "canonical_coverage_iid": 1.625,
+    "string_coverage_iid": 1.4166666666666667
+  },
+  "episodes": [
+    {
+      "task_id": "ood3_d9f07c127323ab2b",
+      "method": "canonical_coverage_iid",
+      "seed": 18617,
+      "recovered_old_structures": 3,
+      "recovered_new_structures": 4,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_d9f07c127323ab2b",
+      "method": "canonical_coverage_iid",
+      "seed": 28657,
+      "recovered_old_structures": 6,
+      "recovered_new_structures": 3,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_d9f07c127323ab2b",
+      "method": "string_coverage_iid",
+      "seed": 18617,
+      "recovered_old_structures": 7,
+      "recovered_new_structures": 0,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_d9f07c127323ab2b",
+      "method": "string_coverage_iid",
+      "seed": 28657,
+      "recovered_old_structures": 4,
+      "recovered_new_structures": 1,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_d9f07c127323ab2b",
+      "method": "base_iid",
+      "seed": 18617,
+      "recovered_old_structures": 0,
+      "recovered_new_structures": 3,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_d9f07c127323ab2b",
+      "method": "base_iid",
+      "seed": 28657,
+      "recovered_old_structures": 0,
+      "recovered_new_structures": 3,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_d9f07c127323ab2b",
+      "method": "balanced_sft_iid",
+      "seed": 18617,
+      "recovered_old_structures": 5,
+      "recovered_new_structures": 2,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_d9f07c127323ab2b",
+      "method": "balanced_sft_iid",
+      "seed": 28657,
+      "recovered_old_structures": 4,
+      "recovered_new_structures": 3,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_54aa97fc81809577",
+      "method": "string_coverage_iid",
+      "seed": 18617,
+      "recovered_old_structures": 5,
+      "recovered_new_structures": 3,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_54aa97fc81809577",
+      "method": "string_coverage_iid",
+      "seed": 28657,
+      "recovered_old_structures": 4,
+      "recovered_new_structures": 5,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_54aa97fc81809577",
+      "method": "base_iid",
+      "seed": 18617,
+      "recovered_old_structures": 1,
+      "recovered_new_structures": 2,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_54aa97fc81809577",
+      "method": "base_iid",
+      "seed": 28657,
+      "recovered_old_structures": 1,
+      "recovered_new_structures": 1,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_54aa97fc81809577",
+      "method": "balanced_sft_iid",
+      "seed": 18617,
+      "recovered_old_structures": 5,
+      "recovered_new_structures": 3,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_54aa97fc81809577",
+      "method": "balanced_sft_iid",
+      "seed": 28657,
+      "recovered_old_structures": 4,
+      "recovered_new_structures": 3,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_54aa97fc81809577",
+      "method": "canonical_coverage_iid",
+      "seed": 18617,
+      "recovered_old_structures": 3,
+      "recovered_new_structures": 3,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_54aa97fc81809577",
+      "method": "canonical_coverage_iid",
+      "seed": 28657,
+      "recovered_old_structures": 4,
+      "recovered_new_structures": 2,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_e1fc1bb8c6a25e30",
+      "method": "canonical_coverage_iid",
+      "seed": 18617,
+      "recovered_old_structures": 4,
+      "recovered_new_structures": 3,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_e1fc1bb8c6a25e30",
+      "method": "canonical_coverage_iid",
+      "seed": 28657,
+      "recovered_old_structures": 7,
+      "recovered_new_structures": 3,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_e1fc1bb8c6a25e30",
+      "method": "balanced_sft_iid",
+      "seed": 18617,
+      "recovered_old_structures": 3,
+      "recovered_new_structures": 2,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_e1fc1bb8c6a25e30",
+      "method": "balanced_sft_iid",
+      "seed": 28657,
+      "recovered_old_structures": 5,
+      "recovered_new_structures": 2,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_e1fc1bb8c6a25e30",
+      "method": "string_coverage_iid",
+      "seed": 18617,
+      "recovered_old_structures": 6,
+      "recovered_new_structures": 1,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_e1fc1bb8c6a25e30",
+      "method": "string_coverage_iid",
+      "seed": 28657,
+      "recovered_old_structures": 6,
+      "recovered_new_structures": 3,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_e1fc1bb8c6a25e30",
+      "method": "base_iid",
+      "seed": 18617,
+      "recovered_old_structures": 1,
+      "recovered_new_structures": 1,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_e1fc1bb8c6a25e30",
+      "method": "base_iid",
+      "seed": 28657,
+      "recovered_old_structures": 2,
+      "recovered_new_structures": 1,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_a120889477c9e5bc",
+      "method": "string_coverage_iid",
+      "seed": 18617,
+      "recovered_old_structures": 5,
+      "recovered_new_structures": 3,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_a120889477c9e5bc",
+      "method": "string_coverage_iid",
+      "seed": 28657,
+      "recovered_old_structures": 5,
+      "recovered_new_structures": 3,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_a120889477c9e5bc",
+      "method": "base_iid",
+      "seed": 18617,
+      "recovered_old_structures": 1,
+      "recovered_new_structures": 5,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_a120889477c9e5bc",
+      "method": "base_iid",
+      "seed": 28657,
+      "recovered_old_structures": 1,
+      "recovered_new_structures": 3,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_a120889477c9e5bc",
+      "method": "balanced_sft_iid",
+      "seed": 18617,
+      "recovered_old_structures": 4,
+      "recovered_new_structures": 1,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_a120889477c9e5bc",
+      "method": "balanced_sft_iid",
+      "seed": 28657,
+      "recovered_old_structures": 5,
+      "recovered_new_structures": 5,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_a120889477c9e5bc",
+      "method": "canonical_coverage_iid",
+      "seed": 18617,
+      "recovered_old_structures": 5,
+      "recovered_new_structures": 3,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_a120889477c9e5bc",
+      "method": "canonical_coverage_iid",
+      "seed": 28657,
+      "recovered_old_structures": 3,
+      "recovered_new_structures": 4,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_09dbb864d143768a",
+      "method": "balanced_sft_iid",
+      "seed": 18617,
+      "recovered_old_structures": 5,
+      "recovered_new_structures": 1,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_09dbb864d143768a",
+      "method": "balanced_sft_iid",
+      "seed": 28657,
+      "recovered_old_structures": 3,
+      "recovered_new_structures": 1,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_09dbb864d143768a",
+      "method": "base_iid",
+      "seed": 18617,
+      "recovered_old_structures": 0,
+      "recovered_new_structures": 2,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_09dbb864d143768a",
+      "method": "base_iid",
+      "seed": 28657,
+      "recovered_old_structures": 0,
+      "recovered_new_structures": 0,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_09dbb864d143768a",
+      "method": "string_coverage_iid",
+      "seed": 18617,
+      "recovered_old_structures": 6,
+      "recovered_new_structures": 1,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_09dbb864d143768a",
+      "method": "string_coverage_iid",
+      "seed": 28657,
+      "recovered_old_structures": 5,
+      "recovered_new_structures": 2,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_09dbb864d143768a",
+      "method": "canonical_coverage_iid",
+      "seed": 18617,
+      "recovered_old_structures": 2,
+      "recovered_new_structures": 2,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_09dbb864d143768a",
+      "method": "canonical_coverage_iid",
+      "seed": 28657,
+      "recovered_old_structures": 2,
+      "recovered_new_structures": 3,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_e4fb86da0170ce35",
+      "method": "base_iid",
+      "seed": 18617,
+      "recovered_old_structures": 0,
+      "recovered_new_structures": 1,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_e4fb86da0170ce35",
+      "method": "base_iid",
+      "seed": 28657,
+      "recovered_old_structures": 1,
+      "recovered_new_structures": 2,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_e4fb86da0170ce35",
+      "method": "balanced_sft_iid",
+      "seed": 18617,
+      "recovered_old_structures": 0,
+      "recovered_new_structures": 0,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_e4fb86da0170ce35",
+      "method": "balanced_sft_iid",
+      "seed": 28657,
+      "recovered_old_structures": 1,
+      "recovered_new_structures": 1,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_e4fb86da0170ce35",
+      "method": "canonical_coverage_iid",
+      "seed": 18617,
+      "recovered_old_structures": 3,
+      "recovered_new_structures": 0,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_e4fb86da0170ce35",
+      "method": "canonical_coverage_iid",
+      "seed": 28657,
+      "recovered_old_structures": 2,
+      "recovered_new_structures": 1,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_e4fb86da0170ce35",
+      "method": "string_coverage_iid",
+      "seed": 18617,
+      "recovered_old_structures": 1,
+      "recovered_new_structures": 0,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_e4fb86da0170ce35",
+      "method": "string_coverage_iid",
+      "seed": 28657,
+      "recovered_old_structures": 3,
+      "recovered_new_structures": 0,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_18d7dceceb4d22cd",
+      "method": "base_iid",
+      "seed": 18617,
+      "recovered_old_structures": 0,
+      "recovered_new_structures": 0,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_18d7dceceb4d22cd",
+      "method": "base_iid",
+      "seed": 28657,
+      "recovered_old_structures": 2,
+      "recovered_new_structures": 0,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_18d7dceceb4d22cd",
+      "method": "balanced_sft_iid",
+      "seed": 18617,
+      "recovered_old_structures": 3,
+      "recovered_new_structures": 0,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_18d7dceceb4d22cd",
+      "method": "balanced_sft_iid",
+      "seed": 28657,
+      "recovered_old_structures": 2,
+      "recovered_new_structures": 2,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_18d7dceceb4d22cd",
+      "method": "canonical_coverage_iid",
+      "seed": 18617,
+      "recovered_old_structures": 0,
+      "recovered_new_structures": 0,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_18d7dceceb4d22cd",
+      "method": "canonical_coverage_iid",
+      "seed": 28657,
+      "recovered_old_structures": 1,
+      "recovered_new_structures": 0,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_18d7dceceb4d22cd",
+      "method": "string_coverage_iid",
+      "seed": 18617,
+      "recovered_old_structures": 2,
+      "recovered_new_structures": 1,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_18d7dceceb4d22cd",
+      "method": "string_coverage_iid",
+      "seed": 28657,
+      "recovered_old_structures": 2,
+      "recovered_new_structures": 1,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_6c4661374aaba3ce",
+      "method": "balanced_sft_iid",
+      "seed": 18617,
+      "recovered_old_structures": 5,
+      "recovered_new_structures": 1,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_6c4661374aaba3ce",
+      "method": "balanced_sft_iid",
+      "seed": 28657,
+      "recovered_old_structures": 5,
+      "recovered_new_structures": 0,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_6c4661374aaba3ce",
+      "method": "string_coverage_iid",
+      "seed": 18617,
+      "recovered_old_structures": 8,
+      "recovered_new_structures": 2,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_6c4661374aaba3ce",
+      "method": "string_coverage_iid",
+      "seed": 28657,
+      "recovered_old_structures": 4,
+      "recovered_new_structures": 4,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_6c4661374aaba3ce",
+      "method": "canonical_coverage_iid",
+      "seed": 18617,
+      "recovered_old_structures": 5,
+      "recovered_new_structures": 1,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_6c4661374aaba3ce",
+      "method": "canonical_coverage_iid",
+      "seed": 28657,
+      "recovered_old_structures": 6,
+      "recovered_new_structures": 3,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_6c4661374aaba3ce",
+      "method": "base_iid",
+      "seed": 18617,
+      "recovered_old_structures": 1,
+      "recovered_new_structures": 2,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_6c4661374aaba3ce",
+      "method": "base_iid",
+      "seed": 28657,
+      "recovered_old_structures": 1,
+      "recovered_new_structures": 1,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_34f1d7870a63c953",
+      "method": "base_iid",
+      "seed": 18617,
+      "recovered_old_structures": 0,
+      "recovered_new_structures": 0,
+      "task_requires_new_structure": true
+    },
+    {
+      "task_id": "ood3_34f1d7870a63c953",
+      "method": "base_iid",
+      "seed": 28657,
+      "recovered_old_structures": 0,
+      "recovered_new_structures": 1,
+      "task_requires_new_structure": true
+    },
+    {
+      "task_id": "ood3_34f1d7870a63c953",
+      "method": "balanced_sft_iid",
+      "seed": 18617,
+      "recovered_old_structures": 0,
+      "recovered_new_structures": 1,
+      "task_requires_new_structure": true
+    },
+    {
+      "task_id": "ood3_34f1d7870a63c953",
+      "method": "balanced_sft_iid",
+      "seed": 28657,
+      "recovered_old_structures": 0,
+      "recovered_new_structures": 0,
+      "task_requires_new_structure": true
+    },
+    {
+      "task_id": "ood3_34f1d7870a63c953",
+      "method": "canonical_coverage_iid",
+      "seed": 18617,
+      "recovered_old_structures": 0,
+      "recovered_new_structures": 1,
+      "task_requires_new_structure": true
+    },
+    {
+      "task_id": "ood3_34f1d7870a63c953",
+      "method": "canonical_coverage_iid",
+      "seed": 28657,
+      "recovered_old_structures": 0,
+      "recovered_new_structures": 0,
+      "task_requires_new_structure": true
+    },
+    {
+      "task_id": "ood3_34f1d7870a63c953",
+      "method": "string_coverage_iid",
+      "seed": 18617,
+      "recovered_old_structures": 0,
+      "recovered_new_structures": 1,
+      "task_requires_new_structure": true
+    },
+    {
+      "task_id": "ood3_34f1d7870a63c953",
+      "method": "string_coverage_iid",
+      "seed": 28657,
+      "recovered_old_structures": 0,
+      "recovered_new_structures": 2,
+      "task_requires_new_structure": true
+    },
+    {
+      "task_id": "ood3_6ae243bad80796ae",
+      "method": "base_iid",
+      "seed": 18617,
+      "recovered_old_structures": 0,
+      "recovered_new_structures": 0,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_6ae243bad80796ae",
+      "method": "base_iid",
+      "seed": 28657,
+      "recovered_old_structures": 0,
+      "recovered_new_structures": 0,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_6ae243bad80796ae",
+      "method": "string_coverage_iid",
+      "seed": 18617,
+      "recovered_old_structures": 1,
+      "recovered_new_structures": 0,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_6ae243bad80796ae",
+      "method": "string_coverage_iid",
+      "seed": 28657,
+      "recovered_old_structures": 1,
+      "recovered_new_structures": 0,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_6ae243bad80796ae",
+      "method": "canonical_coverage_iid",
+      "seed": 18617,
+      "recovered_old_structures": 1,
+      "recovered_new_structures": 1,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_6ae243bad80796ae",
+      "method": "canonical_coverage_iid",
+      "seed": 28657,
+      "recovered_old_structures": 1,
+      "recovered_new_structures": 1,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_6ae243bad80796ae",
+      "method": "balanced_sft_iid",
+      "seed": 18617,
+      "recovered_old_structures": 0,
+      "recovered_new_structures": 0,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_6ae243bad80796ae",
+      "method": "balanced_sft_iid",
+      "seed": 28657,
+      "recovered_old_structures": 0,
+      "recovered_new_structures": 1,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_d24b1825967de907",
+      "method": "canonical_coverage_iid",
+      "seed": 18617,
+      "recovered_old_structures": 1,
+      "recovered_new_structures": 0,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_d24b1825967de907",
+      "method": "canonical_coverage_iid",
+      "seed": 28657,
+      "recovered_old_structures": 0,
+      "recovered_new_structures": 0,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_d24b1825967de907",
+      "method": "string_coverage_iid",
+      "seed": 18617,
+      "recovered_old_structures": 1,
+      "recovered_new_structures": 0,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_d24b1825967de907",
+      "method": "string_coverage_iid",
+      "seed": 28657,
+      "recovered_old_structures": 1,
+      "recovered_new_structures": 1,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_d24b1825967de907",
+      "method": "base_iid",
+      "seed": 18617,
+      "recovered_old_structures": 0,
+      "recovered_new_structures": 0,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_d24b1825967de907",
+      "method": "base_iid",
+      "seed": 28657,
+      "recovered_old_structures": 0,
+      "recovered_new_structures": 0,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_d24b1825967de907",
+      "method": "balanced_sft_iid",
+      "seed": 18617,
+      "recovered_old_structures": 1,
+      "recovered_new_structures": 0,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_d24b1825967de907",
+      "method": "balanced_sft_iid",
+      "seed": 28657,
+      "recovered_old_structures": 0,
+      "recovered_new_structures": 0,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_550dcc5c959bb2f5",
+      "method": "base_iid",
+      "seed": 18617,
+      "recovered_old_structures": 0,
+      "recovered_new_structures": 1,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_550dcc5c959bb2f5",
+      "method": "base_iid",
+      "seed": 28657,
+      "recovered_old_structures": 0,
+      "recovered_new_structures": 1,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_550dcc5c959bb2f5",
+      "method": "string_coverage_iid",
+      "seed": 18617,
+      "recovered_old_structures": 0,
+      "recovered_new_structures": 0,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_550dcc5c959bb2f5",
+      "method": "string_coverage_iid",
+      "seed": 28657,
+      "recovered_old_structures": 1,
+      "recovered_new_structures": 0,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_550dcc5c959bb2f5",
+      "method": "balanced_sft_iid",
+      "seed": 18617,
+      "recovered_old_structures": 0,
+      "recovered_new_structures": 1,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_550dcc5c959bb2f5",
+      "method": "balanced_sft_iid",
+      "seed": 28657,
+      "recovered_old_structures": 3,
+      "recovered_new_structures": 0,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_550dcc5c959bb2f5",
+      "method": "canonical_coverage_iid",
+      "seed": 18617,
+      "recovered_old_structures": 0,
+      "recovered_new_structures": 0,
+      "task_requires_new_structure": false
+    },
+    {
+      "task_id": "ood3_550dcc5c959bb2f5",
+      "method": "canonical_coverage_iid",
+      "seed": 28657,
+      "recovered_old_structures": 0,
+      "recovered_new_structures": 1,
+      "task_requires_new_structure": false
+    }
+  ]
+}

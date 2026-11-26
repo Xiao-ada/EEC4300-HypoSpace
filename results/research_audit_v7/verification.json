@@ -1,0 +1,10 @@
+{
+  "pass": true,
+  "outputs_rescored": 4864,
+  "episodes": 304,
+  "source_and_adapter_hashes_match": true,
+  "fresh_task_selection_reproduced": true,
+  "all_metrics_and_intervals_recomputed": true,
+  "no_hidden_repair_or_replay": true,
+  "scope": "Saved-output CPU audit; does not recompute LLM inference or create independent training seeds."
+}

@@ -1,0 +1,13 @@
+{
+  "protocol_commit": "f6ab46518d1f3b0d4b14be61f6b6cfd0ae6edbb0",
+  "generation_completion": {
+    "calls": 4864,
+    "seconds_this_invocation": 1164.615543291904,
+    "all_outputs_retained": true,
+    "no_inference_reference_access": true
+  },
+  "private_source_sha256": {
+    "raw.jsonl": "9c68094c9d63313a893b4f49ec770b9a666de426429750f1d78cb6f43d80ebc7",
+    "prefix_prefills.jsonl": "3316e6b4a7648eaf388ad12b3e99eb965ef349bc64458034db8f904e7324210b"
+  }
+}

@@ -1,5 +1,7 @@
 # 个人两页展示：原理与结果
 
+**历史演示稿。** 当前项目主线已转为固定预算自由生成，最新结果见[研究报告](../docs/RESEARCH_RESULTS_ZH.md)，可使用[新版英文两页内容与讲稿](../docs/RESEARCH_PRESENTATION_EN.md)。本目录PPTX和预览仍报告第一版，未自动替换为新实验。
+
 [可编辑 PPTX](personal_method_results.pptx)
 
 英文两页演示已保存到当前对话的在线演示，可从查看器导出 PPTX；[英文讲稿](../docs/PERSONAL_TALK_EN.md)约 179 词，报告第一版冻结结果。[官方指标参考核对](../docs/BENCHMARK_SCORE_GUIDANCE_ZH.md)区分仓库模型指引和课程评分。后续训练与 BACE 的新数字单独见[优化报告](../docs/OPTIMIZATION_RESULTS_ZH.md)，不能把第一版演示误认为本轮更新后的成绩。

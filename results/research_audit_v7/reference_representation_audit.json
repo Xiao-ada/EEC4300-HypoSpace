@@ -1,0 +1,33 @@
+{
+  "note": "Diagnostic of upstream representative spellings only, not proof a whole class is unreachable. No denominator or selected-task changes.",
+  "cohorts": {
+    "known_2var": {
+      "universe_size": 34,
+      "reference_representatives_rejected_by_validator": 1,
+      "rejected": [
+        {
+          "formula": "NOT (x  OR  y)",
+          "key": "('NOR', (('VAR', 'x'), ('VAR', 'y')))"
+        }
+      ]
+    },
+    "fresh_3var": {
+      "universe_size": 125,
+      "reference_representatives_rejected_by_validator": 3,
+      "rejected": [
+        {
+          "formula": "NOT (x  OR  y)",
+          "key": "('NOR', (('VAR', 'x'), ('VAR', 'y')))"
+        },
+        {
+          "formula": "NOT (x  OR  z)",
+          "key": "('NOR', (('VAR', 'x'), ('VAR', 'z')))"
+        },
+        {
+          "formula": "NOT (y  OR  z)",
+          "key": "('NOR', (('VAR', 'y'), ('VAR', 'z')))"
+        }
+      ]
+    }
+  }
+}

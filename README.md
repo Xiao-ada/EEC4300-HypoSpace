@@ -1,5 +1,7 @@
 # Canonical Coverage LoRA for HypoSpace
 
+> **README 指标优化实验进行中（2026-11-26）**：新增[预算控制解码 BACE](docs/BACE_METHOD.md)和[结构类别偏好训练](docs/CANONICAL_PREFERENCE.md)。下方原始表仍是第一版冻结结果。解码试验已公开，新增训练与匹配对照正在完成；验证数据不能当作新的最终测试成绩。
+
 在 Apple M5、24GB Mac 上实际完成的小模型课程研究：用经过校验的合法表达式训练 LoRA，并检验官方结构类别覆盖目标相对均衡 SFT 是否提供额外收益。
 
 **完整训练、验证与固定测试已完成。全部数字来自真实模型输出。** 基础模型为固定的四比特 Qwen2.5-1.5B-Instruct；使用 16 道训练题、6 道验证题、26 道测试题。正式生成共 6720 次，其中测试 6240 次。没有使用付费模型 API。
@@ -160,7 +162,7 @@ HF_HOME=../runtime/hf-cache ../runtime/mlx-env/bin/python scripts/local_mlx.py -
 
 [贡献审查与可直接使用的报告陈述](docs/CONTRIBUTION_AUDIT_ZH.md)整理了已有工作的定位、目标的数学性质和匹配对照证据。对现有结果补做的探索性次要推断显示：相对匹配 SFT，VR 增加 3.125 个百分点，同时 NR 降低 4.167 个百分点；RR 的额外优势仍未证实。全部四个对照、三个最终指标统一纳入十二项比较，保留代价与不确定性。次要推断不是新的预注册确认性结果，也不证明全球首创。
 
-无需训练或 GPU 可复核：`.venv/bin/python scripts/verify_contribution_audit.py`。第二版重训不安排执行；原始主结果、模型和 6720 次正式生成记录保持不变。
+无需训练或 GPU 可复核：`.venv/bin/python scripts/verify_contribution_audit.py`。第一版原始主结果、模型和 6720 次正式生成记录保持不变；新增的偏好训练与解码实验单独保存，不会覆盖第一版。
 
 ## 个人两至三分钟讲解
 

@@ -118,6 +118,9 @@
     "personal_chinese_guide": "docs/PERSONAL_TALK_ZH.md",
     "personal_english_script": "docs/PERSONAL_TALK_EN.md",
     "actual_video_recorded": false,
-    "timings": "estimated; speaker rehearsal required"
+    "timings": "estimated; speaker rehearsal required",
+    "personal_current_script": "docs/PERSONAL_TALK_2MIN_ZH.md",
+    "focus": "individual thought process, cited motivation, method and completed results",
+    "target": "under two minutes; actual rehearsal required"
   }
 }

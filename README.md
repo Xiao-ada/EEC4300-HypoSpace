@@ -163,3 +163,5 @@ HF_HOME=../runtime/hf-cache ../runtime/mlx-env/bin/python scripts/local_mlx.py -
 ## 个人两至三分钟讲解
 
 按各成员分别介绍自己方法的分工，已准备[中文说明、主讲稿、精简稿、两页内容和问答](docs/PERSONAL_TALK_ZH.md)，以及[英文备选稿](docs/PERSONAL_TALK_EN.md)。[全组视频指南](docs/VIDEO_GUIDE_ZH.md)给出三人或四人组的十分钟分配参考。稿件时长为估算，实际视频仍需成员试读和录制。
+
+当前推荐的个人口头稿：[两分钟以内，含问题来源、GAPO 文献启发、方法与最终成果](docs/PERSONAL_TALK_2MIN_ZH.md)。

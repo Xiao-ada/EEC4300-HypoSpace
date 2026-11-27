@@ -1,5 +1,7 @@
 # 个人两页展示：原理与结果
 
+**当前选用的BACE展示：** 新版为三页英文内容，前两页讲BACE原理和匹配结果，第三页用两句话说明COVE系统输出收益的边界。见 [bace_final](bace_final/README.md)、[完整英文讲稿](bace_final/English_script.txt)和[逐句中文对照](bace_final/Script_and_translation.md)。讲稿167个口播词，建议约两分钟。以下PPTX为历史第一版，不要与新展示混用。
+
 **历史演示稿。** 当前项目主线已转为固定预算自由生成，最新结果见[研究报告](../docs/RESEARCH_RESULTS_ZH.md)，可使用[新版英文两页内容与讲稿](../docs/RESEARCH_PRESENTATION_EN.md)。本目录PPTX和预览仍报告第一版，未自动替换为新实验。
 
 [可编辑 PPTX](personal_method_results.pptx)
